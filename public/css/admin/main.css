@@ -1,0 +1,119 @@
+.adminSectionMenu ul {
+    list-style: none;
+}
+
+.controlButton {
+    font-size:25px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 7px;
+    color:black;
+}
+
+.controlButton.small {
+    font-size:18px;
+}
+
+.controlButton:hover {
+    border-color: gray;
+}
+
+.navigationsBlock {
+    padding-bottom: 20px;
+}
+
+.navigationsBlock ul li {
+    margin-right: 10px;
+}
+
+.navigationsBlock ul li a {
+    border-color: gray;
+}
+
+.form-control {
+    height: 34px!important;
+}
+
+.form-check {
+    margin-bottom: 24px;
+}
+
+.customTable tr th {
+    background-color: #ac7ae2;
+    color:white;
+    padding-top: 20px!important;
+    padding-bottom: 15px!important;
+}
+
+.checkboxSelector {
+    margin-bottom: 40px;
+}
+
+.alert-warning {
+    color: #8a6d3b!important;
+    background-color: #fcf8e3!important;
+    border-color: #faebcc!important;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.administrationMenu {
+
+}
+
+.administrationMenu li .administrationMenu {
+    margin-left: 10px;
+    display: none;
+}
+
+.administrationMenu li .administrationMenu  li{
+    background-color: gray;
+}
+
+.administrationMenu li .administrationMenu  li a {
+    font-size: 12px;
+    padding: 7px 10px;
+    background-color: #D5F4EC;
+}
+
+.administrationMenu li.active .administrationMenu {
+    display: block;
+}
+
+.administrationMenu li {
+    display: block;
+    width: 100%;
+}
+
+.administrationMenu li.active {
+    background-color: #D5F4EC;
+}
+
+.administrationMenu li.active a {
+    color:black;
+    background-color: #ecf0f5;
+}
+
+.tableImage {
+    width: 200px;
+}

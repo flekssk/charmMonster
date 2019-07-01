@@ -1,0 +1,38 @@
+.uploadControl {
+    margin-bottom: 20px;
+}
+
+.imageBlock {
+    padding: 0;
+    margin: 0 0 10px;
+    height: 25vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.imageBlock img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.commentArea textarea {
+    width: 100%;
+    height: 25%;
+}
+
+.controlPanel {
+    padding: 10px;
+}
+
+.controlPanel .deleteImage {
+    font-size:25px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 7px;
+    color:black;
+}
+
+.controlPanel .deleteImage:hover {
+
+}

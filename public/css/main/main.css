@@ -446,8 +446,8 @@ body {
 
 .categoriesContainer .category {
     border-radius: 10px;
-
-    box-shadow: 1px 10px 10px #FFB2B2;
+    border: 1px solid #CC0000;
+    box-shadow: 5px 10px 20px rgba(0,0,0,.2);
     padding: 10px;
     display: inline-block;
     margin: 0 5px 5px 0;

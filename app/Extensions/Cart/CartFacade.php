@@ -13,6 +13,7 @@ use Illuminate\View\View;
  * @method static ProductRepository getProducts()
  * @method static int productsCount()
  * @method static View renderWidget()
+ * @method static View totalPrice()
  */
 class CartFacade extends Facade
 {

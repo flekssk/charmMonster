@@ -5,8 +5,8 @@ $_['heading_title']           = 'W1 - Единая Касса';
 // Text 
 $_['text_extension']          = 'Платежи';
 $_['text_success']            = 'Настройки модуля обновлены!';
-$_['text_ocstore_w1']         = '<a style="cursor: pointer;" onclick="window.open(\'https://www.walletone.com/merchant/?promo=ocstore2017\');"><img src="view/image/payment/ocstore_w1.png" height="40" alt="Wallet One" title="Wallet One" /></a>';
-$_['text_register']           = 'Зарегистрируйтесь в кассе на <a target="_blank" href="https://www.walletone.com/merchant/?promo=ocstore2017">сайте</a>. Пользователям ocStore предоставляется тариф "Средний бизнес" на 3 месяца.';
+$_['text_ocstore_w1']         = '<a style="cursor: pointer;" onclick="window.open(\'https://www.walletone.com/merchant/?promo=opencart2017\');"><img src="view/image/payment/ocstore_w1.png" height="40" alt="Wallet One" title="Wallet One" /></a>';
+$_['text_register']           = 'Зарегистрируйтесь в кассе на <a target="_blank" href="https://www.walletone.com/merchant/?promo=opencart2017">сайте</a>. Пользователям OpenCart предоставляется тариф "Средний бизнес (Все для своих)" на 3 месяца.';
 $_['text_instruction']        = 'В <a href="https://www.walletone.com/merchant/client/#/settings/integration" target="_blank">личном кабинете</a> во вкладке «Настройки» в разделе «Интеграция» нужно указать следующие настройки:';
 $_['text_setting']            = 'Настройки';
 $_['text_info']               = 'Аккаунт W1';
@@ -21,7 +21,7 @@ $_['entry_order_confirm_status']  = 'Статус заказа после офо
 $_['entry_order_status']          = 'Статус заказа после оплаты';
 $_['entry_order_fail_status']     = 'Статус заказа после неудачной оплаты';
 $_['entry_geo_zone']              = 'Гео Зона';
-$_['entry_status']                = 'Состояние';
+$_['entry_status']                = 'Статус';
 $_['entry_sort_order']            = 'Сортировка';
 
 // Error

@@ -1,4 +1,7 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title'] 				= 'New Amazon listing';
 $_['text_title_advanced'] 			= 'Advanced listing';
@@ -46,15 +49,15 @@ $_['text_product_sent'] 			= 'Product was successfully sent to Amazon.';
 $_['text_links_removed'] 			= 'Amazon product links deleted';
 $_['text_product_links'] 			= 'Product links';
 $_['text_has_saved_listings'] 		= 'This product has one or more saved listings that is not uploaded';
-$_['text_edit_heading'] 			= 'Edit listing';
+$_['text_edit_heading'] 			= 'Редактирование';
 
 // Columns
-$_['column_image'] 					= 'Image';
+$_['column_image'] 					= 'Изображение';
 $_['column_asin'] 					= 'ASIN';
-$_['column_price'] 					= 'Price';
-$_['column_action'] 				= 'Action';
-$_['column_name'] 					= 'Product Name';
-$_['column_model'] 					= 'Model';
+$_['column_price'] 					= 'Цена';
+$_['column_action'] 				= 'Действие';
+$_['column_name'] 					= 'Название товара';
+$_['column_model'] 					= 'Код товара';
 $_['column_combination'] 			= 'Variant Combination';
 $_['column_sku_variant'] 			= 'Variant SKU';
 $_['column_sku'] 					= 'Product SKU';
@@ -64,10 +67,10 @@ $_['column_amazon_sku'] 			= 'Amazon item SKU';
 $_['entry_sku'] 					= 'SKU';
 $_['entry_condition'] 				= 'Condition';
 $_['entry_condition_note'] 			= 'Condition Note';
-$_['entry_price'] 					= 'Price';
+$_['entry_price'] 					= 'Цена';
 $_['entry_sale_price'] 				= 'Sale Price';
 $_['entry_sale_date'] 				= 'Sale date range';
-$_['entry_quantity'] 				= 'Quantity';
+$_['entry_quantity'] 				= 'Количество';
 $_['entry_start_selling'] 			= 'Available from date';
 $_['entry_restock_date'] 			= 'Restock Date';
 $_['entry_country_of_origin'] 		= 'Country of Origin';

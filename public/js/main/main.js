@@ -43,6 +43,18 @@ let cartControl = function () {
                     'product_id': button.data('product-id')
                 },
                 success: function (response) {
+                    $.notify({
+                        message: 'Товар добавлен в корзину',
+                        target: '_blank'
+                    },{
+                        type: 'info',
+                        timer: 1000,
+                        delay: 1000,
+                        placement: {
+                            align: "center"
+                        },
+                    });
+
                     $('.cartWidget .content').html(response.widgetContent);
                     caller.initialize();
                 }
@@ -50,7 +62,7 @@ let cartControl = function () {
         );
     };
     this.changeWidgetCount = function (count) {
-        console.log($('.cartButton:before').css('padding'));
+        $('.cartButton:before').css('padding')
     }
 };
 
@@ -78,5 +90,16 @@ $(document).ready(function () {
 
     $('.cartControlBlock').mouseout(function () {
         $('.cartWidget').hide();
+    });
+
+    $('.count').prop('disabled', true);
+    $(document).on('click', '.plus', function () {
+        $('.count').val(parseInt($('.count').val()) + 1);
+    });
+    $(document).on('click', '.minus', function () {
+        $('.count').val(parseInt($('.count').val()) - 1);
+        if ($('.count').val() == 0) {
+            $('.count').val(1);
+        }
     });
 });

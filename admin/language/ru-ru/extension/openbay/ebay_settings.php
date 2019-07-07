@@ -1,4 +1,7 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']        			= 'Marketplace settings';
 $_['text_openbay']					= 'OpenBay Pro';
@@ -8,7 +11,7 @@ $_['text_ebay']						= 'eBay';
 $_['text_developer']				= 'Developer / support';
 $_['text_app_settings']				= 'Application settings';
 $_['text_default_import']			= 'Default import settings';
-$_['text_payments']					= 'Payments';
+$_['text_payments']					= 'Оплата';
 $_['text_notify_settings']			= 'Notification settings';
 $_['text_listing']					= 'Listing defaults';
 $_['text_token_register']			= 'Register for your eBay token';
@@ -42,11 +45,11 @@ $_['text_create_date_0']            = 'When added to OpenCart';
 $_['text_create_date_1']            = 'When created on eBay';
 $_['text_obp_detail_update']        = 'Update your store URL &amp; contact email';
 $_['text_success']					= 'Your settings have been saved';
-$_['text_edit']						= 'Edit eBay settings';
+$_['text_edit']						= 'Редактирование';
 
 // Entry
-$_['entry_status']					= 'Status';
-$_['entry_token']					= 'Token';
+$_['entry_status']					= 'Статус';
+$_['entry_token']					= 'Токен';
 $_['entry_secret']					= 'Secret';
 $_['entry_string1']					= 'Encryption string 1';
 $_['entry_string2']					= 'Encryption string 2';
@@ -82,7 +85,7 @@ $_['entry_import_part_refund_id']	= 'Partially refunded status:';
 
 // Tabs
 $_['tab_api_info']					= 'API details';
-$_['tab_setup']						= 'Settings';
+$_['tab_setup']						= 'Настройки';
 $_['tab_defaults']					= 'Listing defaults';
 
 // Help
@@ -106,7 +109,7 @@ $_['help_notify_buyer']        		= 'Notify the user with the default new order e
 $_['help_measurement']        		= 'Choose what measurement system you want to use for listings';
 
 // Buttons
-$_['button_update']             	= 'Update';
+$_['button_update']             	= 'Обновить';
 $_['button_repair_links']    		= 'Repair item links';
 
 // Error

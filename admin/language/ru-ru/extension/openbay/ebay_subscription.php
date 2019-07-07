@@ -1,4 +1,7 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']             = 'Subscription';
 $_['text_openbay']              = 'OpenBay Pro';
@@ -11,7 +14,7 @@ $_['button_plan_change']  		= 'Change to plan';
 $_['column_plan']  				= 'Plan name';
 $_['column_call_limit']  		= 'Call limit';
 $_['column_price']  			= 'Price (p/month)';
-$_['column_description']  		= 'Description';
+$_['column_description']  		= 'Описание';
 $_['column_current']  			= 'Current plan';
 
 // Text

@@ -1,20 +1,23 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']           = 'Parcelforce 48';
 
 // Text
-$_['text_extension']          = 'Доставка';
-$_['text_success']            = 'Success: You have modified Parcelforce 48 shipping!';
-$_['text_edit']               = 'Edit Parcelforce 48 Shipping';
+$_['text_shipping']           = 'Доставка';
+$_['text_success']            = 'Настройки успешно изменены!';
+$_['text_edit']               = 'Редактирование';
 
 // Entry
 $_['entry_rate']              = 'Parcelforce 48 Rates';
 $_['entry_insurance']         = 'Parcelforce48 Compensation Rates';
 $_['entry_display_weight']    = 'Display Delivery Weight';
 $_['entry_display_insurance'] = 'Display Insurance';
-$_['entry_display_time']      = 'Отображать время доставки';
-$_['entry_tax_class']         = 'Класс Налога';
-$_['entry_geo_zone']          = 'Регион';
+$_['entry_display_time']      = 'Display Delivery Time';
+$_['entry_tax_class']         = 'Класс налога';
+$_['entry_geo_zone']          = 'Географическая зона';
 $_['entry_status']            = 'Статус';
 $_['entry_sort_order']        = 'Порядок сортировки';
 
@@ -26,4 +29,4 @@ $_['help_display_insurance'] = 'Do you want to display the shipping insurance? (
 $_['help_display_time']      = 'Do you want to display the shipping time? (e.g. Ships within 3 to 5 days)';
 
 // Error
-$_['error_permission']        = 'Warning: You do not have permission to modify Parcelforce 48 shipping!';
+$_['error_permission']        = 'У вас недостаточно прав для внесения изменений!';

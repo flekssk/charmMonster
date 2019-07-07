@@ -1,4 +1,7 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']					= 'Item links';
 $_['text_openbay']					= 'OpenBay Pro';
@@ -11,11 +14,11 @@ $_['text_desc3']                    = 'You can link items manually by entering A
 $_['text_new_link']                 = 'New link';
 $_['text_autocomplete_product']     = 'Product (Auto complete from name)';
 $_['text_amazon_sku']               = 'Amazon item SKU';
-$_['text_action']                   = 'Action';
+$_['text_action']                   = 'Действие';
 $_['text_linked_items']             = 'Linked items';
 $_['text_unlinked_items']           = 'Unlinked items';
 $_['text_name']                     = 'Name';
-$_['text_model']                    = 'Model';
+$_['text_model']                    = 'Код товара';
 $_['text_combination']              = 'Variant Combination';
 $_['text_sku']                      = 'Product SKU';
 $_['text_sku_variant']              = 'Variant SKU';

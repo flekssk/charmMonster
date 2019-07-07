@@ -20,9 +20,9 @@ class ProductRepository extends EloquentRepository
         $instance = self::newInstance();
 
         $items = $instance->newModelInstance()
-            ->newQuery()
-            ->whereIn('product_id', $products)
-            ->get();
+                          ->newQuery()
+                          ->whereIn('product_id', $products)
+                          ->get();
 
         return $instance->setItems($items);
     }
@@ -135,9 +135,10 @@ class ProductRepository extends EloquentRepository
                               });
         }
 
-        $items = $items->filter(function ($item) use ($filters) {
-            return $item->price >= (int)$filters->get('minPrice') && $item->price <= (int) $filters->get('maxPrice');
-        });
+        $items = $items->filter(
+            function ($item) use ($filters) {
+                return $item->price >= (int)$filters->get('minPrice') && $item->price <= (int)$filters->get('maxPrice');
+            });
 
         return $items;
     }
@@ -165,7 +166,7 @@ class ProductRepository extends EloquentRepository
         $total = 0;
 
         foreach ($this->items() as $item) {
-            $total += (int) $item->price;
+            $total += (int)$item->price;
         }
 
         return $total;
@@ -173,22 +174,26 @@ class ProductRepository extends EloquentRepository
 
     protected function setMinPrice()
     {
-        $minPrice = $this->items()->first()->price;
+        if ($this->items()->count() > 0) {
+            $minPrice = $this->items()->first()->price;
 
-        foreach ($this->items() as $item) {
-            $minPrice = is_numeric($item->price) && $item->price < $minPrice ? $item->price : $minPrice;
+            foreach ($this->items() as $item) {
+                $minPrice = is_numeric($item->price) && $item->price < $minPrice ? $item->price : $minPrice;
+            }
+
+            $this->minPrice = (int)$minPrice;
         }
-
-        $this->minPrice = (int)$minPrice;
     }
 
     protected function setMaxPrice()
     {
-        foreach ($this->items() as $item) {
-            $this->maxPrice = is_numeric(
-                $item->price) && $item->price > $this->maxPrice ? $item->price : $this->maxPrice;
-        }
+        if ($this->items()->count() > 0) {
+            foreach ($this->items() as $item) {
+                $this->maxPrice = is_numeric(
+                    $item->price) && $item->price > $this->maxPrice ? $item->price : $this->maxPrice;
+            }
 
-        $this->maxPrice = (int)$this->maxPrice;
+            $this->maxPrice = (int)$this->maxPrice;
+        }
     }
 }

@@ -1,11 +1,14 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']         = 'United States Postal Service';
 
 // Text
-$_['text_extension']        = 'Доставка';
-$_['text_success']          = 'Настройки модуля United States Postal Service успешно обновлены!';
-$_['text_edit']             = 'Редактирование модуля';
+$_['text_shipping']         = 'Доставка';
+$_['text_success']          = 'Настройки успешно изменены!';
+$_['text_edit']             = 'Редактирование';
 $_['text_domestic_00']      = 'First-Class Mail Parcel';
 $_['text_domestic_01']      = 'First-Class Mail Large Envelope';
 $_['text_domestic_02']      = 'First-Class Mail Letter';
@@ -16,7 +19,7 @@ $_['text_domestic_3']       = 'Express Mail';
 $_['text_domestic_4']       = 'Parcel Post';
 $_['text_domestic_5']       = 'Bound Printed Matter';
 $_['text_domestic_6']       = 'Media Mail';
-$_['text_domestic_7']       = 'Библиотека';
+$_['text_domestic_7']       = 'Library';
 $_['text_domestic_12']      = 'First-Class Postcard Stamped';
 $_['text_domestic_13']      = 'Express Mail Flat-Rate Envelope';
 $_['text_domestic_16']      = 'Priority Mail Flat-Rate Envelope';
@@ -44,32 +47,32 @@ $_['text_international_14'] = 'First Class Mail International Flats';
 $_['text_international_15'] = 'First Class Mail International Parcels';
 $_['text_international_16'] = 'Priority Mail Flat Rate Small Box';
 $_['text_international_21'] = 'Postcards';
-$_['text_regular']          = 'Обычный';
-$_['text_large']            = 'Большой';
-$_['text_rectangular']      = 'Прямоугольные';
-$_['text_non_rectangular']  = 'Не прямоугольная';
-$_['text_variable']         = 'Переменная';
+$_['text_regular']          = 'Regular';
+$_['text_large']            = 'Large';
+$_['text_rectangular']      = 'Rectangular';
+$_['text_non_rectangular']  = 'Non Rectangular';
+$_['text_variable']         = 'Variable';
 
 // Entry
-$_['entry_user_id']         = 'ID пользователя';
-$_['entry_postcode']        = 'Почтовый индекс';
+$_['entry_user_id']         = 'User ID';
+$_['entry_postcode']        = 'Zip Code';
 $_['entry_domestic']        = 'Domestic Services';
 $_['entry_international']   = 'International Services';
 $_['entry_size']            = 'Размер';
-$_['entry_container']       = 'Контейнер';
+$_['entry_container']       = 'Container';
 $_['entry_machinable']      = 'Machinable';
-$_['entry_dimension']       = 'Габаритные размеры (Д x Ш x В)';
+$_['entry_dimension']       = 'Размеры (Д х Ш х В)';
 $_['entry_length']          = 'Длина';
 $_['entry_height']          = 'Высота';
 $_['entry_width']           = 'Ширина';
-$_['entry_display_time']    = 'Отображать время доставки';
+$_['entry_display_time']    = 'Display Delivery Time';
 $_['entry_display_weight']  = 'Display Delivery Weight';
-$_['entry_weight_class']    = 'Класс веса';
-$_['entry_tax']             = 'Налоговый класс';
-$_['entry_geo_zone']        = 'Регион';
+$_['entry_weight_class']    = 'Единица измерения веса';
+$_['entry_tax']             = 'Класс налога';
+$_['entry_geo_zone']        = 'Географическая зона';
 $_['entry_status']          = 'Статус';
 $_['entry_sort_order']      = 'Порядок сортировки';
-$_['entry_debug']      		  = 'Режим отладки';
+$_['entry_debug']      		= 'Debug Mode';
 
 // Help
 $_['help_dimension']        = 'Average package dimensions for shipping package. Product dimensions are not used for shipping at this time.';
@@ -79,10 +82,10 @@ $_['help_weight_class']     = 'Must be set to Pound.';
 $_['help_debug']      		= 'Saves send/recv data to the system log';
 
 // Error
-$_['error_permission']      = 'Warning: You do not have permission to modify United States Postal Service!';
+$_['error_permission']      = 'У вас недостаточно прав для внесения изменений!';
 $_['error_user_id']         = 'User ID Required!';
 $_['error_postcode']        = 'Zip Code Required!';
-$_['error_width']        	= 'Width Required!';
+$_['error_width']        	= 'Укажите Ширину!';
 $_['error_length']        	= 'Length Required!';
-$_['error_height']        	= 'Height Required!';
+$_['error_height']        	= 'Укажите Высоту!';
 $_['error_girth']        	= 'Girth Required!';

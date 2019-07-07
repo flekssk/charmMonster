@@ -1,29 +1,31 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']					= 'Paymate';
 
 // Text
-$_['text_payment']					= 'Платежи';
-$_['text_success']					= 'Вы успешно изменили Paymate реквизиты!';
-$_['text_edit']                     = 'Редактировать Paymate';
+$_['text_payment']					= 'Платеж';
+$_['text_success']					= 'Success: You have modified Paymate account details!';
+$_['text_edit']                     = 'Редактирование';
 $_['text_paymate']					= '<img src="view/image/payment/paymate.png" alt="Paymate" title="Paymate" style="border: 1px solid #EEEEEE;" />';
-$_['text_extension']   = 'Платежи';
 
 // Entry
-$_['entry_username']				= 'Paymate логин';
+$_['entry_username']				= 'Paymate Username';
 $_['entry_password']				= 'Пароль';
-$_['entry_test']					= 'Тестовый режим';
-$_['entry_total']					= 'Итого';
-$_['entry_order_status']			= 'Статус заказа';
-$_['entry_geo_zone']				= 'Регион';
+$_['entry_test']					= 'Test Mode';
+$_['entry_total']					= 'Всего';
+$_['entry_order_status']			= 'Статус';
+$_['entry_geo_zone']				= 'Географическая зона';
 $_['entry_status']					= 'Статус';
 $_['entry_sort_order']				= 'Порядок сортировки';
 
 // Help
 $_['help_password']					= 'Just use some random password. This will be used to make sure the payment information is not interfered with after being sent to the payment gateway.';
-$_['help_total']					= 'Сумма заказа должна быть выше, прежде чем этот метод оплаты станет активным.';
+$_['help_total']					= 'The checkout total the order must reach before this payment method becomes active.';
 
 // Error
-$_['error_permission']				= 'Внимание: Вы не имеете разрешения на изменение оплаты Paymate!';
-$_['error_username']				= 'Paymate имя пользователя обязательно!';
-$_['error_password']				= 'Требуется пароль!';
+$_['error_permission']				= 'У вас недостаточно прав для внесения изменений!';
+$_['error_username']				= 'Paymate Username required!';
+$_['error_password']				= 'Password required!';

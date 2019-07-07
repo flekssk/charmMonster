@@ -1,19 +1,22 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
-$_['heading_title']    = 'Чат Google Hangouts';
+$_['heading_title']    = 'Google Hangouts';
 
 // Text
-$_['text_extension']   = 'Модули';
-$_['text_success']     = 'Чат от Google Hangouts успешно установлен!';
-$_['text_edit']        = 'Редактирование модуля';
+$_['text_module']      = 'Модули';
+$_['text_success']     = 'Настройки успешно изменены!';
+$_['text_edit']        = 'Редактирование';
 
 // Entry
 $_['entry_code']       = 'Код Google Talk';
 $_['entry_status']     = 'Статус';
 
 // Help
-$_['help_code']        = 'Вначале, необходимо <a href="https://developers.google.com/+/hangouts/button" target="_blank">Создать значек для чата Google Hangout</a> затем, скопировать и вставить сгенерированный код в это поле.';
+$_['help_code']        = '<a href="https://developers.google.com/+/hangouts/button" target="_blank">Создайте кнопку Google Hangout</a>, скопируйте и вставьте сгенерированный код в текстовое поле.';
 
 // Error
-$_['error_permission'] = 'У вас нет прав для управления этим модулем!';
-$_['error_code']       = 'Необходимо указать Код!';
+$_['error_permission'] = 'У вас недостаточно прав для внесения изменений!';
+$_['error_code']       = 'Необходимо указать код';

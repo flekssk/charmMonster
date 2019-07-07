@@ -1,4 +1,7 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title'] 					= 'Manage listings';
 
@@ -9,7 +12,7 @@ $_['text_ebay'] 						= 'eBay';
 $_['text_amazon'] 						= 'Amazon EU';
 $_['text_amazonus'] 					= 'Amazon US';
 $_['text_etsy'] 						= 'Etsy';
-$_['text_status_all'] 					= 'All';
+$_['text_status_all'] 					= 'Все';
 $_['text_status_ebay_active'] 			= 'eBay active';
 $_['text_status_ebay_inactive'] 		= 'eBay not active';
 $_['text_status_amazoneu_saved'] 		= 'Amazon EU saved';
@@ -26,26 +29,26 @@ $_['text_status_amazonus_notlisted'] 	= 'Amazon US not listed';
 $_['text_status_amazonus_failed'] 		= 'Amazon US failed';
 $_['text_status_amazonus_linked'] 		= 'Amazon US linked';
 $_['text_status_amazonus_notlinked'] 	= 'Amazon US not linked';
-$_['text_processing']       			= 'Processing';
+$_['text_processing']       			= 'Обработка';
 $_['text_category_missing'] 			= 'Missing category';
 $_['text_variations'] 					= 'variations';
-$_['text_variations_stock'] 			= 'stock';
+$_['text_variations_stock'] 			= 'Наличие';
 $_['text_min']                      	= 'Min';
 $_['text_max']                      	= 'Max';
-$_['text_option']                   	= 'Option';
+$_['text_option']                   	= 'Опции';
 $_['text_list']              			= 'Product List';
 
 // Entry
 $_['entry_title'] 						= 'Title';
-$_['entry_model'] 						= 'Model';
-$_['entry_manufacturer'] 				= 'Manufacturer';
-$_['entry_status'] 						= 'Status';
+$_['entry_model'] 						= 'Код товара';
+$_['entry_manufacturer'] 				= 'Производитель';
+$_['entry_status'] 						= 'Статус';
 $_['entry_status_marketplace'] 			= 'Marketplace status';
 $_['entry_stock_range'] 				= 'Stock range';
-$_['entry_category'] 					= 'Category';
+$_['entry_category'] 					= 'Категории';
 $_['entry_populated'] 					= 'Populated';
 $_['entry_sku'] 						= 'SKU';
-$_['entry_description'] 				= 'Description';
+$_['entry_description'] 				= 'Описание';
 
 // Button
 $_['button_error_fix']              	= 'Fix errors';

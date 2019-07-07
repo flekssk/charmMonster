@@ -48,14 +48,15 @@
         <div class="col-9 image" style="">
             <style>
                 .headerMainContainer:after {
-                    background-image: url({{ asset('images/layout/1.jpg') }})
+                    background-image: url({{ asset('images/layout/test.jpg') }});
+                    background-position: 0 -400px;
                 }
             </style>
         </div>
     </div>
 </div>
 <div class="row topMenuContainer">
-    <div class="container">
+    <div class="menuContent container">
         <div class="col-9 menu">
             <div class="col-2 item">
                 <a class="mainItem" href="{{ action('IndexController@index') }}">ГЛАВНАЯ</a>

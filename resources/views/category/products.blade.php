@@ -87,7 +87,9 @@ use Illuminate\Support\Arr;
                                     <img src="{{ getImagePath($product->image) }}" alt="">
                                     <div class="productControl">
                                         <div class="buttons">
-                                            <a class="btn btn-product-control">
+                                            <a class="btn btn-product-control"
+                                               href="{{ action('Product\ProductController@show', ['product' => $product->product_id]) }}"
+                                            >
                                                 Быстрый просмотр
                                                 <i class="icon fa fa-eye"></i>
                                             </a>
@@ -104,7 +106,7 @@ use Illuminate\Support\Arr;
                                         </div>
                                     </div>
                                 </div>
-                                <div class="title">
+                                <div class="title main">
                                     <span>{{ $product->description->name }}</span>
                                 </div>
                             </div>

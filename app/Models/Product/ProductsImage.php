@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductsImage extends Model
 {
+    protected $table = 'product_image';
+
     /**
      * @param $image
      * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Model|object|null

@@ -10,6 +10,8 @@ class Product extends Model
 {
     protected $table = 'product';
 
+    protected $primaryKey = 'product_id';
+
     protected $route = 'Admin\Product\ProductController';
 
     public function getMainImage()
@@ -19,7 +21,7 @@ class Product extends Model
 
     public function images()
     {
-        return $this->hasMany(ProductsImage::class);
+        return $this->hasMany(ProductsImage::class, 'product_id', 'product_id');
     }
 
     public function category()

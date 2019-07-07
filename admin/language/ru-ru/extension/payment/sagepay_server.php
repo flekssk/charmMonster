@@ -1,9 +1,12 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']					= 'SagePay Server';
 
 // Text
-$_['text_payment']					= 'Платежи';
+$_['text_payment']					= 'Payment';
 $_['text_success']					= 'Success: You have modified SagePay account details!';
 $_['text_edit']                     = 'Edit SagePay Server';
 $_['text_sagepay_server']			= '<a href="https://support.sagepay.com/apply/default.aspx?PartnerID=E511AF91-E4A0-42DE-80B0-09C981A3FB61" target="_blank"><img src="view/image/payment/sagepay.png" alt="SagePay" title="SagePay" style="border: 1px solid #EEEEEE;" /></a>';
@@ -55,9 +58,9 @@ $_['help_cron_job_token']			= 'Make this long and hard to guess';
 $_['help_cron_job_url']				= 'Set a cron job to call this URL';
 
 // Button
-$_['button_release']					= 'Release';
+$_['button_release']				= 'Release';
 $_['button_rebate']					= 'Rebate / refund';
-$_['button_void']						= 'Void';
+$_['button_void']					= 'Void';
 
 // Error
 $_['error_permission']				= 'Warning: You do not have permission to modify payment SagePay!';

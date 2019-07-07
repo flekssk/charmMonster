@@ -1,4 +1,7 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title'] 				= 'Bulk Listing';
 $_['text_openbay'] 					= 'OpenBay Pro';
@@ -33,14 +36,14 @@ $_['entry_start_selling'] 			= 'Start Selling';
 
 // Column
 $_['column_name'] 					= 'Name';
-$_['column_image'] 					= 'Image';
-$_['column_model'] 					= 'Model';
-$_['column_status'] 				= 'Status';
+$_['column_image'] 					= 'Изображение';
+$_['column_model'] 					= 'Код товара';
+$_['column_status'] 				= 'Статус';
 $_['column_matches']				= 'Matches';
 $_['column_result'] 				= 'Result';
 
 // Button
-$_['button_list'] 					= 'List';
+$_['button_list'] 					= 'Список';
 
 // Error
 $_['error_product_sku'] 			= 'Product must have an SKU';

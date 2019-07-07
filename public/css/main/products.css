@@ -16,6 +16,14 @@
     margin-left: 40px;
 }
 
+.filterContainer .filtersBackground:after {
+    content: ' ';
+    position: absolute;
+    bottom: -150px;
+    border: 100px solid transparent;
+    border-top: 50px solid #E6E6E6;
+}
+
 .filterContainer .searchFilter {
     margin: 20px 0 0 0;
     border: 2px solid #F6F6F6;

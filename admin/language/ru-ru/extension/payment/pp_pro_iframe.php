@@ -1,24 +1,27 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']					= 'PayPal Pro iFrame';
 
 // Text
-$_['text_success']					= 'Успех: Вы изменили данные учетной записи PayPal Pro iFrame!';
-$_['text_edit']                     = 'Edit PayPal Pro iFrame';
+$_['text_success']					= 'Success: You have modified PayPal Pro iFrame account details!';
+$_['text_edit']                     = 'Редактирование';
 $_['text_pp_pro_iframe']			= '<a target="_BLANK" href="https://www.paypal.com/uk/mrb/pal=V4T754QB63XXL"><img src="view/image/payment/paypal.png" alt="PayPal Website Payment Pro" title="PayPal Website Payment Pro iFrame" style="border: 1px solid #EEEEEE;" /></a>';
 $_['text_authorization']			= 'Authorization';
 $_['text_sale']						= 'Sale';
-$_['text_payment_info']				= 'Payment information';
+$_['text_payment_info']				= 'Платёжные реквизиты';
 $_['text_capture_status']			= 'Capture status';
 $_['text_amount_auth']				= 'Amount authorised';
 $_['text_amount_captured']			= 'Amount captured';
 $_['text_amount_refunded']			= 'Amount refunded';
 $_['text_capture_amount']			= 'Capture amount';
 $_['text_complete_capture']			= 'Complete capture';
-$_['text_transactions']				= 'Transactions';
+$_['text_transactions']				= 'Операции';
 $_['text_complete']					= 'Complete';
 $_['text_confirm_void']				= 'If you void you cannot capture any further funds';
-$_['text_view']						= 'View';
+$_['text_view']						= 'Просмотр';
 $_['text_refund']					= 'Refund';
 $_['text_resend']					= 'Resend';
 $_['text_reauthorise']				= 'Reauthorise';
@@ -27,18 +30,18 @@ $_['text_transaction']				= 'Transaction';
 $_['text_product_lines']			= 'Product lines';
 $_['text_ebay_txn_id']				= 'eBay transaction ID';
 $_['text_name']						= 'Name';
-$_['text_qty']						= 'Quantity';
-$_['text_price']					= 'Price';
+$_['text_qty']						= 'Количество';
+$_['text_price']					= 'Цена';
 $_['text_number']					= 'Number';
 $_['text_coupon_id']				= 'Coupon ID';
 $_['text_coupon_amount']			= 'Coupon amount';
 $_['text_coupon_currency']			= 'Coupon currency';
 $_['text_loyalty_disc_amt']			= 'Loyalty card disc amount';
 $_['text_loyalty_currency']			= 'Loyalty card currency';
-$_['text_options_name']				= 'Options name';
+$_['text_options_name']				= 'Опции name';
 $_['text_tax_amt']					= 'Tax amount';
 $_['text_currency_code']			= 'Currency code';
-$_['text_amount']					= 'Amount';
+$_['text_amount']					= 'Итого';
 $_['text_gift_msg']					= 'Gift message';
 $_['text_gift_receipt']				= 'Gift receipt';
 $_['text_gift_wrap_name']			= 'Gift wrap name';
@@ -94,7 +97,7 @@ $_['text_protect_elig']				= 'Protection eligibility';
 $_['text_protect_elig_type']		= 'Protection eligibility type';
 $_['text_store_id']					= 'Store ID';
 $_['text_terminal_id']				= 'Terminal ID';
-$_['text_invoice_number']			= 'Invoice number';
+$_['text_invoice_number']			= 'Номер счета';
 $_['text_custom']					= 'Custom';
 $_['text_note']						= 'Note';
 $_['text_sales_tax']				= 'Sales tax';
@@ -105,21 +108,21 @@ $_['text_sub_amt']					= 'Subscription amount';
 $_['text_sub_period']				= 'Subscription period';
 $_['text_redirect']					= 'Redirect';
 $_['text_iframe']					= 'Iframe';
-$_['help_checkout_method']			= "Please use Redirect method if do not have SSL installed or if you do not have Pay with PayPal option disabled on your hosted payment page.";
-$_['help_debug']					= "Logs additional information.";
+$_['help_checkout_method']			= 'Please use Redirect method if do not have SSL installed or if you do not have Pay with PayPal option disabled on your hosted payment page.';
+$_['help_debug']					= 'Logs additional information.';
 
 // Column
 $_['column_trans_id']				= 'Transaction ID';
-$_['column_amount']					= 'Amount';
+$_['column_amount']					= 'Итого';
 $_['column_type']					= 'Payment type';
-$_['column_status']					= 'Status';
+$_['column_status']					= 'Статус';
 $_['column_pend_reason']			= 'Pending reason';
-$_['column_date_added']				= 'Created';
-$_['column_action']					= 'Action';
+$_['column_date_added']				= 'Дата добавления';
+$_['column_action']					= 'Действие';
 
 // Tab
-$_['tab_settings']					= 'Settings';
-$_['tab_order_status']				= 'Order Status';
+$_['tab_settings']					= 'Настройки';
+$_['tab_order_status']				= 'Статус';
 $_['tab_checkout_customisation']	= 'Checkout Customisation';
 
 // Entry
@@ -127,16 +130,16 @@ $_['entry_username']				= 'API Username';
 $_['entry_password']				= 'API Password';
 $_['entry_signature']				= 'API Signature';
 $_['entry_test']					= 'Test Mode';
-$_['entry_total']					= 'Total';
-$_['entry_order_status']			= 'Order Status:';
+$_['entry_total']					= 'Всего';
+$_['entry_order_status']			= 'Состояние заказа:';
 $_['entry_geo_zone']				= 'Geo Zone:';
-$_['entry_status']					= 'Status:';
+$_['entry_status']					= 'Статус:';
 $_['entry_sort_order']				= 'Sort Order:';
 $_['entry_transaction_method']		= 'Transaction method:';
 $_['entry_transaction_id']			= 'Transaction ID';
 $_['entry_full_refund']				= 'Full refund';
-$_['entry_amount']					= 'Amount';
-$_['entry_message']					= 'Message';
+$_['entry_amount']					= 'Итого';
+$_['entry_message']					= 'Сообщение';
 $_['entry_ipn_url']					= 'IPN URL:';
 $_['entry_checkout_method']			= 'Checkout Method:';
 $_['entry_debug']					= 'Debug mode:';
@@ -162,12 +165,12 @@ $_['button_capture']				= 'Capture';
 $_['button_reauthorise']			= 'Reauthorise';
 
 // Error
-$_['error_permission']				= 'Warning: You do not have permission to modify payment PayPal Website Payment Pro iFrame (UK)!';
+$_['error_permission']				= 'У вас недостаточно прав для внесения изменений!';
 $_['error_sig']						= 'Signature Required!';
 $_['error_user']					= 'User Required!';
 $_['error_password']				= 'Password Required!';
 $_['error_timeout']					= 'Request timed out';
 $_['error_transaction_missing']		= 'Could not find the transaction';
 $_['error_missing_data']			= 'Missing data';
-$_['error_general']					= 'There was an error';
+$_['error_general']					= 'Возникла ошибка';
 $_['error_capture_amt']				= 'Enter an amount to capture';

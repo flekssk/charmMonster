@@ -26,7 +26,7 @@
                         <tbody>
                         <?php
                         /**
-                         * @var \App\Models\Blog\Post $Category
+                         * @var \App\Models\Blog\Article $Category
                          */
                         ?>
                         @forelse($posts->items() as $post)

@@ -1,24 +1,27 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
-$_['heading_title']    = 'Кредит системы Klarna';
+$_['heading_title']    = 'Klarna Fee';
 
 // Text
-$_['text_extension']   = 'Общая сумма заказа';
-$_['text_success']     = 'Настройки модуля обновлены!';
-$_['text_edit']        = 'Редактирование модуля';
-$_['text_sweden']           = 'Швеция';
-$_['text_norway']           = 'Норвегия';
-$_['text_finland']          = 'Финляндия';
-$_['text_denmark']          = 'Дания';
-$_['text_germany']          = 'Германия';
-$_['text_netherlands']      = 'Нидерланды';
+$_['text_total']       = 'Учитывать в заказе';
+$_['text_success']     = 'Настройки успешно изменены!';
+$_['text_edit']        = 'Редактирование';
+$_['text_sweden']      = 'Sweden';
+$_['text_norway']      = 'Norway';
+$_['text_finland']     = 'Finland';
+$_['text_denmark']     = 'Denmark';
+$_['text_germany']     = 'Germany';
+$_['text_netherlands'] = 'The Netherlands';
 
 // Entry
-$_['entry_total']      = 'Сумма заказа:';
-$_['entry_fee']        = 'Плата:';
-$_['entry_tax_class']  = 'Класс налога:';
-$_['entry_status']     = 'Статус:';
-$_['entry_sort_order'] = 'Порядок сортировки:';
+$_['entry_total']      = 'Order Total';
+$_['entry_fee']        = 'Invoice Fee';
+$_['entry_tax_class']  = 'Класс налога';
+$_['entry_status']     = 'Статус';
+$_['entry_sort_order'] = 'Порядок сортировки';
 
 // Error
-$_['error_permission'] = 'У вас нет прав для управления этим модулем!';
+$_['error_permission'] = 'У вас недостаточно прав для внесения изменений!';

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin\Blog;
 
 use App\Http\Controllers\Admin\AdminController;
-use App\Models\Blog\Post;
-use App\Models\Blog\PostsImage;
-use App\Repositories\Blog\PostsRepository;
+use App\Models\Blog\Article;
+use App\Models\Blog\ArticleImage;
+use App\Repositories\Blog\ArticlesRepository;
 use App\Requests\Admin\Blog\PostFormRequest;
 use Illuminate\Http\Request;
 
@@ -13,7 +13,7 @@ class PostController extends AdminController
 {
     public function index(Request $request)
     {
-        return view('admin.blog.index', ['posts' => PostsRepository::all()]);
+        return view('admin.blog.index', ['posts' => ArticlesRepository::all()]);
     }
 
     public function create(Request $request)
@@ -23,7 +23,7 @@ class PostController extends AdminController
 
     public function store(PostFormRequest $request)
     {
-        $post = new Post();
+        $post = new Article();
 
         $post->title         = $request->title;
         $post->short_content = $request->get('short_content');
@@ -33,7 +33,7 @@ class PostController extends AdminController
 
         if ($post->save()) {
             foreach ($request->images as $file) {
-                $image          = new PostsImage();
+                $image          = new ArticleImage();
                 $image->image   = $file;
                 $image->post_id = $post->id;
 
@@ -44,12 +44,12 @@ class PostController extends AdminController
         return redirect(action('Admin\Blog\PostController@index'));
     }
 
-    public function edit(Post $post)
+    public function edit(Article $post)
     {
         return view('admin.blog.edit', compact('post'));
     }
 
-    public function update(Post $post, PostFormRequest $request)
+    public function update(Article $post, PostFormRequest $request)
     {
         $post->title         = $request->title;
         $post->short_content = $request->get('short_content');
@@ -62,7 +62,7 @@ class PostController extends AdminController
             if ($request->has('images')) {
                 foreach ($request->images as $file) {
                     if (!$existedImage->has($file)) {
-                        $image          = new PostsImage();
+                        $image          = new ArticleImage();
                         $image->image   = $file;
                         $image->post_id = $post->id;
 
@@ -81,7 +81,7 @@ class PostController extends AdminController
         return redirect(action('Admin\Blog\PostController@index'));
     }
 
-    public function destroy(Post $post)
+    public function destroy(Article $post)
     {
         $post->delete();
 

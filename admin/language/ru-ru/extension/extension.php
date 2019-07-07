@@ -1,21 +1,24 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
-$_['heading_title']  = 'Дополнения';
+$_['heading_title']  = 'Расширения';
 
 // Text
-$_['text_success']   = 'Дополнение успешно изменено!';
-$_['text_list']      = 'Список дополнений';
-$_['text_type']      = 'Выберите дополнение из списка:';
+$_['text_success']   = 'Настройки успешно изменены!';
+$_['text_list']      = 'Список расширений';
+$_['text_type']      = 'Выберите тип расширения';
 $_['text_filter']    = 'Фильтр';
-$_['text_analytics'] = 'Каналы продвижения';
-$_['text_captcha']   = 'Captcha';
-$_['text_dashboard'] = 'Панель управления';
-$_['text_feed']      = 'Отзывы';
-$_['text_fraud']     = 'Защита от мошенничества';
+$_['text_analytics'] = 'Аналитикс';
+$_['text_captcha']   = 'Капча';
+$_['text_dashboard'] = 'Панель состояния';
+$_['text_feed']      = 'Каналы продвижения';
+$_['text_fraud']     = 'Анти Фрод';
 $_['text_module']    = 'Модули';
-$_['text_content']   = 'Модули контента';
-$_['text_menu']      = 'Модули меню';
-$_['text_payment']   = 'Платежи';
+$_['text_content']   = 'Модули Контента';
+$_['text_menu']      = 'Модули Меню';
+$_['text_payment']   = 'Оплата';
 $_['text_shipping']  = 'Доставка';
 $_['text_theme']     = 'Шаблоны';
-$_['text_total']     = 'Заказы';
+$_['text_total']     = 'Учитывать в заказе';

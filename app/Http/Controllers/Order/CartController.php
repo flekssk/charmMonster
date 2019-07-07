@@ -3,13 +3,20 @@
 namespace App\Http\Controllers\Order;
 
 use App\Extensions\Cart\CartFacade;
+use App\Http\Controllers\Controller;
 use App\Requests\Order\ProductToCartFormRequest;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Session;
 
-class CartController
+class CartController extends Controller
 {
+    public function index(Request $request)
+    {
+        return view('cart.index', ['products' => CartFacade::getProducts()]);
+    }
+
     public function addToCart(ProductToCartFormRequest $request)
     {
         /** @var Collection $products */

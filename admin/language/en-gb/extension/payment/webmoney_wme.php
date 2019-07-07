@@ -9,7 +9,7 @@ $_['button_clear']            = 'Очистить журнал';
 $_['tab_log']                 = 'Журнал';
 
 // Text 
-$_['text_payment']            = 'Оплаты';
+$_['text_extension']          = 'Платежи';
 $_['text_success']            = 'Настройки модуля обновлены!';
 $_['text_webmoney_wme']       = '<a style="cursor: pointer;" onclick="window.open(\'https://webmoney.ru\');"><img src="view/image/payment/webmoney_wme.gif" alt="Webmoney" title="Webmoney" style="border: 1px solid #EEEEEE;" height="25px" /></a>';
 $_['text_clear_log_success']  = 'Журнал запросов от сервера платежной системы успешно очищен!';

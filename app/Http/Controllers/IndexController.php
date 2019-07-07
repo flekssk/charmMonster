@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\Blog\PostsRepository;
+use App\Repositories\Blog\ArticlesRepository;
 use App\Repositories\Category\CategoriesRepository;
 use App\Repositories\Product\ProductRepository;
 use App\Repositories\Settings\MainSliderImagesRepositories;
@@ -18,7 +18,7 @@ class IndexController extends Controller
                 'products'     => ProductRepository::getOnMain(),
                 'categories'   => CategoriesRepository::getOnMain(),
                 'sliderImages' => MainSliderImagesRepositories::all(),
-                'posts'        => PostsRepository::getOnMain(),
+                'posts'        => ArticlesRepository::getOnMain(),
             ]
         );
     }

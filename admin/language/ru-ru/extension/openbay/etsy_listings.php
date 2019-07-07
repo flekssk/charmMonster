@@ -1,4 +1,7 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Headings
 $_['heading_title']        		= 'Etsy listings';
 $_['text_openbay']              = 'OpenBay Pro';
@@ -8,7 +11,7 @@ $_['text_etsy']                 = 'Etsy';
 $_['text_link_saved']           = 'Item has been linked';
 $_['text_activate']         	= 'Activate';
 $_['text_deactivate']         	= 'Deactivate';
-$_['text_add_link']         	= 'Add link';
+$_['text_add_link']         	= 'Добавить ссылку';
 $_['text_delete_link']         	= 'Delete link';
 $_['text_delete']         		= 'Delete listing';
 $_['text_status_stock']         = 'Stock not synced';
@@ -31,13 +34,13 @@ $_['column_listing_qty']		= 'Listing quantity';
 $_['column_store_qty']			= 'Store quantity';
 $_['column_status']				= 'Status message';
 $_['column_link_status']		= 'Link status';
-$_['column_action']				= 'Action';
+$_['column_action']				= 'Действие';
 
 // Entry
 $_['entry_limit']				= 'Page limit';
-$_['entry_status']				= 'Status';
-$_['entry_keywords']			= 'Keywords';
-$_['entry_name']				= 'Product name';
+$_['entry_status']				= 'Статус';
+$_['entry_keywords']			= 'Ключевые слова';
+$_['entry_name']				= 'Название товара';
 $_['entry_etsy_id']				= 'Etsy item ID';
 
 // Help

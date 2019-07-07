@@ -28,4 +28,9 @@ class Cart
     {
         return $this->products;
     }
+
+    public function totalPrice()
+    {
+        return $this->products->totalPrice();
+    }
 }

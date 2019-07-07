@@ -1,24 +1,27 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']					= 'View Transaction';
 
 // Text
-$_['text_pp_express']				= 'PayPal Express Checkout';
+$_['text_pp_express']				= 'PayPal Express (включая Кредитные и Дебетовые карты)';
 $_['text_product_lines']			= 'Product lines';
 $_['text_ebay_txn_id']				= 'eBay transaction ID';
 $_['text_name']						= 'Name';
-$_['text_qty']						= 'Quantity';
-$_['text_price']					= 'Price';
+$_['text_qty']						= 'Количество';
+$_['text_price']					= 'Цена';
 $_['text_number']					= 'Number';
 $_['text_coupon_id']				= 'Coupon ID';
 $_['text_coupon_amount']			= 'Coupon amount';
 $_['text_coupon_currency']			= 'Coupon currency';
 $_['text_loyalty_disc_amt']			= 'Loyalty card disc amount';
 $_['text_loyalty_currency']			= 'Loyalty card currency';
-$_['text_options_name']				= 'Options name';
+$_['text_options_name']				= 'Опции name';
 $_['text_tax_amt']					= 'Tax amount';
 $_['text_currency_code']			= 'Currency code';
-$_['text_amount']					= 'Amount';
+$_['text_amount']					= 'Итого';
 $_['text_gift_msg']					= 'Gift message';
 $_['text_gift_receipt']				= 'Gift receipt';
 $_['text_gift_wrap_name']			= 'Gift wrap name';
@@ -74,7 +77,7 @@ $_['text_protect_elig']				= 'Protection eligibility';
 $_['text_protect_elig_type']		= 'Protection eligibility type';
 $_['text_store_id']					= 'Store ID';
 $_['text_terminal_id']				= 'Terminal ID';
-$_['text_invoice_number']			= 'Invoice number';
+$_['text_invoice_number']			= 'Номер счета';
 $_['text_custom']					= 'Custom';
 $_['text_note']						= 'Note';
 $_['text_sales_tax']				= 'Sales tax';

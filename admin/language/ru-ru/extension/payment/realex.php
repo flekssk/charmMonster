@@ -1,21 +1,24 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']					 = 'Realex Redirect';
 
 // Text
-$_['text_payment']				  	 = 'Платежи';
+$_['text_payment']				  	 = 'Платеж';
 $_['text_success']					 = 'Success: You have modified Realex account details!';
-$_['text_edit']                      = 'Edit Realex Redirect';
+$_['text_edit']                      = 'Редактирование';
 $_['text_live']						 = 'Live';
-$_['text_demo']						 = 'Демо';
+$_['text_demo']						 = 'Demo';
 $_['text_card_type']				 = 'Тип карты';
 $_['text_enabled']					 = 'Включено';
-$_['text_use_default']				 = 'Использовать по умолчанию';
-$_['text_merchant_id']				 = 'ID Продавца';
-$_['text_subaccount']				 = 'Субсчет';
-$_['text_secret']					 = 'Общий секрет';
+$_['text_use_default']				 = 'Use default';
+$_['text_merchant_id']				 = 'Merchant ID';
+$_['text_subaccount']				 = 'Subaccount';
+$_['text_secret']					 = 'Shared secret';
 $_['text_card_visa']				 = 'Visa';
-$_['text_card_master']				 = 'MasterCard';
+$_['text_card_master']				 = 'Mastercard';
 $_['text_card_amex']				 = 'American Express';
 $_['text_card_switch']				 = 'Switch/Maestro';
 $_['text_card_laser']				 = 'Laser';
@@ -25,21 +28,21 @@ $_['text_capture_ok_order']			 = 'Capture was successful, order status updated t
 $_['text_rebate_ok']				 = 'Rebate was successful';
 $_['text_rebate_ok_order']			 = 'Rebate was successful, order status updated to rebated';
 $_['text_void_ok']					 = 'Void was successful, order status updated to voided';
-$_['text_settle_auto']				 = 'Автоматически';
-$_['text_settle_delayed']			 = 'Отложено';
+$_['text_settle_auto']				 = 'Auto';
+$_['text_settle_delayed']			 = 'Delayed';
 $_['text_settle_multi']				 = 'Multi';
 $_['text_url_message']				 = 'You must supply the store URL to your Realex account manager before going live';
-$_['text_payment_info']				 = 'Информация об оплате';
+$_['text_payment_info']				 = 'Платёжные реквизиты';
 $_['text_capture_status']			 = 'Payment captured';
-$_['text_void_status']				 = 'Оплата аннулирована';
+$_['text_void_status']				 = 'Payment voided';
 $_['text_rebate_status']			 = 'Payment rebated';
 $_['text_order_ref']				 = 'Order ref';
 $_['text_order_total']				 = 'Total authorised';
 $_['text_total_captured']			 = 'Total captured';
-$_['text_transactions']				 = 'Transactions';
-$_['text_column_amount']			 = 'Amount';
-$_['text_column_type']				 = 'Type';
-$_['text_column_date_added']		 = 'Created';
+$_['text_transactions']				 = 'Операции';
+$_['text_column_amount']			 = 'Итого';
+$_['text_column_type']				 = 'Тип';
+$_['text_column_date_added']		 = 'Дата добавления';
 $_['text_confirm_void']				 = 'Are you sure you want to void the payment?';
 $_['text_confirm_capture']			 = 'Are you sure you want to capture the payment?';
 $_['text_confirm_rebate']			 = 'Are you sure you want to rebate the payment?';
@@ -51,10 +54,10 @@ $_['entry_secret']					 = 'Shared secret';
 $_['entry_rebate_password']			 = 'Rebate password';
 $_['entry_total']					 = 'Всего';
 $_['entry_sort_order']				 = 'Порядок сортировки';
-$_['entry_geo_zone']				 = 'Регион';
-$_['entry_status']					 = 'Состояние';
-$_['entry_debug']					 = 'Журнал отладки';
-$_['entry_live_demo']				 = 'Live / Демо';
+$_['entry_geo_zone']				 = 'Географическая зона';
+$_['entry_status']					 = 'Статус';
+$_['entry_debug']					 = 'Debug logging';
+$_['entry_live_demo']				 = 'Live / Demo';
 $_['entry_auto_settle']				 = 'Settlement type';
 $_['entry_card_select']				 = 'Select card';
 $_['entry_tss_check']				 = 'TSS checks';
@@ -80,19 +83,19 @@ $_['help_dcc_settle']				 = 'If your subaccount is DCC enabled you must use Auto
 // Tab
 $_['tab_api']					     = 'API Details';
 $_['tab_account']		     		 = 'Accounts';
-$_['tab_order_status']				 = 'Статус заказа';
-$_['tab_payment']					 = 'Настройки платежа';
-$_['tab_advanced']					 = 'Расширенный';
+$_['tab_order_status']				 = 'Статус';
+$_['tab_payment']					 = 'Payment settings';
+$_['tab_advanced']					 = 'Advanced';
 
 // Button
-$_['button_capture']				 = 'Фиксация';
-$_['button_rebate']					 = 'Скидка / Возврат';
+$_['button_capture']				 = 'Capture';
+$_['button_rebate']					 = 'Rebate / refund';
 $_['button_void']					 = 'Void';
 
 // Error
-$_['error_merchant_id']				 = 'Требуется ID продавца';
-$_['error_secret']					 = 'Общий секрет не требуется';
-$_['error_live_url']				 = 'Живой URL-адрес не требуется';
-$_['error_demo_url']				 = 'Демо URL-адрес не требуется';
-$_['error_data_missing']			 = 'Отсутствуют данные';
-$_['error_use_select_card']			 = 'Вы должны иметь «Выбрать карту» включена для субсчет маршрутизации по типу карты для работы';
+$_['error_merchant_id']				 = 'Merchant ID is required';
+$_['error_secret']					 = 'Shared secret is required';
+$_['error_live_url']				 = 'Live URL is required';
+$_['error_demo_url']				 = 'Demo URL is required';
+$_['error_data_missing']			 = 'Data missing';
+$_['error_use_select_card']			 = 'You must have "Select Card" enabled for subaccount routing by card type to work';

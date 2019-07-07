@@ -1,4 +1,7 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']   			= 'Bulk order update';
 $_['text_openbay']              = 'OpenBay Pro';
@@ -6,12 +9,12 @@ $_['text_confirm_title']        = 'Review bulk status update';
 
 // Button
 $_['button_status']           	= 'Change status';
-$_['button_update']           	= 'Update';
+$_['button_update']           	= 'Обновить';
 
 // Column
 $_['column_channel']        	= 'Order Channel';
 $_['column_additional']     	= 'Additional info';
-$_['column_comments']      		= 'Comments';
+$_['column_comments']      		= 'Дополнительная информация';
 $_['column_notify']        		= 'Notify';
 
 // Text
@@ -31,5 +34,5 @@ $_['text_list']					= 'Order list';
 $_['entry_carrier']             = 'Carrier';
 $_['entry_tracking_no']         = 'Tracking';
 $_['entry_other']               = 'Other';
-$_['entry_date_added']          = 'Date Added';
+$_['entry_date_added']          = 'Дата добавления';
 $_['entry_order_channel']       = 'Order channel';

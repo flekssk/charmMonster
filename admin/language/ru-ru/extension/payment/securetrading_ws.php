@@ -1,4 +1,7 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 $_['heading_title'] = 'Secure Trading Web Service';
 
 $_['tab_settings'] = 'Settings';
@@ -53,21 +56,21 @@ $_['entry_currency'] = 'Currency';
 $_['entry_status_code'] = 'Error code';
 $_['entry_payment_type'] = 'Payment Type';
 $_['entry_request'] = 'Request';
-$_['entry_settle_status'] = 'Settlement status';
+$_['entry_settle_status'] = 'Settle Status';
 $_['entry_date_from'] = 'Date From';
 $_['entry_date_to'] = 'Date To';
 $_['entry_hour'] = 'Hour';
 $_['entry_minute'] = 'Minute';
 
 $_['column_order_id'] = 'Order ID';
-$_['column_transaction_reference'] = "Transaction reference";
-$_['column_customer'] = "Customer";
-$_['column_total'] = "Total";
-$_['column_currency'] = "Currency";
-$_['column_settle_status'] = "Settle status";
-$_['column_status'] = "Status";
-$_['column_type'] = "Type";
-$_['column_payment_type'] = "Payment type";
+$_['column_transaction_reference'] = 'Transaction reference';
+$_['column_customer'] = 'Customer';
+$_['column_total'] = 'Total';
+$_['column_currency'] = 'Currency';
+$_['column_settle_status'] = 'Settle status';
+$_['column_status'] = 'Status';
+$_['column_type'] = 'Type';
+$_['column_payment_type'] = 'Payment type';
 
 $_['error_permission'] = 'You do not have permissions to modify this module';
 $_['error_site_reference'] = 'Site Reference is required';
@@ -95,7 +98,7 @@ $_['text_rebate_status'] = 'Payment rebated';
 $_['text_order_ref'] = 'Order ref';
 $_['text_order_total'] = 'Total authorised';
 $_['text_total_released'] = 'Total released';
-$_['text_transactions'] = 'transactions';
+$_['text_transactions'] = 'Transactions';
 $_['text_column_amount'] = 'Amount';
 $_['text_column_type'] = 'Type';
 $_['text_column_created'] = 'Created';

@@ -1,25 +1,28 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
-$_['heading_title']    	= 'Рекомендуемые';
+$_['heading_title']    = 'Рекомендуемые';
 
 // Text
-$_['text_extension']    = 'Модули';
-$_['text_success']      = 'Настройки модуля обновлены!';
-$_['text_edit']        	= 'Редактирование модуля';
+$_['text_module']      = 'Модули';
+$_['text_success']     = 'Настройки успешно изменены!';
+$_['text_edit']        = 'Редактирование';
 
 // Entry
-$_['entry_name']        = 'Название';
-$_['entry_product']     = 'Товары';
-$_['entry_limit']       = 'Лимит';
-$_['entry_width']       = 'Ширина';
-$_['entry_height']      = 'Высота';
-$_['entry_status']      = 'Статус';
+$_['entry_name']       = 'Название модуля';
+$_['entry_product']    = 'Товары';
+$_['entry_limit']      = 'Лимит';
+$_['entry_width']      = 'Ширина';
+$_['entry_height']     = 'Высота';
+$_['entry_status']     = 'Статус';
 
 // Help
-$_['help_product']     = '(Автодополнение)';
+$_['help_product']     = '(Автозаполнение)';
 
 // Error
-$_['error_permission'] = 'У вас нет прав для управления этим модулем!';
-$_['error_name']       = 'Название должно быть от 3 до 64 символа!';
-$_['error_width']      = 'Необходимо указать ширину!';
-$_['error_height']     = 'Необходимо указать высоту!';
+$_['error_permission'] = 'У вас недостаточно прав для внесения изменений!';
+$_['error_name']       = 'Название должно содержать от 3 до 64 символов!';
+$_['error_width']      = 'Укажите Ширину!';
+$_['error_height']     = 'Укажите Высоту!';

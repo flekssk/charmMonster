@@ -1,17 +1,26 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
-$_['heading_title']    = 'Theme Editor';
+$_['heading_title']     = 'Редактор шаблонов';
 
 // Text
-$_['text_success']     = 'Success: You have modified themes!';
-$_['text_edit']        = 'Edit Theme';
-$_['text_store']       = 'Choose your store';
-$_['text_template']    = 'Choose a template';
-$_['text_default']     = 'Default';
-$_['text_warning']     = 'Warning: Security can be compromised using the theme editor!';
-$_['text_access']      = 'Make sure that only the correct admin users are allowed to access this page as you can directly access your stores souce code.';
-$_['text_permission']  = 'You can change the user permissions <a href="%s" class="alert-link">here</a>.';
-$_['text_begin']       = 'Select a theme file from the left side to begin editing.';
+$_['text_success']      = 'Настройки успешно изменены!';
+$_['text_edit']         = 'Редактирование';
+$_['text_store']        = 'Магазин';
+$_['text_template']     = 'Шаблон';
+$_['text_default']      = 'По умолчанию';
+$_['text_history']      = 'История Шаблона';
+$_['text_twig']         = 'Редактор шаблонов использует Twig. Вы можете прочитать <a href="http://twig.sensiolabs.org/documentation" target="_blank" class="alert-link">Синтаксис Twig тут</a>.';
+
+// Column
+$_['column_store']      = 'Магазин';
+$_['column_route']      = 'Путь';
+$_['column_theme']      = 'Шаблон';
+$_['column_date_added'] = 'Дата добавления';
+$_['column_action']     = 'Действие';
 
 // Error
-$_['error_permission'] = 'Warning: You do not have permission to modify the theme editor!';
+$_['error_permission']  = 'У вас недостаточно прав для внесения изменений!';
+$_['error_twig']        = 'Вы можете сохранять только файлы .twig!';

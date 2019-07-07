@@ -1,9 +1,12 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
 $_['heading_title']					= 'BluePay Redirect (Requires SSL)';
 
 // Text
-$_['text_payment']					= 'Платежи';
+$_['text_payment']					= 'Payment';
 $_['text_success']					= 'Success: You have modified BluePay Redirect account details!';
 $_['text_edit']                     = 'Edit BluePay Redirect (Requires SSL)';
 $_['text_bluepay_redirect']			= '<a href="http://www.bluepay.com/preferred-partner/opencart" target="_blank"><img src="view/image/payment/bluepay.jpg" alt="BluePay Redirect" title="BluePay Redirect" style="border: 1px solid #EEEEEE;" /></a>';
@@ -31,11 +34,10 @@ $_['text_column_date_added']		= 'Created';
 $_['text_confirm_void']				= 'Are you sure you want to void the payment?';
 $_['text_confirm_release']			= 'Are you sure you want to release the payment?';
 $_['text_confirm_rebate']			= 'Are you sure you want to rebate the payment?';
-$_['text_extension']                            = 'Платежи';
 
 // Entry
 $_['entry_vendor']					= 'Account ID';
-$_['entry_secret_key']				= "Secret Key";
+$_['entry_secret_key']				= 'Secret Key';
 $_['entry_test']					= 'Test Mode';
 $_['entry_transaction']				= 'Transaction Method';
 $_['entry_total']					= 'Total';
@@ -54,9 +56,9 @@ $_['help_cron_job_token']			= 'Make this long and hard to guess';
 $_['help_cron_job_url']				= 'Set a cron job to call this URL';
 
 // Button
-$_['button_release']					= 'Release';
+$_['button_release']				= 'Release';
 $_['button_rebate']					= 'Rebate / refund';
-$_['button_void']						= 'Void';
+$_['button_void']					= 'Void';
 
 // Error
 $_['error_permission']				= 'Warning: You do not have permission to modify payment BluePay!';

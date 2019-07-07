@@ -1,18 +1,21 @@
 <?php
+// *	@source		See SOURCE.txt for source and other copyright.
+// *	@license	GNU General Public License version 3; see LICENSE.txt
+
 // Heading
-$_['heading_title']     = 'Доставка с оплатой за единицу';
+$_['heading_title']     = 'За единицу товара';
 
 // Text
-$_['text_extension']   = 'Доставка';
-$_['text_success']     = 'Настройки модуля успешно обновлены!';
-$_['text_edit']        = 'Редактирование модуля';
+$_['text_shipping']    = 'Доставка';
+$_['text_success']     = 'Настройки успешно изменены!';
+$_['text_edit']        = 'Редактирование';
 
 // Entry
-$_['entry_cost']       = 'Стоимость:';
-$_['entry_tax_class']  = 'Класс налога:';
-$_['entry_geo_zone']   = 'Географическая зона:';
-$_['entry_status']     = 'Статус:';
-$_['entry_sort_order'] = 'Порядок сортировки:';
+$_['entry_cost']       = 'Стоимость';
+$_['entry_tax_class']  = 'Класс налога';
+$_['entry_geo_zone']   = 'Географическая зона';
+$_['entry_status']     = 'Статус';
+$_['entry_sort_order'] = 'Порядок сортировки';
 
 // Error
-$_['error_permission'] = 'У вас нет прав для управления этим модулем!';
+$_['error_permission'] = 'У вас недостаточно прав для внесения изменений!';

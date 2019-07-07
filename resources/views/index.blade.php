@@ -93,14 +93,14 @@
                 @foreach($posts->items() as $post)
                     <div class="col-4 post">
                         <div class="col-12 title">
-                            {{ $post->title }}
+                            {{ $post->description->name }}
                         </div>
                         <div class="col-12 content">
                             <div class="image col-12">
-                                <img src="{{ $post->images->first()->image }}" alt="">
+                                <img src="{{ getImagePath($post->image) }}" alt="">
                             </div>
                             <div class="text">
-                                {{ strip_tags($post->content) }}
+                                {{ $post->description->meta_description }}
                             </div>
                         </div>
                     </div>

@@ -62,11 +62,11 @@ body {
 
 }
 
-.headerContainer .headerControlPanel .control.cartControlBlock  .cartButton i {
+.headerContainer .headerControlPanel .control.cartControlBlock .cartButton i {
     padding: 4px 8px 5px;
 }
 
-.headerContainer .headerControlPanel .control.cartControlBlock  .cartButton:before {
+.headerContainer .headerControlPanel .control.cartControlBlock .cartButton:before {
     position: absolute;
     border-radius: 50%;
     padding: 0px 6px;
@@ -230,13 +230,19 @@ body {
     z-index: -1;
 }
 
-.topMenuContainer:before {
+.topMenuContainer .menuContent {
+    position: relative;
+}
+
+.topMenuContainer .menuContent:before {
     position: absolute;
     content: ' ';
-    height: 200px;
-    width: 100%;
-    top: 260px;
-    background: url('/public/images/layout/menuLine.png') no-repeat;
+    height: 44px;
+    width: 1920px;
+    top: -19px;
+    left: -386px;
+    background: url(/public/images/layout/menuLine.png) no-repeat;
+    overflow: hidden;
 }
 
 .topMenuContainer .menu {
@@ -357,7 +363,7 @@ body {
     font-size: 20px;
 }
 
-.aboutCompanyContainer .mainTitle {
+.mainTitle {
     background: url(/public/images/layout/title_background.png) no-repeat center;
     background-size: contain;
     width: auto;
@@ -447,7 +453,7 @@ body {
 .categoriesContainer .category {
     border-radius: 10px;
     border: 1px solid #CC0000;
-    box-shadow: 5px 10px 20px rgba(0,0,0,.2);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, .2);
     padding: 10px;
     display: inline-block;
     margin: 0 5px 5px 0;
@@ -585,16 +591,21 @@ body {
     padding: 0;
     border-radius: 5px;
     margin: 0 0 10px;
+    text-align: center;
+    background-color: #c6c6c6;
 }
 
 .blogPostsContainer .post .content .image img {
-    width: 100%;
+    width: auto;
+    height: 200px;
+    min-height: 200px;
+    margin: 0 auto;
 }
 
 .blogPostsContainer .post .content .text {
     background: #E6E0E0;
     border-radius: 5px;
-    height: 300px;
+    height: 250px;
     padding: 10px;
     margin-bottom: 10px;
     font-size: 15pt;
@@ -703,4 +714,86 @@ body {
 .cartWidgetContainer .control a {
     display: inline-block;
     width: 165px;
+}
+
+.qty {
+    width: 105px;
+}
+
+.qty .count {
+    color: #000;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 2px;
+    min-width: 35px;
+    text-align: center;
+    border: 1px solid #ffb2b2;
+    background-color: #ffe2e2;
+    margin: 0;
+}
+
+.qty .clickable {
+    color: white;
+    background-color: #ffe2e2;
+    border: 1px solid #ffb2b2;
+    font-weight: bold;
+}
+
+.qty .clickable:hover {
+    background-color: #ffb2b2!important;
+}
+
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 32px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 0 5px 5px 0;
+}
+
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    width: 30px;
+    padding: 3px;
+    text-align: center;
+    background-clip: padding-box;
+    border-radius: 5px 0 0 5px;
+}
+
+.minus:hover {
+    background-color: #717fe0 !important;
+}
+
+.plus:hover {
+    background-color: #717fe0 !important;
+}
+
+/*Prevent text selection*/
+span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input {
+    border: 0;
+    width: 2%;
+}
+
+nput::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:disabled {
+    background-color: white;
 }

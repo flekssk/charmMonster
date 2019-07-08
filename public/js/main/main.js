@@ -68,9 +68,36 @@ let cartControl = function () {
 
 let cart = new cartControl();
 
+let popup = function () {
+    let caller = this;
+
+    this.initialize = function () {
+        $(document).ready(function () {
+            $('.closePopup').click(caller.hidePopup);
+        });
+    };
+
+    this.showPopup = function () {
+        $('.popupWindow').fadeIn();
+    };
+
+    this.showContent = function (content) {
+        caller.showPopup();
+        $('.popupContent .contentContainer').html(content);
+    };
+
+    this.hidePopup = function () {
+        $('.popupWindow').fadeOut();
+    };
+
+    this.initialize();
+};
+
 cart.initialize();
 
 $(document).ready(function () {
+    $.popupControl = new popup();
+
     $('.categoryBox').click(function () {
         location.href = $(this).data('link');
     });
@@ -101,5 +128,18 @@ $(document).ready(function () {
         if ($('.count').val() == 0) {
             $('.count').val(1);
         }
+    });
+
+    $('.fastLook').click(function () {
+        $.ajax({
+           url: $(this).data('link'),
+           dataType: 'json',
+           success: function (response) {
+               $.popupControl.showContent(response.content);
+               $(document).ready(function () {
+                   var productControl = new product().initialize();
+               });
+           }
+        });
     });
 });

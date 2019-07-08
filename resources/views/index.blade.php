@@ -7,8 +7,6 @@
 @extends('layouts.base.layout')
 
 @push('after_scripts')
-    <script src="{{ asset('js/jquery.glide.min.js') }}"></script>
-    <script src="{{ asset('js/main/mainSlider.js') }}"></script>
 @endpush
 
 @push('after_styles')
@@ -63,30 +61,30 @@
                 <div class="sliderBackground">
                     <div class="sliderBackgroundImage"></div>
                 </div>
+
                 <div class="imagesContainer slider">
-                    <ul class="slides">
-                        <li class="slide">
-                            <div class="box" style="background-color: #1abc9c;">
-                                <img src="{{ getImagePath('catalog/rv7k9hmhonc.jpg') }}" alt="">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ getImagePath('catalog/1.jpg') }}" alt="">
                             </div>
-                            <div class="box" style="background-color: #1abc9c;">
-                                <img src="{{ getImagePath('catalog/rv7k9hmhonc.jpg') }}" alt="">
+                            <div class="carousel-item">
+                                <img src="{{ getImagePath('catalog/wed.jpg') }}" alt="">
                             </div>
-                            <div class="box" style="background-color: #1abc9c;">
-                                <img src="{{ getImagePath('catalog/rv7k9hmhonc.jpg') }}" alt="">
-                            </div>
-                            <div class="box" style="background-color: #1abc9c;">
-                                <img src="{{ getImagePath('catalog/rv7k9hmhonc.jpg') }}" alt="">
-                            </div>
-                        </li>
-                        @foreach($sliderImages->items() as $sliderImage)
-                            <li class="slide">
-                                <div class="box" style="background-color: #1abc9c;">
-                                    <img src="{{ $sliderImage->image }}" alt="">
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="row blogPostsContainer">

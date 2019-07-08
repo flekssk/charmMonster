@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Product;
 use App\Http\Controllers\Controller;
 use App\Models\Product\Product;
 use App\Repositories\Product\ProductRepository;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -17,5 +18,10 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         return view('product.show', compact('product'));
+    }
+
+    public function fastLook(Product $product)
+    {
+        return JsonResponse::create(['content' => view('product.fastLook', compact('product'))->render()]);
     }
 }

@@ -199,7 +199,7 @@
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, .7);
-    padding-top: 25px;
+    padding-top: 7px;
 }
 
 .productContainer .product .image .productControl .buttons {
@@ -209,12 +209,12 @@
 
 .productContainer .product .image .productControl .buttons a.btn {
     margin: 8px 0;
-    padding: 10px 15px;
+    padding: 5px 15px;
     text-align: left;
     font-size: 15px;
 }
 
 .productContainer .product .image .productControl .buttons a.btn .icon {
     float: right;
-    font-size: 25px;
+    font-size: 18px;
 }

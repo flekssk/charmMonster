@@ -7,6 +7,7 @@ Route::get('/', 'IndexController@index');
 Route::prefix('product')->group(function () {
     Route::get('/', 'Product\ProductController@index');
     Route::get('show/{product}', 'Product\ProductController@show');
+    Route::get('fastLook/{product}', 'Product\ProductController@fastLook');
 });
 
 Route::prefix('categories')->group(

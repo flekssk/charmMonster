@@ -1,17 +1,17 @@
-.productContainer {
+.productPage {
     margin-top: 50px;
 }
 
-.productContainer div {
+.productPage div {
     display: inline-block;
 }
 
-.productContainer .images {
+.productPage .images {
     width: 515px;
     padding: 30px;
 }
 
-.productContainer .images .mainImage {
+.productPage .images .mainImage {
     width: 445px;
     margin: 0 auto 10px;
     overflow: hidden;
@@ -21,17 +21,17 @@
     box-shadow: 3px 4px 30px rgba(0, 0, 0, .2);
 }
 
-.productContainer .images .mainImage img {
+.productPage .images .mainImage img {
     width: 100%;
     border: 3px solid #ffb2b2;
     border-radius: 8px;
 }
 
-.productContainer .images .imagesList {
+.productPage .images .imagesList {
     width: 460px;
 }
 
-.productContainer .images .imagesList .image {
+.productPage .images .imagesList .image {
     display: inline-block;
     width: 110px;
     padding: 6px;
@@ -40,19 +40,19 @@
     border-radius: 5px;
 }
 
-.productContainer .images .imagesList .image img {
+.productPage .images .imagesList .image img {
     width: 100%;
     border-radius: 3px;
     border: 2px solid #ffb2b2;
 }
 
-.productContainer .description {
+.productPage .description {
     padding: 31px 0 0 0;
     width: 600px;
     position: relative;
 }
 
-.productContainer .description .descriptionBackground {
+.productPage .description .descriptionBackground {
     position: absolute;
     width: 635px;
     height: 60%;
@@ -61,7 +61,7 @@
     z-index: -2;
 }
 
-.productContainer .description .descriptionBackground:before {
+.productPage .description .descriptionBackground:before {
     content: '';
     position: absolute;
     border: 318px solid transparent;
@@ -70,7 +70,7 @@
     left: 0;
 }
 
-.productContainer .description .descriptionBackground:after {
+.productPage .description .descriptionBackground:after {
     content: '';
     position: absolute;
     border: 318px solid transparent;
@@ -79,7 +79,7 @@
     left: 0;
 }
 
-.productContainer .description .title {
+.productPage .description .title {
     width: 560px;
     background-color: #f5c7c7;
     text-align: center;
@@ -89,17 +89,17 @@
     margin: 0 40px;
 }
 
-.productContainer .description .title span {
+.productPage .description .title span {
     vertical-align: middle;
 }
 
-.productContainer .description .text {
+.productPage .description .text {
     padding: 20px;
     position: relative;
     margin-bottom: 60px;
 }
 
-.productContainer .description .text .textBackground {
+.productPage .description .text .textBackground {
     position: absolute;
     left: -100px;
     background-color: #CDCDCD;
@@ -110,11 +110,11 @@
     border-bottom: 10px solid #fff;
 }
 
-.productContainer .description .text .description {
+.productPage .description .text .description {
     line-height: 19px !important;
 }
 
-.productContainer .description .text .control {
+.productPage .description .text .control {
     background-color: #000;
 }
 

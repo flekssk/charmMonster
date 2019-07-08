@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="{{ asset('css/main/product.css') }}">
 @endpush
 
+
+@push('after_scripts')
+    <script src="{{ asset('js/main/product.js') }}"></script>
+@endpush
+
 @extends('layouts.base.layout')
 
 @section('content')
     <div class="contentContainer">
         <div class="container">
-            <div class="row productContainer">
+            <div class="row productPage">
                 <div class="images">
                     <div class="mainImage">
                         <img src="{{ getImagePath($product->image) }}" alt="">

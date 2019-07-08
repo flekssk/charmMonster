@@ -15,3 +15,7 @@
 2019-07-07 20:18:25 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
 2019-07-07 20:18:25 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
 2019-07-07 20:18:25 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-07 20:24:37 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-07 20:24:37 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-07 20:24:37 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-07 20:24:37 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108

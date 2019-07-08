@@ -11,6 +11,7 @@ use Illuminate\Support\Arr;
 @push('after_styles')
     <link rel="stylesheet" href="{{ asset('css/main/mainSlider.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main/products.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main/product.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet"
@@ -20,6 +21,7 @@ use Illuminate\Support\Arr;
 
 @push('after_scripts')
     <script src="{{ asset('js/main/products.js') }}"></script>
+    <script src="{{ asset('js/main/product.js') }}"></script>
 @endpush
 
 @section('content')
@@ -89,6 +91,12 @@ use Illuminate\Support\Arr;
                                         <div class="buttons">
                                             <a class="btn btn-product-control"
                                                href="{{ action('Product\ProductController@show', ['product' => $product->product_id]) }}"
+                                            >
+                                                Просмотр
+                                                <i class="icon fa fa-eye"></i>
+                                            </a>
+                                            <a class="btn btn-product-control fastLook"
+                                               data-link="{{ action('Product\ProductController@fastLook', ['product' => $product->product_id]) }}"
                                             >
                                                 Быстрый просмотр
                                                 <i class="icon fa fa-eye"></i>

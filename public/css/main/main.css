@@ -600,6 +600,7 @@ body {
     margin: 0 0 10px;
     text-align: center;
     background-color: #c6c6c6;
+    overflow: hidden;
 }
 
 .blogPostsContainer .post .content .image img {

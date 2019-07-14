@@ -38,7 +38,7 @@ class VKUserLink extends Model
             $link = new static();
 
             $link->vk_id   = $user->id;
-            $link->user_id = $newUser->id;
+            $link->user_id = $newUser->user_id;
 
             $link->save();
         }

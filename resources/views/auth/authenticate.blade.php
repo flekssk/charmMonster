@@ -9,7 +9,7 @@
             >
                 <i class="fa fa-vk"></i> ВКонтакте
             </a>
-            <a href="{{ action('User\VKAuthController@redirectToProvider') }}"
+            <a href="{{ action('User\InstagramAuthController@redirectToProvider') }}"
                class="btn btn-instagram authButton"
             >
                 <i class="fa fa-instagram"></i> Instagram

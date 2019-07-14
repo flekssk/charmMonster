@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use App\Models\User\User;
+use App\Models\User\VKUser;
 use Backpack\Base\app\Models\Traits\InheritsRelationsFromParentModel;
 use Backpack\Base\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;
 
-class BackpackUser extends User
+class BackpackVKUser extends VKUser
 {
     use InheritsRelationsFromParentModel;
 

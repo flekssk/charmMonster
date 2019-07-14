@@ -7,6 +7,7 @@ use App\Repositories\Category\CategoriesRepository;
 use App\Repositories\Product\ProductRepository;
 use App\Repositories\Settings\MainSliderImagesRepositories;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {

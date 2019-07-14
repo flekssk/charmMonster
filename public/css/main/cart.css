@@ -85,7 +85,7 @@
     left: 40px;
     height: 120px;
     width: 100%;
-    background: linear-gradient(to right, #ffe1e1, #ffcdcd);
+    background: linear-gradient(to right, #ffe1e1, #fbe3e3);
 }
 
 .cartProductContainer .imageContainer {
@@ -103,6 +103,7 @@
 }
 
 .cartProductContainer .information {
+
     padding: 65px 10px 65px 65px;
     font-size: 23px;
 }
@@ -115,10 +116,12 @@
     display: inline-block;
 }
 
+
 .cartProductContainer .information .name {
     color: #995c5c;
     width: 300px;
     background-color: none;
+    text-align: center;
 }
 
 
@@ -129,4 +132,15 @@
 
 .cartProductContainer .information .delete {
     float: right;
+    margin: 5px 0 0 0;
+    border: 3px solid #ededed;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    padding: 6px 8px;
+    font-size: 15px;
+    background-color: #ffb2b2;
+    color: #ededed;
+    box-shadow: 1px 3px 7px rgba(0,0,0,.2);
+    cursor: pointer;
 }

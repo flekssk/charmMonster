@@ -85,38 +85,12 @@ abstract class EloquentRepository extends BaseRepository implements Repository, 
     }
 
     /**
-     * Return new repository instance
-     *
-     * @param array $attributes
-     *
-     * @return static
-     */
-    public static function newInstance(array $attributes = array())
-    {
-        return (new static($attributes));
-    }
-
-    /**
      * @return Model
      */
     public function newModelInstance()
     {
         $name = $this->getModelAlias();
         return new $name();
-    }
-
-    /**
-     * This object not singleton, but can be created only by self methods all() getWhere() etc.
-     *
-     * EloquentRepository constructor.
-     *
-     * @param array $attributes
-     */
-    protected function __construct($attributes = array())
-    {
-        $this->setRawAttributes($attributes);
-
-        return $this;
     }
 
     /**
@@ -266,24 +240,5 @@ abstract class EloquentRepository extends BaseRepository implements Repository, 
         $this->setItems($this->callModelStatic($method, $params));
 
         return $this;
-    }
-
-    /**
-     * @param  Collection $items
-     *
-     * @return EloquentRepository
-     */
-    protected function setItems($items)
-    {
-        $this->items = $items;
-
-        $this->afterSetItems();
-
-        return $this;
-    }
-
-
-    protected function afterSetItems()
-    {
     }
 }

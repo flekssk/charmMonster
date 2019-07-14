@@ -20,10 +20,10 @@
             </div>
             <div class="col-3 align-self-end headerControlPanel">
                 <div class="control">
-                    <span class="userName">Алексей Осипов</span>
+                    <span class="userName">{{ \App\Extensions\User\CharmUser::name() }}</span>
                 </div>
                 <div class="control">
-                    <span class="controlButton"><i class="fa fa-user"></i></span>
+                    <span class="controlButton authenticate"><i class="fa fa-user"></i></span>
                 </div>
                 <div class="control cartControlBlock">
                     <span class="controlButton cartButton">
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="col-2 item">
-                <a class="mainItem">БЛОГ</a>
+                <a class="mainItem" href="{{ action('Blog\BlogController@index') }}">БЛОГ</a>
             </div>
             <div class="col-2 item">
                 <a class="mainItem">КОНТАКТЫ</a>

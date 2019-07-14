@@ -13,7 +13,7 @@ class Product extends Model
     protected $primaryKey = 'product_id';
 
     protected $route = 'Admin\Product\ProductController';
-
+    
     public function getMainImage()
     {
         return new File($this->image);
@@ -38,7 +38,7 @@ class Product extends Model
     {
         $images = collect();
 
-        if($this->image) {
+        if ($this->image) {
             $images->put($this->image, $this->image);
         }
 

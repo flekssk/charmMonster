@@ -15,6 +15,8 @@ class Article extends Model
 {
     protected $table = 'article';
 
+    protected $primaryKey = 'article_id';
+
     public function images()
     {
         return $this->hasMany(ArticleImage::class);

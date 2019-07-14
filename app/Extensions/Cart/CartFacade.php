@@ -2,7 +2,6 @@
 
 namespace App\Extensions\Cart;
 
-use App\Repositories\Product\ProductRepository;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\View\View;
 
@@ -10,10 +9,16 @@ use Illuminate\View\View;
  * Class CartFacade
  * @package App\Extensions\Cart
  *
- * @method static ProductRepository getProducts()
+ * @method static CartProductsRepository getProducts()
  * @method static int productsCount()
  * @method static View renderWidget()
  * @method static View totalPrice()
+ * @method static View productTotalPrice(int $productId)
+ * @method static View increaseProduct(int $productId)
+ * @method static View reduceProduct(int $productId)
+ * @method static View addProduct(int $productId)
+ * @method static View removeProduct(int $productId)
+ * @method static View changeProductCount(int $productId, int $count)
  */
 class CartFacade extends Facade
 {

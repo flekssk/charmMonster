@@ -4,11 +4,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController@index');
 
-Route::prefix('product')->group(function () {
-    Route::get('/', 'Product\ProductController@index');
-    Route::get('show/{product}', 'Product\ProductController@show');
-    Route::get('fastLook/{product}', 'Product\ProductController@fastLook');
-});
+Route::prefix('product')->group(
+    function () {
+        Route::get('/', 'Product\ProductController@index');
+        Route::get('show/{product}', 'Product\ProductController@show');
+        Route::get('fastLook/{product}', 'Product\ProductController@fastLook');
+    });
 
 Route::prefix('categories')->group(
     function () {
@@ -17,7 +18,6 @@ Route::prefix('categories')->group(
 
 Route::prefix('order')->group(
     function () {
-
     });
 
 Route::prefix('cart')->group(
@@ -25,4 +25,22 @@ Route::prefix('cart')->group(
         Route::get('/', 'Order\CartController@index');
         Route::post('addToCart', 'Order\CartController@addToCart')->middleware([]);
         Route::delete('removeFromCart', 'Order\CartController@removeFromCart')->middleware([]);
-    });
+        Route::post('changeCount', 'Order\CartController@changeCount')->middleware([]);
+    }
+);
+
+Route::prefix('blog')->group(
+    function () {
+        Route::get('/', 'Blog\BlogController@index');
+        Route::get('show/{article}', 'Blog\BlogController@show');
+    }
+);
+
+Route::get('login/vk', 'User\VKAuthController@redirectToProvider');
+Route::get('login/vk/callback', 'User\VKAuthController@handleProviderCallback');
+
+Route::get('login/instagram', 'User\InstagramAuthController@redirectToProvider');
+Route::get('login/instagram/callback', 'User\InstagramAuthController@handleProviderCallback');
+
+Route::get('login/authenticate', 'User\UserController@authenticate');
+Route::get('login/logout', 'User\UserController@logout');

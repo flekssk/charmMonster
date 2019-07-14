@@ -7,8 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Requests\Order\ProductToCartFormRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
@@ -19,36 +17,38 @@ class CartController extends Controller
 
     public function addToCart(ProductToCartFormRequest $request)
     {
-        /** @var Collection $products */
-        $products = Session::get('cart.products', collect());
-
-        $products->put($request->product_id, $request->product_id);
-
-        Session::put('cart.products', $products);
+        CartFacade::addProduct($request->product_id);
 
         return JsonResponse::create(
             [
                 'success'       => true,
                 'widgetContent' => CartFacade::renderWidget()->render(),
+                'totalPrice'    => CartFacade::totalPrice(),
             ]
         );
     }
 
     public function removeFromCart(ProductToCartFormRequest $request)
     {
-        /** @var Collection $products */
-        $products = Session::get('cart.products', collect());
-
-        Session::forget('cart.products');
-
-        $products->forget($request->product_id);
-
-        Session::put('cart.products', $products);
+        CartFacade::removeProduct($request->product_id);
 
         return JsonResponse::create(
             [
                 'success'       => true,
                 'widgetContent' => CartFacade::renderWidget()->render(),
+                'totalPrice'    => CartFacade::totalPrice(),
+            ]
+        );
+    }
+
+    public function changeCount(Request $request)
+    {
+        CartFacade::changeProductCount($request->product_id, $request->count);
+
+        return JsonResponse::create(
+            [
+                'totalPrice'        => CartFacade::totalPrice(),
+                'productTotalPrice' => CartFacade::productTotalPrice($request->product_id),
             ]
         );
     }

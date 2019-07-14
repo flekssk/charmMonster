@@ -65,8 +65,8 @@
                 <div class="imagesContainer slider">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="carouselIndicator active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1" class="carouselIndicator"></li>
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -89,7 +89,7 @@
             </div>
             <div class="row blogPostsContainer">
                 @foreach($posts->items() as $post)
-                    <div class="col-4 post">
+                    <div class="col-4 post" data-link="{{ action('Blog\BlogController@show', ['article' => $post->article_id]) }}">
                         <div class="col-12 title">
                             {{ $post->description->name }}
                         </div>
@@ -100,6 +100,12 @@
                             <div class="text">
                                 {{ $post->description->meta_description }}
                             </div>
+                            <b>{{ \Illuminate\Support\Carbon::make($post->date_added)->format('m-d-Y') }}</b>
+                            <b>
+                                <a style="float: right;" href="{{ action('Blog\BlogController@show', ['article' => $post->article_id]) }}">
+                                    Подробнее
+                                </a>
+                            </b>
                         </div>
                     </div>
                 @endforeach

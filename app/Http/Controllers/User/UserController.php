@@ -3,21 +3,19 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
 
 class UserController extends Controller
 {
-    public function index()
+    public function authenticate()
     {
-
+        return JsonResponse::create(['content' => view('auth.authenticate')->render()]);
     }
 
-    public function show()
+    public function logout()
     {
+        session()->forget('user');
 
-    }
-
-    public function register()
-    {
-
+        return redirect('/');
     }
 }

@@ -22,6 +22,6 @@ class ProductController extends Controller
 
     public function fastLook(Product $product)
     {
-        return JsonResponse::create(['content' => view('product.fastLook', compact('product'))->render()]);
+        return JsonResponse::create(['content' => view('product.fastShow', compact('product'))->render()]);
     }
 }

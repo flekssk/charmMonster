@@ -39,17 +39,24 @@ body {
     border-color: #fff;
 }
 
+.headerContainer .headerContacts .contactButton.emailButton {
+    padding-top: 4px;
+}
+
 .headerContainer .headerContacts .contactButton.vkButton {
-    padding-right: 3px;
-    padding-left: 5px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-left: 7px;
 }
 
 .headerContainer .headerContacts .contactButton.phoneButton {
     padding-right: 5px;
     padding-left: 8px;
+    padding-top: 4px;
 }
 
 .headerContainer .headerContacts .contactButton.instagramButton {
+    padding-top: 4px;
     padding-right: 5px;
 }
 
@@ -280,7 +287,7 @@ body {
     height: 200%;
     width: 51px;
     background: url(/public/images/layout/menuHovered.png) no-repeat;
-    top: -13px;
+    top: -14px;
     display: none;
     left: 45px;
 }
@@ -517,7 +524,7 @@ body {
     width: 100%;
 }
 
-.sliderContainer .sliderBackground {
+.sliderBackground {
     position: absolute;
     left: -25%;
     top: 15%;
@@ -529,7 +536,7 @@ body {
     z-index: -2;
 }
 
-.sliderContainer .sliderBackground .sliderBackgroundImage {
+.sliderBackground .sliderBackgroundImage {
     position: absolute;
     left: -25%;
     top: 15%;
@@ -543,7 +550,7 @@ body {
     margin-bottom: 30px;
 }
 
-.sliderContainer .sliderBackground .sliderBackgroundImage {
+.sliderBackground .sliderBackgroundImage {
     height: 70%;
     width: 150%;
     background-size: contain;
@@ -552,7 +559,6 @@ body {
     background-clip: padding-box;
     margin-bottom: 30px;
 }
-
 
 .blogPostsContainer {
     background: #D6CCCC;
@@ -564,6 +570,7 @@ body {
 .blogPostsContainer .post {
     padding: 10px;
     display: inline-block;
+    cursor: pointer;
     margin: 0;
 }
 
@@ -717,55 +724,72 @@ body {
 }
 
 .qty {
-    width: 105px;
+    width: 100px;
+    height: 30px;
 }
 
 .qty .count {
     color: #000;
     display: inline-block;
-    vertical-align: top;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 30px;
     padding: 0 2px;
     min-width: 35px;
     text-align: center;
+    height: 25px;
     border: 1px solid #ffb2b2;
     background-color: #ffe2e2;
     margin: 0;
+    vertical-align: bottom;
 }
 
 .qty .clickable {
-    color: white;
+    display: inline-block;
     background-color: #ffe2e2;
     border: 1px solid #ffb2b2;
     font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    padding: 1px 8px;
+    height: 25px;
+    vertical-align: bottom;
+    font-size: 14px;
+    margin: 0;
+    color: #000;
 }
 
+
 .qty .clickable:hover {
-    background-color: #ffb2b2!important;
+    color: #f6f6f6 !important;
+    background-color: #ffb2b2 !important;
 }
 
 .qty .plus {
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    width: 30px;
-    height: 32px;
-    text-align: center;
-    padding: 3px;
     border-radius: 0 5px 5px 0;
+    margin: 0 0 0 -7px;
 }
 
 .qty .minus {
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    color: white;
-    width: 30px;
-    padding: 3px;
-    text-align: center;
-    background-clip: padding-box;
+    padding: 1px 9px;
     border-radius: 5px 0 0 5px;
+    margin: 0 -6px 0 0;
+}
+
+
+.qty.small {
+    height: 20px;
+}
+
+.qty.small .count {
+    height: 20px;
+    min-width: 25px;
+    padding-right: 7px;
+    font-size: 12px;
+}
+
+.qty.small .clickable {
+    height: 20px;
+    font-size: 10px;
 }
 
 .minus:hover {
@@ -777,6 +801,7 @@ body {
 }
 
 /*Prevent text selection*/
+
 span {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -788,7 +813,7 @@ input {
     width: 2%;
 }
 
-nput::-webkit-outer-spin-button,
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -812,9 +837,8 @@ input:disabled {
 
 .popupWindow .popupContent {
     overflow: hidden;
-    width: 1280px;
+    max-width: 1200px;
     margin: 50px auto 0;
-    background-color: #f6f6f6;
     border-radius: 15px;
     padding: 10px;
 }
@@ -833,4 +857,51 @@ input:disabled {
     background-color: #ffb2b2;
     padding: 7px 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    cursor: pointer;
 }
+
+.popupWindow .popupContent .closer .closePopup:hover {
+    background-color: rgba(177, 177, 177, 0.7);
+}
+
+.authenticationContainer {
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 1px solid #CC0000;
+    padding: 20px;
+    background-color: rgba(255, 237, 237, 1);
+
+}
+
+.authenticationContainer .title {
+    width: 100%;
+    text-align: center;
+}
+
+.authenticationContainer .authButton {
+    width: 100%;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.authenticationContainer .authButton i {
+    float: left;
+    font-size: 23px;
+}
+
+.btn-vk {
+    background-color: #4c77a1;
+    color: #fff;
+}
+
+.btn-instagram {
+    background-color: #2e5e86;
+    color: #fff;
+}
+
+.btn-logout {
+    background-color: #f6b2b2;
+    color: #fff;
+}
+

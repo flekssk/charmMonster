@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User\VKUser;
+
 return [
 
     /*
@@ -20,7 +22,7 @@ return [
     ],
 
     'ses' => [
-        'key' => env('SES_KEY'),
+        'key'    => env('SES_KEY'),
         'secret' => env('SES_SECRET'),
         'region' => 'us-east-1',
     ],
@@ -29,10 +31,17 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
-    'stripe' => [
-        'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
+    'vkontakte' => [
+        'model'         => App\Models\User\VKUser::class,
+        'redirect'      => 'http://charm.local/login/vk/callback',
+        'secret'        => env('STRIPE_SECRET'),
+        'client_id'     => 7056662,
+        'client_secret' => 'rBjGpQyBKK2mr7PlVcQF',
     ],
 
+    'instagram' => [
+        'redirect'      => 'http://charm.local/login/instagram/callback',
+        'client_id'     => '50e460e96ef242efa0193b675d3d84c0',
+        'client_secret' => '79b479f7b7084f7db1d8089e5617b330',
+    ]
 ];

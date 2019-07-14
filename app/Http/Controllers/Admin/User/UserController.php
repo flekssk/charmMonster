@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin\User;
 
 use App\Http\Controllers\Admin\AdminController;
-use App\Models\User\User;
+use App\Models\User\VKUser;
 
 class UserController extends AdminController
 {
@@ -12,12 +12,12 @@ class UserController extends AdminController
 
     }
 
-    public function show(User $user)
+    public function show(VKUser $user)
     {
 
     }
 
-    public function destroy(User $user)
+    public function destroy(VKUser $user)
     {
         $user->delete();
 

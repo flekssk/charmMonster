@@ -11,3 +11,8 @@
     width: 100%;
     text-align: center;
 }
+
+.orderSuccessContainer {
+    margin-top: 50px;
+    text-align: center;
+}

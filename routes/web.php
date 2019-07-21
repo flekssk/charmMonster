@@ -20,6 +20,7 @@ Route::prefix('order')->group(
     function () {
         Route::get('/', 'Order\OrderController@index');
         Route::post('store', 'Order\OrderController@store');
+        Route::get('success/{order}', 'Order\OrderController@success');
     });
 
 Route::prefix('cart')->group(

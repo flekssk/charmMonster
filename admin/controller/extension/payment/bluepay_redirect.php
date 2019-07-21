@@ -163,8 +163,8 @@ class ControllerExtensionPaymentBluepayredirect extends Controller {
 
 				$bluepay_redirect_order['total_released'] = $this->model_extension_payment_bluepay_redirect->getTotalReleased($bluepay_redirect_order['bluepay_redirect_order_id']);
 
-				$bluepay_redirect_order['total_formatted'] = $this->currency->format($bluepay_redirect_order['total'], $bluepay_redirect_order['currency_code'], false, false);
-				$bluepay_redirect_order['total_released_formatted'] = $this->currency->format($bluepay_redirect_order['total_released'], $bluepay_redirect_order['currency_code'], false, false);
+				$bluepay_redirect_order['total_formatted'] = $bluepay_redirect_order['total'];
+				$bluepay_redirect_order['total_released_formatted'] = $bluepay_redirect_order['total_released'];
 
 				$data['bluepay_redirect_order'] = $bluepay_redirect_order;
 

@@ -24,12 +24,8 @@ let cartControl = function () {
 
             $('#orderForm').ajaxForm(
                 {
-                    beforeSubmit: function () {
-
-                    },
                     success: function (resounce) {
-                        console.log('success');
-                        $('.ajaxDebug').append(resounce);
+                        location.href = '/order/success/' + resounce.order_id
                     }
                 }
             );

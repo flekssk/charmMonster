@@ -635,7 +635,7 @@ class ControllerCatalogProduct extends Controller {
 
 			foreach ($product_specials  as $product_special) {
 				if (($product_special['date_start'] == '0000-00-00' || strtotime($product_special['date_start']) < time()) && ($product_special['date_end'] == '0000-00-00' || strtotime($product_special['date_end']) > time())) {
-					$special = $this->currency->format($product_special['price'], $this->config->get('config_currency'));
+					$special = $product_special['price'];
 
 					break;
 				}
@@ -646,7 +646,7 @@ class ControllerCatalogProduct extends Controller {
 				'image'      => $image,
 				'name'       => $result['name'],
 				'model'      => $result['model'],
-				'price'      => $this->currency->format($result['price'], $this->config->get('config_currency')),
+				'price'      => $result['price'],
 				'special'    => $special,
 				'quantity'   => $result['quantity'],
 				'status'     => $result['status'] ? $this->language->get('text_enabled_short') : $this->language->get('text_disabled_short'),
@@ -1801,7 +1801,7 @@ class ControllerCatalogProduct extends Controller {
 									'product_option_value_id' => $product_option_value['product_option_value_id'],
 									'option_value_id'         => $product_option_value['option_value_id'],
 									'name'                    => $option_value_info['name'],
-									'price'                   => (float)$product_option_value['price'] ? $this->currency->format($product_option_value['price'], $this->config->get('config_currency')) : false,
+									'price'                   => (float)$product_option_value['price'] ? $product_option_value['price'] : false,
 									'price_prefix'            => $product_option_value['price_prefix']
 								);
 							}

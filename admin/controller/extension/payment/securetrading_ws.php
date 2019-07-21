@@ -344,8 +344,8 @@ class ControllerExtensionPaymentSecureTradingWs extends Controller {
 
 				$securetrading_ws_order['total_released'] = $this->model_extension_payment_securetrading_ws->getTotalReleased($securetrading_ws_order['securetrading_ws_order_id']);
 
-				$securetrading_ws_order['total_formatted'] = $this->currency->format($securetrading_ws_order['total'], $securetrading_ws_order['currency_code'], false, false);
-				$securetrading_ws_order['total_released_formatted'] = $this->currency->format($securetrading_ws_order['total_released'], $securetrading_ws_order['currency_code'], false, false);
+				$securetrading_ws_order['total_formatted'] = $securetrading_ws_order['total'];
+				$securetrading_ws_order['total_released_formatted'] = $securetrading_ws_order['total_released'];
 
 				$data['securetrading_ws_order'] = $securetrading_ws_order;
 

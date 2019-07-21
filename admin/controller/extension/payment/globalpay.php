@@ -236,8 +236,8 @@ class ControllerExtensionPaymentGlobalpay extends Controller {
 
 				$globalpay_order['total_captured'] = $this->model_extension_payment_globalpay->getTotalCaptured($globalpay_order['globalpay_order_id']);
 
-				$globalpay_order['total_formatted'] = $this->currency->format($globalpay_order['total'], $globalpay_order['currency_code'], 1, true);
-				$globalpay_order['total_captured_formatted'] = $this->currency->format($globalpay_order['total_captured'], $globalpay_order['currency_code'], 1, true);
+				$globalpay_order['total_formatted'] = $globalpay_order['total'];
+				$globalpay_order['total_captured_formatted'] = $globalpay_order['total_captured'];
 
 				$data['globalpay_order'] = $globalpay_order;
 

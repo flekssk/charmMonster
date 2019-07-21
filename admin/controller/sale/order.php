@@ -1629,7 +1629,7 @@ class ControllerSaleOrder extends Controller {
 				foreach ($vouchers as $voucher) {
 					$voucher_data[] = array(
 						'description' => $voucher['description'],
-						'amount'      => $this->currency->format($voucher['amount'], $order_info['currency_code'], $order_info['currency_value'])
+						'amount'      => $voucher['amount']
 					);
 				}
 
@@ -1640,7 +1640,7 @@ class ControllerSaleOrder extends Controller {
 				foreach ($totals as $total) {
 					$total_data[] = array(
 						'title' => $total['title'],
-						'text'  => $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value'])
+						'text'  => $total['value']
 					);
 				}
 

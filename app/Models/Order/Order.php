@@ -12,4 +12,9 @@ class Order extends Model
     protected $table = 'order';
 
     protected $primaryKey = 'order_id';
+
+    public function orderProducts()
+    {
+        return $this->hasMany(OrderProduct::class, 'order_id', 'order_id');
+    }
 }

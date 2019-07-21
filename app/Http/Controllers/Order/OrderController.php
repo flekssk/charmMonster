@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Order;
 
+use App\Extensions\Cart\CartFacade;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Order\OrderFormRequest;
 use App\Models\Order\Order;
@@ -55,6 +56,8 @@ class OrderController extends Controller
             $orderProduct->save();
 
             $totalOrderPrice += $orderProduct->total;
+
+            CartFacade::removeProduct($id);
         }
 
         $order->total = $totalOrderPrice;
@@ -65,5 +68,10 @@ class OrderController extends Controller
                 'order_id' => $order->order_id,
             ]
         );
+    }
+
+    public function success(Order $order)
+    {
+        return view('order.success', compact('order'));
     }
 }

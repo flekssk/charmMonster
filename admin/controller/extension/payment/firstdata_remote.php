@@ -284,8 +284,8 @@ class ControllerExtensionPaymentFirstdataRemote extends Controller {
 
 				$firstdata_order['total_captured'] = $this->model_extension_payment_firstdata_remote->getTotalCaptured($firstdata_order['firstdata_remote_order_id']);
 
-				$firstdata_order['total_formatted'] = $this->currency->format($firstdata_order['total'], $firstdata_order['currency_code'], 1, true);
-				$firstdata_order['total_captured_formatted'] = $this->currency->format($firstdata_order['total_captured'], $firstdata_order['currency_code'], 1, true);
+				$firstdata_order['total_formatted'] = $firstdata_order['total'];
+				$firstdata_order['total_captured_formatted'] = $firstdata_order['total_captured'];
 
 				$data['firstdata_order'] = $firstdata_order;
 
@@ -379,7 +379,7 @@ class ControllerExtensionPaymentFirstdataRemote extends Controller {
 				$json['data']['amount'] = (float)$firstdata_order['total'];
 				$json['data']['capture_status'] = $capture_status;
 				$json['data']['total'] = (float)$total_captured;
-				$json['data']['total_formatted'] = $this->currency->format($total_captured, $firstdata_order['currency_code'], 1, true);
+				$json['data']['total_formatted'] = $total_captured;
 				$json['error'] = false;
 			} else {
 				$json['error'] = true;

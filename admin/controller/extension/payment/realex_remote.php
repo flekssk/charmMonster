@@ -206,8 +206,8 @@ class ControllerExtensionPaymentRealexRemote extends Controller {
 
 				$realex_order['total_captured'] = $this->model_extension_payment_realex_remote->getTotalCaptured($realex_order['realex_remote_order_id']);
 
-				$realex_order['total_formatted'] = $this->currency->format($realex_order['total'], $realex_order['currency_code'], 1, true);
-				$realex_order['total_captured_formatted'] = $this->currency->format($realex_order['total_captured'], $realex_order['currency_code'], 1, true);
+				$realex_order['total_formatted'] = $realex_order['total'];
+				$realex_order['total_captured_formatted'] = $realex_order['total_captured'];
 
 				$data['realex_order'] = $realex_order;
 
@@ -289,7 +289,7 @@ class ControllerExtensionPaymentRealexRemote extends Controller {
 				$json['data']['amount'] = (float)$this->request->post['amount'];
 				$json['data']['capture_status'] = $capture_status;
 				$json['data']['total'] = (float)$total_captured;
-				$json['data']['total_formatted'] = $this->currency->format($total_captured, $realex_order['currency_code'], 1, true);
+				$json['data']['total_formatted'] = $total_captured;
 				$json['error'] = false;
 			} else {
 				$json['error'] = true;

@@ -253,8 +253,8 @@ class ControllerExtensionPaymentSecureTradingPp extends Controller {
 
 				$securetrading_pp_order['total_released'] = $this->model_extension_payment_securetrading_pp->getTotalReleased($securetrading_pp_order['securetrading_pp_order_id']);
 
-				$securetrading_pp_order['total_formatted'] = $this->currency->format($securetrading_pp_order['total'], $securetrading_pp_order['currency_code'], false, false);
-				$securetrading_pp_order['total_released_formatted'] = $this->currency->format($securetrading_pp_order['total_released'], $securetrading_pp_order['currency_code'], false, false);
+				$securetrading_pp_order['total_formatted'] = $securetrading_pp_order['total'];
+				$securetrading_pp_order['total_released_formatted'] = $securetrading_pp_order['total_released'];
 
 				$data['securetrading_pp_order'] = $securetrading_pp_order;
 

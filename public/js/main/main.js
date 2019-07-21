@@ -7,6 +7,12 @@ let cartControl = function () {
         $(document).ready(function () {
             caller.changeWidgetCount($('.cartWidgetContainer').data('product-count'));
 
+            $('.makeOrder').unbind();
+            $('.makeOrder').click(caller.makeOrder);
+
+            $('.placeOrder').unbind();
+            $('.placeOrder').click(caller.placeOrder);
+
             $('.removeFromCart').unbind();
             $('.removeFromCart').click(caller.removeFromCart);
 
@@ -15,6 +21,18 @@ let cartControl = function () {
 
             $('.productCounter .clickable').unbind();
             $('.productCounter .clickable').click(caller.changeProductCount);
+
+            $('#orderForm').ajaxForm(
+                {
+                    beforeSubmit: function () {
+
+                    },
+                    success: function (resounce) {
+                        console.log('success');
+                        $('.ajaxDebug').append(resounce);
+                    }
+                }
+            );
         });
     };
 
@@ -106,7 +124,20 @@ let cartControl = function () {
     };
     this.changeWidgetCount = function (count) {
         $('.cartButton:before').css('padding')
-    }
+    };
+
+    this.makeOrder = function () {
+        $.ajax(
+            {
+                url: '\order',
+                dataType: 'json',
+                success: function (response) {
+                    controller.popupControl.showContent(response.content);
+                    caller.initialize();
+                }
+            }
+        );
+    };
 };
 
 controller.cart = new cartControl();
@@ -122,6 +153,7 @@ let popup = function () {
 
     this.showPopup = function () {
         $('.popupWindow').fadeIn();
+        $('body').css('overflow', 'hidden');
     };
 
     this.showContent = function (content) {
@@ -130,6 +162,7 @@ let popup = function () {
     };
 
     this.hidePopup = function () {
+        $('body').css('overflow', 'auto');
         $('.popupWindow').fadeOut();
     };
 
@@ -139,7 +172,7 @@ let popup = function () {
 controller.cart.initialize();
 
 $(document).ready(function () {
-    $.popupControl = new popup();
+    controller.popupControl = new popup();
 
     $('.authenticate').click(function () {
         $.ajax({
@@ -147,7 +180,7 @@ $(document).ready(function () {
                 method: 'get',
                 dataType: 'json',
                 success: function (response) {
-                    $.popupControl.showContent(response.content);
+                    controller.popupControl.showContent(response.content);
                 }
             }
         );
@@ -198,7 +231,7 @@ $(document).ready(function () {
             url: $(this).data('link'),
             dataType: 'json',
             success: function (response) {
-                $.popupControl.showContent(response.content);
+                controller.popupControl.showContent(response.content);
                 $(document).ready(function () {
                     var productControl = new product().initialize();
                 });

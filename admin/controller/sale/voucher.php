@@ -184,7 +184,7 @@ class ControllerSaleVoucher extends Controller {
 				'from'       => $result['from_name'],
 				'to'         => $result['to_name'],
 				'theme'      => $result['theme'],
-				'amount'     => $this->currency->format($result['amount'], $this->config->get('config_currency')),
+				'amount'     => $result['amount'],
 				'status'     => ($result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled')),
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 				'edit'       => $this->url->link('sale/voucher/edit', 'user_token=' . $this->session->data['user_token'] . '&voucher_id=' . $result['voucher_id'] . $url, true),
@@ -526,7 +526,7 @@ class ControllerSaleVoucher extends Controller {
 			$data['histories'][] = array(
 				'order_id'   => $result['order_id'],
 				'customer'   => $result['customer'],
-				'amount'     => $this->currency->format($result['amount'], $this->config->get('config_currency')),
+				'amount'     => $result['amount'],
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added']))
 			);
 		}
@@ -592,7 +592,7 @@ class ControllerSaleVoucher extends Controller {
 							// HTML Mail
 							$data['title'] = sprintf($language->get('text_subject'), $voucher_info['from_name']);
 			
-							$data['text_greeting'] = sprintf($language->get('text_greeting'), $this->currency->format($voucher_info['amount'], (!empty($order_info['currency_code']) ? $order_info['currency_code'] : $this->config->get('config_currency')), (!empty($order_info['currency_value']) ? $order_info['currency_value'] : $this->currency->getValue($this->config->get('config_currency')))));
+							$data['text_greeting'] = sprintf($language->get('text_greeting'), $voucher_info['amount']);
 							$data['text_from'] = sprintf($language->get('text_from'), $voucher_info['from_name']);
 							$data['text_message'] = $language->get('text_message');
 							$data['text_redeem'] = sprintf($language->get('text_redeem'), $voucher_info['code']);
@@ -631,7 +631,7 @@ class ControllerSaleVoucher extends Controller {
 						}  else {
 							$data['title'] = sprintf($this->language->get('text_subject'), $voucher_info['from_name']);
 			
-							$data['text_greeting'] = sprintf($this->language->get('text_greeting'), $this->currency->format($voucher_info['amount'], $this->config->get('config_currency')));
+							$data['text_greeting'] = sprintf($this->language->get('text_greeting'), $voucher_info['amount']);
 							$data['text_from'] = sprintf($this->language->get('text_from'), $voucher_info['from_name']);
 							$data['text_message'] = $this->language->get('text_message');
 							$data['text_redeem'] = sprintf($this->language->get('text_redeem'), $voucher_info['code']);

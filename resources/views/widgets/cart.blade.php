@@ -41,7 +41,7 @@
         @endforeach
     </div>
     <div class="control">
-        <a class="btn btn-product-control">Оформить заказ</a>
+        <a class="btn btn-product-control makeOrder">Оформить заказ</a>
         <a class="btn btn-product-control" href="{{ action('Order\CartController@index') }}">Перейти в корзину</a>
     </div>
 </div>

@@ -832,14 +832,14 @@ input:disabled {
     height: 100%;
     background: rgba(177, 177, 177, 0.7);
     z-index: 1111;
-    overflow: hidden;
+    overflow: scroll;
     display: none;
 }
 
 .popupWindow .popupContent {
     overflow: hidden;
     max-width: 1200px;
-    margin: 50px auto 0;
+    margin: 20px auto 100px;
     border-radius: 15px;
     padding: 10px;
 }

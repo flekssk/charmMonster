@@ -36,7 +36,7 @@
                                                 class="count"
                                                 name="qty"
                                                 value="{{ $product->count }}"
-                                                data-product="{{ $product->product->product_id }}"
+                                                ata-product="{{ $product->product->product_id }}"
                                                 data-counter="product{{ $product->product->product_id }}"
                                         >
                                         <span class="btn clickable plus" data-counter="product{{ $product->product->product_id }}">
@@ -63,7 +63,7 @@
                     </div>
                     <div class="cartControl">
                         <div class="buttonContainer">
-                            <a style="display: block;">
+                            <a class="makeOrder" style="display: block;">
                                 Оформить заказ
                             </a>
                         </div>

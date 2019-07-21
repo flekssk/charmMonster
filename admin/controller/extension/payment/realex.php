@@ -236,8 +236,8 @@ class ControllerExtensionPaymentRealex extends Controller {
 
 				$realex_order['total_captured'] = $this->model_extension_payment_realex->getTotalCaptured($realex_order['realex_order_id']);
 
-				$realex_order['total_formatted'] = $this->currency->format($realex_order['total'], $realex_order['currency_code'], 1, true);
-				$realex_order['total_captured_formatted'] = $this->currency->format($realex_order['total_captured'], $realex_order['currency_code'], 1, true);
+				$realex_order['total_formatted'] = $realex_order['total'];
+				$realex_order['total_captured_formatted'] = $realex_order['total_captured'];
 
 				$data['realex_order'] = $realex_order;
 

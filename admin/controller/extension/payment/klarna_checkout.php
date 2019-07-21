@@ -438,11 +438,11 @@ class ControllerExtensionPaymentKlarnaCheckout extends Controller {
 				'quantity'				=> $order_line['quantity'],
 				'quantity_unit'			=> $order_line['quantity_unit'],
 				'name'					=> $order_line['name'],
-				'total_amount'			=> $this->currency->format($order_line['total_amount'] / 100, $order_info['currency_code'], '1.00000000'),
-				'unit_price'			=> $this->currency->format($order_line['unit_price'] / 100, $order_info['currency_code'], '1.00000000'),
-				'total_discount_amount'	=> $this->currency->format($order_line['total_discount_amount'] / 100, $order_info['currency_code'], '1.00000000'),
+				'total_amount'			=> $order_line['total_amount'] / 100,
+				'unit_price'			=> $order_line['unit_price'] / 100,
+				'total_discount_amount'	=> $order_line['total_discount_amount'] / 100,
 				'tax_rate'				=> ($order_line['tax_rate'] / 100) . '%',
-				'total_tax_amount'		=> $this->currency->format($order_line['total_tax_amount'] / 100, $order_info['currency_code'], '1.00000000')
+				'total_tax_amount'		=> $order_line['total_tax_amount'] / 100
 			);
 		}
 
@@ -466,9 +466,9 @@ class ControllerExtensionPaymentKlarnaCheckout extends Controller {
 			'billing_address_formatted'	 => $billing_address_formatted,
 			'shipping_address_formatted' => $shipping_address_formatted,
 			'order_lines'				 => $order_lines,
-			'amount'					 => $this->currency->format($klarna_order['order_amount'] / 100, $order_info['currency_code'], '1.00000000'),
+			'amount'					 => $klarna_order['order_amount'] / 100,
 			'authorization_expiry'		 => isset($klarna_order['expires_at']) ? date($this->language->get('date_format_short'), strtotime($klarna_order['expires_at'])) : '',
-			'authorization_remaining'	 => $this->currency->format($klarna_order['remaining_authorized_amount'] / 100, $order_info['currency_code'], '1.00000000'),
+			'authorization_remaining'	 => $klarna_order['remaining_authorized_amount'] / 100,
 		);
 
 		$max_capture_amount = $klarna_order['remaining_authorized_amount'] / 100;
@@ -483,7 +483,7 @@ class ControllerExtensionPaymentKlarnaCheckout extends Controller {
 				'shipping_info_title'	=> sprintf($this->language->get('text_capture_shipping_info_title'), $capture['capture_id']),
 				'billing_address_title'	=> sprintf($this->language->get('text_capture_billing_address_title'), $capture['capture_id']),
 				'date_added'			=> date($this->language->get('datetime_format'), strtotime($capture['captured_at'])),
-				'amount'				=> $this->currency->format($capture['captured_amount'] / 100, $order_info['currency_code'], '1.00000000', true),
+				'amount'				=> $capture['captured_amount'] / 100,
 				'reference'				=> $capture['klarna_reference'],
 				'shipping_info'			=> $capture['shipping_info'],
 				'billing_address'		=> $capture['billing_address'],
@@ -498,7 +498,7 @@ class ControllerExtensionPaymentKlarnaCheckout extends Controller {
 
 			$data['refunds'][] = array(
 				'date_added' => date($this->language->get('datetime_format'), strtotime($capture['refunded_at'])),
-				'amount'	 => $this->currency->format($capture['refunded_amount'] / 100, $order_info['currency_code'], '1.00000000', true)
+				'amount'	 => $capture['refunded_amount'] / 100
 			);
 		}
 
@@ -526,8 +526,8 @@ class ControllerExtensionPaymentKlarnaCheckout extends Controller {
 		$data['address_action'] = $address_action;
 		$data['merchant_reference_action'] = $merchant_reference_action;
 		$data['release_authorization_action'] = $release_authorization_action;
-		$data['max_capture_amount'] = $this->currency->format($max_capture_amount, $order_info['currency_code'], '1.00000000', false);
-		$data['max_refund_amount'] = $this->currency->format($max_refund_amount, $order_info['currency_code'], '1.00000000', false);
+		$data['max_capture_amount'] = $max_capture_amount;
+		$data['max_refund_amount'] = $max_refund_amount;
 		$data['symbol_left'] = $this->currency->getSymbolLeft($order_info['currency_code']);
 		$data['symbol_right'] = $this->currency->getSymbolRight($order_info['currency_code']);
 

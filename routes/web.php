@@ -18,6 +18,8 @@ Route::prefix('categories')->group(
 
 Route::prefix('order')->group(
     function () {
+        Route::get('/', 'Order\OrderController@index');
+        Route::post('store', 'Order\OrderController@store');
     });
 
 Route::prefix('cart')->group(

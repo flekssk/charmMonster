@@ -305,7 +305,7 @@ $('#cancel-plan').on('click', function(e) {
 				if (token) {
 					// Send order history to the API
 					$.ajax({
-						url: '{{ store_url }}index.php?route=api/order/history&token=' + token + '&order_id=' + json['order_id'],
+						url: 'api/order/histor?order_id=' + json['order_id'],
 						type: 'post',
 						dataType: 'json',
 						data: 'order_status_id=' + json['order_status_id'] + '&notify=1&override=0&append=0&comment=' + encodeURIComponent(json['comment']),

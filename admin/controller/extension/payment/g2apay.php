@@ -207,8 +207,8 @@ class ControllerExtensionPaymentG2APay extends Controller {
 
 				$g2apay_order['total_released'] = $this->model_extension_payment_g2apay->getTotalReleased($g2apay_order['g2apay_order_id']);
 
-				$g2apay_order['total_formatted'] = $this->currency->format($g2apay_order['total'], $g2apay_order['currency_code'], false);
-				$g2apay_order['total_released_formatted'] = $this->currency->format($g2apay_order['total_released'], $g2apay_order['currency_code'], false);
+				$g2apay_order['total_formatted'] = $g2apay_order['total'];
+				$g2apay_order['total_released_formatted'] = $g2apay_order['total_released'];
 
 				$data['g2apay_order'] = $g2apay_order;
 
@@ -251,7 +251,7 @@ class ControllerExtensionPaymentG2APay extends Controller {
 
 				$json['data'] = array();
 				$json['data']['date_added'] = date("Y-m-d H:i:s");
-				$json['data']['amount'] = $this->currency->format(($this->request->post['amount'] * -1), $g2apay_order['currency_code'], false);
+				$json['data']['amount'] = ($this->request->post['amount'] * -1);
 				$json['data']['total_released'] = (float)$total_released;
 				$json['data']['total_refunded'] = (float)$total_refunded;
 				$json['data']['refund_status'] = $refund_status;

@@ -168,8 +168,8 @@ class ControllerExtensionPaymentSagepayDirect extends Controller {
 
 				$sagepay_direct_order['total_released'] = $this->model_extension_payment_sagepay_direct->getTotalReleased($sagepay_direct_order['sagepay_direct_order_id']);
 
-				$sagepay_direct_order['total_formatted'] = $this->currency->format($sagepay_direct_order['total'], $sagepay_direct_order['currency_code'], false, false);
-				$sagepay_direct_order['total_released_formatted'] = $this->currency->format($sagepay_direct_order['total_released'], $sagepay_direct_order['currency_code'], false, false);
+				$sagepay_direct_order['total_formatted'] = $sagepay_direct_order['total'];
+				$sagepay_direct_order['total_released_formatted'] = $sagepay_direct_order['total_released'];
 
 				$data['sagepay_direct_order'] = $sagepay_direct_order;
 

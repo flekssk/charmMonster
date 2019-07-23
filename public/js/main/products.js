@@ -2,10 +2,12 @@
     $(document).ready(function () {
         $('.productContainer .productContent').mouseover(function () {
             $(this).find('.productControl').show();
+            $(this).find('.title').addClass('active');
         });
 
         $('.productContainer .productContent').mouseout(function () {
             $(this).find('.productControl').hide();
+            $(this).find('.title').removeClass('active');
         });
 
 

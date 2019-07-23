@@ -48,8 +48,8 @@
         <div class="col-9 image" style="">
             <style>
                 .headerMainContainer:after {
-                    background-image: url({{ asset('images/layout/test.jpg') }});
-                    background-position: 0 -400px;
+                    background-image: url(/public/uploads/images/catalog/555.jpg);
+                    background-position: 77px -164px;
                 }
             </style>
         </div>

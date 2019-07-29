@@ -5,6 +5,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
+        "greggilbert/recaptcha": "dev-master",
         "barryvdh/laravel-elfinder": "^0.4.2",
         "braintree/braintree_php": "^4.2",
         "cardinity/cardinity-sdk-php": "^2.1",

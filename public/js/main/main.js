@@ -5,6 +5,22 @@ let cartControl = function () {
 
     this.initialize = function () {
         $(document).ready(function () {
+            $("#delivery_address").suggestions({
+                token: "04ce039c4780b0b29f0f77c8a80590ee1a3b2b5c",
+                type: "ADDRESS",
+                onSelect: function (suggestion) {
+                }
+            });
+
+            $("#email").suggestions({
+                token: "04ce039c4780b0b29f0f77c8a80590ee1a3b2b5c",
+                type: "EMAIL",
+                /* Вызывается, когда пользователь выбирает одну из подсказок */
+                onSelect: function (suggestion) {
+                    console.log(suggestion);
+                }
+            });
+
             caller.changeWidgetCount($('.cartWidgetContainer').data('product-count'));
 
             $('.makeOrder').unbind();
@@ -24,8 +40,17 @@ let cartControl = function () {
 
             $('#orderForm').ajaxForm(
                 {
+                    beforeSubmit: function () {
+                        controller.form.clearErrors();
+                    },
                     success: function (resounce) {
                         location.href = '/order/success/' + resounce.order_id
+                    },
+                    error: function (response) {
+                        controller.form.renderErrors(response.responseJSON.errors);
+                        $('.popupWindow').animate({
+                            scrollTop: 0
+                        }, 400);
                     }
                 }
             );
@@ -125,12 +150,12 @@ let cartControl = function () {
     this.makeOrder = function () {
         $.ajax(
             {
-                url: '\order',
+                url: controller.data.createOrderUrl,
                 dataType: 'json',
                 success: function (response) {
                     controller.popupControl.showContent(response.content);
                     caller.initialize();
-                }
+                },
             }
         );
     };
@@ -169,10 +194,11 @@ controller.cart.initialize();
 
 $(document).ready(function () {
     controller.popupControl = new popup();
+    controller.data = JSON.parse($('.jsonData').html());
 
     $('.authenticate').click(function () {
         $.ajax({
-                url: '/login/authenticate',
+                url: controller.data.authenticateUrl,
                 method: 'get',
                 dataType: 'json',
                 success: function (response) {
@@ -235,3 +261,23 @@ $(document).ready(function () {
         });
     });
 });
+
+controller.form = new function () {
+    this.renderErrors = function (errors) {
+        let renderedErrors = [];
+
+        $.each(errors, function (fieldName, fieldError) {
+            $('[name="' + fieldName + '"]').addClass('alert-danger');
+            $.each(fieldError, function (id, error) {
+                renderedErrors.push($('<div class="alert alert-danger" />').html(error));
+            })
+        });
+
+        $('.errorsContainer').html(renderedErrors);
+    };
+
+    this.clearErrors = function () {
+        $('input,textarea').removeClass('alert-danger');
+        $('.errorsContainer').html('');
+    }
+};

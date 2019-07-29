@@ -704,6 +704,10 @@ body {
     display: inline-block;
 }
 
+.cartWidgetContainer .products .product a {
+    color: #000;
+}
+
 .cartWidgetContainer .product {
     border-radius: 5px;
     padding: 5px;

@@ -5,3 +5,13 @@
     </div>
 </div>
 <div class="ajaxDebug"></div>
+<div class="jsonData" style="display: none;">
+    {{
+    json_encode(
+        [
+            'createOrderUrl' => action('Order\OrderController@index'),
+            'authenticateUrl' => action('User\UserController@authenticate')
+        ]
+    )
+    }}
+</div>

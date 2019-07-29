@@ -17,15 +17,21 @@
                 @foreach($products->items() as $product)
                     <div class="row col-12 cartProductContainer" data-product="{{ $product->product->product_id }}">
                         <div class="cartProductBackground"></div>
-                        <div class="col-3">
+                        <div class="col-2">
                             <div class="imageContainer">
                                 <div class="image">
                                     <img src="{{ getImagePath($product->product->image) }}" alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-9">
+                        <div class="col-10">
                             <div class="information">
+                                <div class="mainTitle name">
+                                    {{ $product->product->description->name }}
+                                    <span class="price" data-product="{{ $product->product->product_id }}">
+                                        {{ (int) $product->totalPrice() }} р.
+                                    </span>
+                                </div>
                                 <div class="quantity">
                                     <div class="qty productCounter">
                                         <span class="btn clickable minus" data-counter="product{{ $product->product->product_id }}">
@@ -43,12 +49,6 @@
                                             +
                                         </span>
                                     </div>
-                                </div>
-                                <div class="mainTitle name">
-                                    {{ $product->product->description->name }}
-                                    <span class="price" data-product="{{ $product->product->product_id }}">
-                                        {{ (int) $product->totalPrice() }} р.
-                                    </span>
                                 </div>
                                 <span class="fa fa-close delete"></span>
                             </div>

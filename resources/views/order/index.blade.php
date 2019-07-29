@@ -3,6 +3,7 @@
         <div class="mainTitle title ukrainianTitle">
             <h1>Оформление зказа</h1>
         </div>
+        <div class="errorsContainer"></div>
         <div class="products" style="margin: 0 -20px;">
             <table class="table table-hover">
                 <thead>
@@ -65,17 +66,20 @@
         </div>
         <div class="form-group">
             <label for=""><b>Email</b></label>
-            <input type="text" class="form-control" name="email"
+            <input type="text" class="form-control" id="email" name="email"
                    value="{{ \App\Extensions\User\CharmUser::email() }}">
         </div>
         <div class="form-group">
             <label for=""><b>Адрес доставки</b></label>
-            <input type="text" class="form-control" name="delivery_address" value="">
+            <input type="text" class="form-control" name="delivery_address" id="delivery_address" value="">
         </div>
         <div class="form-group">
             <label for=""><b>Способ оплаты</b></label>
             <div><input name="payment_method" type="radio" value="1"> Наличными</div>
             <div><input name="payment_method" type="radio" value="2"> Банковской картов</div>
+        </div>
+        <div class="form-group">
+            {!! Recaptcha::render() !!}
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-success">Отправить заказ</button>

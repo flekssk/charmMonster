@@ -19,9 +19,9 @@
             <div class="orderSuccessContainer">
                 <h1 class="mainTitle ukrainianTitle">Поздравляем</h1>
                 <div>
-                    Заказ №{{$order->order_id}} успешно создан наш менеджер в скором свяжется с Вами!
+                    Заказ №{{$order->order_id}} успешно создан наш менеджер в скором времени свяжется с Вами!
                 </div>
-                <table class="table table-hover">
+                <table class="table">
                     <thead>
                     <tr>
                         <th></th>

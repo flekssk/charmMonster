@@ -21,6 +21,8 @@ let cartControl = function () {
                 }
             });
 
+            $("#phone").mask("+7(999) 999-9999");
+
             caller.changeWidgetCount($('.cartWidgetContainer').data('product-count'));
 
             $('.makeOrder').unbind();

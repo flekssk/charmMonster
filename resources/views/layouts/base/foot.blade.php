@@ -10,6 +10,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
 <script src="{{ asset('js/bootstrap.notify.min.js') }}"></script>
 <script src="{{ asset('js/jquery.form.js') }}"></script>
+<script src="{{ asset('js/jquery.maskedinput.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@19.7.1/dist/js/jquery.suggestions.min.js"></script>
 
 <script src="{{ asset('js/main/main.js') }}"></script>

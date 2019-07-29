@@ -62,7 +62,7 @@
         </div>
         <div class="form-group">
             <label for=""><b>Телефон</b></label>
-            <input type="text" class="form-control" name="telephone">
+            <input type="text" class="form-control" id="phone" name="telephone">
         </div>
         <div class="form-group">
             <label for=""><b>Email</b></label>

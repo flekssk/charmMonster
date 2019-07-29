@@ -17,8 +17,11 @@
                 @foreach(\App\Extensions\Cart\CartFacade::getProducts()->items()->all() as $product)
                     <tr>
                         <td style="vertical-align: middle; text-align: center;">
-                            <input type="checkbox" name="products[{{ $product->product->product_id }}]"
-                                   style="width: 15px;">
+                            <input type="checkbox"
+                                   name="products[{{ $product->product->product_id }}]"
+                                   style="width: 15px;"
+                                   checked
+                            >
                         </td>
                         <td>
                             <img src="{{ getImagePath($product->product->image) }}" alt="" style="width: 150px">

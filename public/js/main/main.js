@@ -198,6 +198,20 @@ $(document).ready(function () {
     controller.popupControl = new popup();
     controller.data = JSON.parse($('.jsonData').html());
 
+    $('.categoriesContainer .category').mouseover(function () {
+       $(this).find('.title').css('background-color', '#d64345');
+    });
+    $('.categoriesContainer .category').mouseout(function () {
+       $(this).find('.title').css('background-color', '#FFB2B2');
+    });
+
+    $('.blogPostsContainer .post').mouseover(function () {
+       $(this).find('.title').css('background-color', '#d64345');
+    });
+    $('.blogPostsContainer .post').mouseout(function () {
+       $(this).find('.title').css('background-color', '#FFB2B2');
+    });
+
     $('.authenticate').click(function () {
         $.ajax({
                 url: controller.data.authenticateUrl,

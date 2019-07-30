@@ -51,13 +51,6 @@
                     </div>
                     <div class="row container" style="text-align: center; margin: 0 auto;">
                         <div>
-                            <div class="qty">
-                                <span class="clickable minus">-</span>
-                                <input type="number" class="count" name="qty" value="1">
-                                <span class="clickable plus">+</span>
-                            </div>
-                        </div>
-                        <div>
                             <a data-product-id="{{ $product->product_id }}" class="addToCart controlButton">В корзину</a>
                         </div>
                         <div>

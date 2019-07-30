@@ -466,6 +466,11 @@ body {
     margin: 0 5px 5px 0;
 }
 
+.categoriesContainer .category:hover {
+    transition: 500ms;
+    box-shadow: 5px 20px 30px rgba(0, 0, 0, .3);
+}
+
 .categoriesContainer .category .title {
     font-size: 21px;
     background-color: #FFB2B2;
@@ -573,20 +578,23 @@ body {
     display: inline-block;
     cursor: pointer;
     margin: 0;
+    border-radius: 5px;
+}
+
+.blogPostsContainer .post:hover {
+    transition: 500ms;
+    box-shadow: 5px 20px 30px rgba(0, 0, 0, .3);
 }
 
 .blogPostsContainer .post .title {
-    text-align: center;
-    padding: 20px 0;
-    border-radius: 5px 10px 5px 0;
-    overflow: hidden;
     font-size: 21px;
-    color: #fff;
-    background: url(/public/images/layout/blogTitleBackground.png) no-repeat;
-    -webkit-background-size: contain;
-    background-size: 102%;
-    margin-bottom: 10px;
+    background-color: #FFB2B2;
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
     text-shadow: 3px 3px 4px #320000;
+    margin-bottom: 10px;
 }
 
 .blogPostsContainer .post .content {

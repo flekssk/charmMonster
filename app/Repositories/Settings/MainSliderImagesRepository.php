@@ -5,7 +5,7 @@ namespace App\Repositories\Settings;
 use App\Extensions\Repositories\EloquentRepository;
 use App\Models\Content\MainSliderImage;
 
-class MainSliderImagesRepositories extends EloquentRepository
+class MainSliderImagesRepository extends EloquentRepository
 {
     public function getModelAlias()
     {
@@ -32,10 +32,5 @@ class MainSliderImagesRepositories extends EloquentRepository
         }
 
         return $comments;
-    }
-
-    public function afterSetItems()
-    {
-        $this->items = $this->items->keyBy('ordering')->sortBy('ordering');
     }
 }

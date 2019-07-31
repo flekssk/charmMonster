@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin\Settings;
 
 use App\Models\Content\MainSliderImage;
-use App\Repositories\Settings\MainSliderImagesRepositories;
+use App\Repositories\Settings\MainSliderImagesRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 
@@ -11,7 +11,7 @@ class MainSliderController
 {
     public function index(Request $request)
     {
-        return view('admin.settings.slider.index', ['images' => MainSliderImagesRepositories::all()]);
+        return view('admin.settings.slider.index', ['images' => MainSliderImagesRepository::all()]);
     }
 
     public function store(Request $request)
@@ -19,7 +19,7 @@ class MainSliderController
         /** @var Collection $images */
         $images        = collect($request->images);
         $comments      = collect($request->get('imagesComment'));
-        $existedImages = MainSliderImagesRepositories::all()->items()->keyBy('image');
+        $existedImages = MainSliderImagesRepository::all()->items()->keyBy('image');
 
         foreach ($images as $ordering => $uploadedImage) {
             if (!$existedImages->has($uploadedImage)) {

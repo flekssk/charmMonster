@@ -45,7 +45,8 @@
 
                 </div>
                 @foreach($categories->items() as $category)
-                    <div class="categoryBox col-4" data-link="{{ action('Product\CategoryController@products', ['category' => $category->category_id]) }}">
+                    <div class="categoryBox col-4"
+                         data-link="{{ action('Product\CategoryController@products', ['category' => $category->category_id]) }}">
                         <div class="col-12 category">
                             <div class="col-12 title">
                                 {{ $category->description->name }}
@@ -65,22 +66,32 @@
                 <div class="imagesContainer slider">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="carouselIndicator active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1" class="carouselIndicator"></li>
+                            <?php $first = true; ?>
+                            @foreach($sliderImages->items()->all() as $id => $image)
+                                <li data-target="#carouselExampleIndicators"
+                                    data-slide-to="{{ $id }}"
+                                    class="carouselIndicator {{ $first ? 'active' : '' }}"
+                                >
+                                </li>
+                                <?php $first = false; ?>
+                            @endforeach
                         </ol>
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{{ getImagePath('catalog/444.jpg') }}" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ getImagePath('catalog/321.jpg') }}" alt="">
-                            </div>
+                            <?php $first = true; ?>
+                            @foreach($sliderImages->items()->all() as $image)
+                                <div class="carousel-item {{ $first ? 'active' : '' }}">
+                                    <img src="{{ getImagePath($image->image) }}" alt="">
+                                </div>
+                                <?php $first = false; ?>
+                            @endforeach
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                           data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                           data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
@@ -89,7 +100,8 @@
             </div>
             <div class="row blogPostsContainer">
                 @foreach($posts->items() as $post)
-                    <div class="col-4 post" data-link="{{ action('Blog\BlogController@show', ['article' => $post->article_id]) }}">
+                    <div class="col-4 post"
+                         data-link="{{ action('Blog\BlogController@show', ['article' => $post->article_id]) }}">
                         <div class="col-12 title">
                             {{ $post->description->name }}
                         </div>
@@ -102,7 +114,8 @@
                             </div>
                             <b>{{ \Illuminate\Support\Carbon::make($post->date_added)->format('m-d-Y') }}</b>
                             <b>
-                                <a style="float: right;" href="{{ action('Blog\BlogController@show', ['article' => $post->article_id]) }}">
+                                <a style="float: right;"
+                                   href="{{ action('Blog\BlogController@show', ['article' => $post->article_id]) }}">
                                     Подробнее
                                 </a>
                             </b>

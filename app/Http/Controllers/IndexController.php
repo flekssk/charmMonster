@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Repositories\Blog\ArticlesRepository;
 use App\Repositories\Category\CategoriesRepository;
+use App\Repositories\Content\MainSliderImagesRepository;
 use App\Repositories\Product\ProductRepository;
-use App\Repositories\Settings\MainSliderImagesRepositories;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
@@ -18,7 +17,7 @@ class IndexController extends Controller
             [
                 'products'     => ProductRepository::getOnMain(),
                 'categories'   => CategoriesRepository::getOnMain(),
-                'sliderImages' => MainSliderImagesRepositories::all(),
+                'sliderImages' => MainSliderImagesRepository::getBySliderId(config('pageContents.mainPage.sliderId')),
                 'posts'        => ArticlesRepository::getOnMain(),
             ]
         );

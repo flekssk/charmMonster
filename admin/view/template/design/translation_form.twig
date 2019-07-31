@@ -81,7 +81,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-default">{{ entry_default }}</label>
             <div class="col-sm-10">
-              <textarea name="default" placeholder="{{ entry_default }}" rows="5" id="input-default" class="form-control" disabled="disabled">{% if default %}{{ default }}{% endif %}</textarea>
+              <textarea name="default" placeholder="{{ entry_default }}" rows="5" id="input-default" class="form-control" readonly="readonly">{% if default %}{{ default }}{% endif %}</textarea>
             </div>
           </div>
           <div class="form-group">
@@ -96,11 +96,11 @@
   </div>
   <script type="text/javascript"><!--
     {% if key %}
-    $('select[name="store_id"]').prop('disabled', true);
-    $('select[name="language_id"]').prop('disabled', true);
-    $('select[name="route"]').prop('disabled', true);
-    $('select[name="key"]').prop('disabled', true);
-    $('input[name="key"]').prop('disabled', true);
+    $('select[name="store_id"]').prop('readonly', true);
+    $('select[name="language_id"]').prop('readonly', true);
+    $('select[name="route"]').prop('readonly', true);
+    $('select[name="key"]').prop('readonly', true);
+    $('input[name="key"]').prop('readonly', true);
     {% else %}
     $('select[name="language_id"]').on('change', function() {
       $.ajax({
@@ -111,17 +111,17 @@
           $('select[name="key"]').html('');
           $('input[name="key"]').val('');
           $('textarea[name="default"]').val('');
-          $('select[name="store_id"]').prop('disabled', true);
-          $('select[name="language_id"]').prop('disabled', true);
-          $('select[name="route"]').prop('disabled', true);
-          $('select[name="key"]').prop('disabled', true);
-          $('input[name="key"]').prop('disabled', true);
-          $('textarea[name="value"]').prop('disabled', true);
+          $('select[name="store_id"]').prop('readonly', true);
+          $('select[name="language_id"]').prop('readonly', true);
+          $('select[name="route"]').prop('readonly', true);
+          $('select[name="key"]').prop('readonly', true);
+          $('input[name="key"]').prop('readonly', true);
+          $('textarea[name="value"]').prop('readonly', true);
         },
         complete: function() {
-          $('select[name="store_id"]').prop('disabled', false);
-          $('select[name="language_id"]').prop('disabled', false);
-          $('select[name="route"]').prop('disabled', false);
+          $('select[name="store_id"]').prop('readonly', false);
+          $('select[name="language_id"]').prop('readonly', false);
+          $('select[name="route"]').prop('readonly', false);
         },
         success: function(json) {
           html = '<option value=""></option>';
@@ -158,18 +158,18 @@
           $('input[name="key"]').val('');
           $('textarea[name="default"]').val('');
           $('textarea[name="value"]').val('');
-          $('select[name="store_id"]').prop('disabled', true);
-          $('select[name="language_id"]').prop('disabled', true);
-          $('select[name="route"]').prop('disabled', true);
-          $('select[name="key"]').prop('disabled', true);
-          $('textarea[name="value"]').prop('disabled', true);
+          $('select[name="store_id"]').prop('readonly', true);
+          $('select[name="language_id"]').prop('readonly', true);
+          $('select[name="route"]').prop('readonly', true);
+          $('select[name="key"]').prop('readonly', true);
+          $('textarea[name="value"]').prop('readonly', true);
         },
         complete: function() {
-          $('select[name="store_id"]').prop('disabled', false);
-          $('select[name="language_id"]').prop('disabled', false);
-          $('select[name="route"]').prop('disabled', false);
-          $('select[name="key"]').prop('disabled', false);
-          $('textarea[name="value"]').prop('disabled', false);
+          $('select[name="store_id"]').prop('readonly', false);
+          $('select[name="language_id"]').prop('readonly', false);
+          $('select[name="route"]').prop('readonly', false);
+          $('select[name="key"]').prop('readonly', false);
+          $('textarea[name="value"]').prop('readonly', false);
         },
         {% endif %}
         success: function(json) {
@@ -206,14 +206,14 @@
         $('textarea[name="default"]').val(translation[$('select[name="key"]').val()]);
         $('input[name="key"]').val($('select[name="key"]').val());
 
-        $('input[name="key"]').prop('disabled', true);
+        $('input[name="key"]').prop('readonly', true);
       } else {
         $('textarea[name="default"]').val('');
 
-        $('input[name="key"]').prop('disabled', false);
+        $('input[name="key"]').prop('readonly', false);
       }
     });
     {% endif %}
-  //--></script> 
+  //--></script>
 </div>
-{{ footer }} 
+{{ footer }}

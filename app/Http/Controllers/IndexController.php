@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Content\Translation;
 use App\Repositories\Blog\ArticlesRepository;
 use App\Repositories\Category\CategoriesRepository;
 use App\Repositories\Content\MainSliderImagesRepository;
@@ -19,6 +20,7 @@ class IndexController extends Controller
                 'categories'   => CategoriesRepository::getOnMain(),
                 'sliderImages' => MainSliderImagesRepository::getBySliderId(config('pageContents.mainPage.sliderId')),
                 'posts'        => ArticlesRepository::getOnMain(),
+                'mainText'     => Translation::findByKey('mainTitleText'),
             ]
         );
     }

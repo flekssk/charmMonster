@@ -13,7 +13,7 @@ class Product extends Model
     protected $primaryKey = 'product_id';
 
     protected $route = 'Admin\Product\ProductController';
-    
+
     public function getMainImage()
     {
         return new File($this->image);
@@ -58,5 +58,10 @@ class Product extends Model
         }
 
         return $comments;
+    }
+
+    public function attributes()
+    {
+        return $this->hasMany(ProductAttribute::class, 'product_id');
     }
 }

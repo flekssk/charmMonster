@@ -45,13 +45,26 @@
 
                         </div>
                         <div class="description">
-                            <b>Описание:</b>
-                            {!! html_entity_decode($product->description->description, ENT_QUOTES, 'UTF-8') !!}
+                            <div>
+                                <b>Описание:</b>
+                                {!! html_entity_decode($product->description->description, ENT_QUOTES, 'UTF-8') !!}
+                            </div>
+                            <div>
+                                <b>Характеристики:</b>
+                                <ul style="list-style: none; margin-top: 10px; padding-left: 0;">
+                                    @foreach($product->attributes as $attribute)
+                                        <li>
+                                            <b>{{ $attribute->attribute->description->name }}:</b> {{ $attribute->text }}
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="row container" style="text-align: center; margin: 0 auto;">
                         <div>
-                            <a data-product-id="{{ $product->product_id }}" class="addToCart controlButton">В корзину</a>
+                            <a data-product-id="{{ $product->product_id }}" class="addToCart controlButton">В
+                                корзину</a>
                         </div>
                         <div>
                             <a href="" class="controlButton">Оформить заказ</a>

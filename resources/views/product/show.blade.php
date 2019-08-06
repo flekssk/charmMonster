@@ -36,6 +36,9 @@
                     </div>
                 </div>
                 <div class="description">
+                    <div class="price">
+                        {{ number_format(round($product->price), 0, '.', ' ') }} <i class="fa fa-ruble"></i>
+                    </div>
                     <div class="descriptionBackground"></div>
                     <div class="ukrainianTitle mainTitle title">
                         {{ $product->description->name }}

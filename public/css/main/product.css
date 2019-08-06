@@ -138,3 +138,20 @@
     text-decoration: none;
     background-color: #995656;
 }
+
+.productPage .description .price {
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    background-color: #fff;
+    z-index: 1;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #320000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.productPage .description .price i {
+    font-size: 15px;
+}

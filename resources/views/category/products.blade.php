@@ -85,6 +85,9 @@ use Illuminate\Support\Arr;
                     @foreach($products->filtrate($filters) as $product)
                         <div class="col-4 product">
                             <div class="productContent">
+                                <div class="price">
+                                    {{ number_format(round($product->price), 0, '.', ' ') }} <i class="fa fa-ruble"></i>
+                                </div>
                                 <div class="image">
                                     <img src="{{ getImagePath($product->image) }}" alt="">
                                     <div class="productControl">

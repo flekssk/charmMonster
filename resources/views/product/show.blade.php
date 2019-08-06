@@ -11,6 +11,12 @@
 
 @push('after_scripts')
     <script src="{{ asset('js/main/product.js') }}"></script>
+    <script src="{{ asset('js/blowup.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $(".mainImage img").blowup();
+        });
+    </script>
 @endpush
 
 @extends('layouts.base.layout')
@@ -21,14 +27,22 @@
             <div class="row productPage">
                 <div class="images">
                     <div class="mainImage">
-                        <img src="{{ getImagePath($product->image) }}" alt="">
+                        <img
+                                src="{{ getImagePath($product->image) }}"
+                                alt=""
+                                data-large="{{ getImagePath($product->image) }}"
+                                data-title="Red Valentino"
+                                data-help="Используйте колесико мыши для Zoom +/-"
+                        >
                     </div>
                     <div class="imagesList">
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 @foreach($product->images as $image)
                                     <div class="carousel-item active image">
-                                        <img src="{{ getImagePath($image->image) }}" alt="">
+                                        <img src="{{ getImagePath($image->image) }}"
+                                             alt=""
+                                        >
                                     </div>
                                 @endforeach
                             </div>
@@ -49,18 +63,23 @@
                         </div>
                         <div class="description">
                             <div>
-                                <b>Описание:</b>
-                                {!! html_entity_decode($product->description->description, ENT_QUOTES, 'UTF-8') !!}
+                                @if($product->description->description)
+                                    <b>Описание:</b>
+                                    {!! html_entity_decode($product->description->description, ENT_QUOTES, 'UTF-8') !!}
+                                @endif
                             </div>
                             <div>
-                                <b>Характеристики:</b>
-                                <ul style="list-style: none; margin-top: 10px; padding-left: 0;">
-                                    @foreach($product->attributes as $attribute)
-                                        <li>
-                                            <b>{{ $attribute->attribute->description->name }}:</b> {{ $attribute->text }}
-                                        </li>
-                                    @endforeach
-                                </ul>
+                                @if($product->attributes->count() > 0)
+                                    <b>Характеристики:</b>
+                                    <ul style="list-style: none; margin-top: 10px; padding-left: 0;">
+                                        @foreach($product->attributes as $attribute)
+                                            <li>
+                                                <b>{{ $attribute->attribute->description->name }}
+                                                    :</b> {{ $attribute->text }}
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @endif
                             </div>
                         </div>
                     </div>

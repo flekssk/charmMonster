@@ -12,11 +12,6 @@
 @push('after_scripts')
     <script src="{{ asset('js/main/product.js') }}"></script>
     <script src="{{ asset('js/blowup.js') }}"></script>
-    <script>
-        $(document).ready(function () {
-            $(".mainImage img").blowup();
-        });
-    </script>
 @endpush
 
 @extends('layouts.base.layout')
@@ -37,9 +32,14 @@
                     </div>
                     <div class="imagesList">
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
+                            <div>
+                                <div class="active image">
+                                    <img src="{{ getImagePath($product->image) }}"
+                                         alt=""
+                                    >
+                                </div>
                                 @foreach($product->images as $image)
-                                    <div class="carousel-item active image">
+                                    <div class="carousel-item image">
                                         <img src="{{ getImagePath($image->image) }}"
                                              alt=""
                                         >
@@ -85,8 +85,9 @@
                     </div>
                     <div class="row container" style="text-align: center; margin: 0 auto;">
                         <div>
-                            <a data-product-id="{{ $product->product_id }}" class="addToCart controlButton">В
-                                корзину</a>
+                            <a data-product-id="{{ $product->product_id }}" class="addToCart controlButton">
+                                В корзину
+                            </a>
                         </div>
                         <div>
                             <a href="" class="controlButton">Оформить заказ</a>

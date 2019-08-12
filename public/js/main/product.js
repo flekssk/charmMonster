@@ -2,15 +2,20 @@ var product = function () {
     let caller;
 
     this.initialize = function () {
+        $(".mainImage").zoom();
         $('.imagesList .image').click(function () {
-            console.log(23213);
+            $(".mainImage").trigger('zoom.destroy');;
             let clickedImage = $(this).find('img').attr('src');
-            $(this).find('img').attr('src', $('.mainImage').find('img').attr('src'));
             $('.mainImage').find('img').attr('src', clickedImage);
+            $(document).ready(function () {
+                $(".mainImage").zoom();
+            });
         });
     };
 };
 
 $(document).ready(function () {
-    var productControl = new product().initialize();
+    var productControl = new product();
+
+    productControl.initialize();
 });

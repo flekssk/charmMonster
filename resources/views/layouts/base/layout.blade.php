@@ -7,10 +7,10 @@
 <div style="overflow: hidden" class="wrapper">
     @include('layouts.base.header')
     @yield('header')
-    @yield('content')
-    <footer class="main-footer text-sm clearfix">
+    <div class="mainPageContent">
+        @yield('content')
         @include('layouts.base.footer')
-    </footer>
+    </div>
 </div>
 @include('layouts.base.foot')
 <div class="popupWindow">

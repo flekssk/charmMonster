@@ -45,10 +45,13 @@
     border-radius: 15px;
     border: 5px solid #ad9999;
     overflow: hidden;
+    background-color: #fff;
+    text-align: center;
 }
 
 .articlesContainer .articleContainer .articleContent .imageContainer .image img {
-    width: 100%;
+    width: auto;
+    height: 500px;
 }
 
 .articlesContainer .articleContainer .articleContent .textContainer {

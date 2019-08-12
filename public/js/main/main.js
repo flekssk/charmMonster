@@ -195,6 +195,8 @@ let popup = function () {
 controller.cart.initialize();
 
 $(document).ready(function () {
+    $('.mainPageContent').fadeIn(1000);
+
     controller.popupControl = new popup();
     controller.data = JSON.parse($('.jsonData').html());
 

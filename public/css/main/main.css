@@ -351,6 +351,10 @@ body {
     color: #fff;
 }
 
+.mainPageContent {
+    display: none;
+}
+
 .aboutCompanyContainer {
     margin-top: 100px;
     background: url(/public/images/layout/video_back.png) no-repeat center;

@@ -5,10 +5,17 @@
         </div>
         <div class="imagesList">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
+                <div>
+                    <div class="active image">
+                        <img src="{{ getImagePath($product->image) }}"
+                             alt=""
+                        >
+                    </div>
                     @foreach($product->images as $image)
-                        <div class="carousel-item active image">
-                            <img src="{{ getImagePath($image->image) }}" alt="">
+                        <div class="carousel-item image">
+                            <img src="{{ getImagePath($image->image) }}"
+                                 alt=""
+                            >
                         </div>
                     @endforeach
                 </div>

@@ -194,6 +194,26 @@ let popup = function () {
 
 controller.cart.initialize();
 
+controller.form = new function () {
+    this.renderErrors = function (errors) {
+        let renderedErrors = [];
+
+        $.each(errors, function (fieldName, fieldError) {
+            $('[name="' + fieldName + '"]').addClass('alert-danger');
+            $.each(fieldError, function (id, error) {
+                renderedErrors.push($('<div class="alert alert-danger" />').html(error));
+            })
+        });
+
+        $('.errorsContainer').html(renderedErrors);
+    };
+
+    this.clearErrors = function () {
+        $('input,textarea').removeClass('alert-danger');
+        $('.errorsContainer').html('');
+    }
+};
+
 $(document).ready(function () {
     $('.mainPageContent').fadeIn(1000);
 
@@ -201,17 +221,17 @@ $(document).ready(function () {
     controller.data = JSON.parse($('.jsonData').html());
 
     $('.categoriesContainer .category').mouseover(function () {
-       $(this).find('.title').css('background-color', '#d64345');
+        $(this).find('.title').css('background-color', '#d64345');
     });
     $('.categoriesContainer .category').mouseout(function () {
-       $(this).find('.title').css('background-color', '#FFB2B2');
+        $(this).find('.title').css('background-color', '#FFB2B2');
     });
 
     $('.blogPostsContainer .post').mouseover(function () {
-       $(this).find('.title').css('background-color', '#d64345');
+        $(this).find('.title').css('background-color', '#d64345');
     });
     $('.blogPostsContainer .post').mouseout(function () {
-       $(this).find('.title').css('background-color', '#FFB2B2');
+        $(this).find('.title').css('background-color', '#FFB2B2');
     });
 
     $('.authenticate').click(function () {
@@ -261,7 +281,7 @@ $(document).ready(function () {
     $(document).on('click', '.minus', function () {
         let counter = $('.count[data-counter="' + $(this).data('counter') + '"]');
         counter.val(parseInt($('.count').val()) - 1);
-        if (counter.val() == 0) {
+        if (counter.val() === 0) {
             counter.val(1);
         }
     });
@@ -273,29 +293,9 @@ $(document).ready(function () {
             success: function (response) {
                 controller.popupControl.showContent(response.content);
                 $(document).ready(function () {
-                    var productControl = new product().initialize();
+                    let productControl = new product().initialize();
                 });
             }
         });
     });
 });
-
-controller.form = new function () {
-    this.renderErrors = function (errors) {
-        let renderedErrors = [];
-
-        $.each(errors, function (fieldName, fieldError) {
-            $('[name="' + fieldName + '"]').addClass('alert-danger');
-            $.each(fieldError, function (id, error) {
-                renderedErrors.push($('<div class="alert alert-danger" />').html(error));
-            })
-        });
-
-        $('.errorsContainer').html(renderedErrors);
-    };
-
-    this.clearErrors = function () {
-        $('input,textarea').removeClass('alert-danger');
-        $('.errorsContainer').html('');
-    }
-};

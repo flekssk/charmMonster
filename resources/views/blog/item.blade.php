@@ -8,7 +8,7 @@
     <div class="articleBackground">
         <div class="articleBackgroundImage"></div>
     </div>
-    <div class="mainTitle title">
+    <div class="ukrainianTitle mainTitle title">
         <h1>{{ $article->description->name }}</h1>
     </div>
     <div class="articleContent">

@@ -10,7 +10,7 @@
 .articlesContainer .articleContainer .title {
     width: 100%;
     text-align: center;
-    background-color: #ffcccc;
+    background-color: #d5c7c7;
     padding: 20px 10px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -18,10 +18,6 @@
     border: 10px solid #fff;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, .2);
     margin-bottom: 40px;
-}
-
-.articlesContainer .articleContainer .title h1 {
-    color: #fff;
 }
 
 .articlesContainer .articleContainer .articleContent {

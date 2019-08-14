@@ -2,7 +2,7 @@
     @if(\App\Extensions\Cart\CartFacade::getProducts()->items()->count() > 0)
         <form id="orderForm" action="{{ action('Order\OrderController@store') }}" method="post">
             <div class="mainTitle title ukrainianTitle">
-                <h1>Оформление зказа</h1>
+                <h1>Оформление зaказа</h1>
             </div>
             <div class="errorsContainer"></div>
             <div class="products" style="margin: 0 -20px;">

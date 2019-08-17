@@ -1,0 +1,18 @@
+.orderContainer {
+    width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid #CC0000;
+    padding: 20px;
+    background-color: rgba(255, 237, 237, 1);
+}
+
+.orderContainer .title {
+    width: 100%;
+    text-align: center;
+}
+
+.orderSuccessContainer {
+    margin-top: 50px;
+    text-align: center;
+}

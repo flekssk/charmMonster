@@ -923,3 +923,17 @@ input:disabled {
     color: #fff;
 }
 
+.slick-next.slick-arrow {
+    height: 100px;
+    color: gray;
+    font-size: 0;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 50px !important;
+    color: #c6c6c6 !important;
+}
+
+.slick-prev {
+    left: -53px;
+}

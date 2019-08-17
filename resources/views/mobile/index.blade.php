@@ -94,7 +94,7 @@
             </div>
             <div class="row blogPostsContainer">
                 @foreach($posts->items() as $post)
-                    <div class="post slick-slide"
+                    <div class="col-4 post"
                          data-link="{{ action('Blog\BlogController@show', ['article' => $post->article_id]) }}">
                         <div class="col-12 title">
                             {{ $post->description->name }}

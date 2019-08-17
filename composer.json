@@ -5,19 +5,20 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "greggilbert/recaptcha": "dev-master",
+        "ext-json": "*",
         "barryvdh/laravel-elfinder": "^0.4.2",
         "braintree/braintree_php": "^4.2",
         "cardinity/cardinity-sdk-php": "^2.1",
         "darryldecode/cart": "~4.0",
+        "greggilbert/recaptcha": "dev-master",
         "laravel/framework": "5.8.*",
         "laravel/socialite": "^4.1",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.8",
+        "mobiledetect/mobiledetectlib": "^2.8",
         "socialiteproviders/instagram": "^3.0",
         "socialiteproviders/manager": "~2.0 || ~3.0",
-        "socialiteproviders/vkontakte": "^4.0",
-      "ext-json": "*"
+        "socialiteproviders/vkontakte": "^4.0"
     },
     "require-dev": {
         "backpack/generators": "^1.2",

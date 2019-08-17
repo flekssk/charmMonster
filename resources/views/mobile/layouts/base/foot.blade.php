@@ -15,7 +15,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 <script src="{{ asset('js/jquery.zoom.min.js') }}"></script>
 <script src="{{ asset('lightbox/js/lightgallery.js') }}"></script>
-<script src="{{ asset('slick/slick.js') }}"></script>
 
 <script src="{{ asset('js/main/main.js') }}"></script>
 @yield('after_scripts')

@@ -164,6 +164,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         \App\Providers\HtmlServiceProvider::class,
         \App\Extensions\Cart\CartServiceProvider::class,
+        \App\Providers\OCSessionProvider::class,
+        Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -227,7 +229,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
     ],
 
     'asset_url' => '/public/'

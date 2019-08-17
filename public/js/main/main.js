@@ -177,6 +177,7 @@ let popup = function () {
     this.showPopup = function () {
         $('.popupWindow').fadeIn();
         $('body').css('overflow', 'hidden');
+        $('.wrapper').css('filter', 'blur(7px)');
     };
 
     this.showContent = function (content) {
@@ -187,6 +188,7 @@ let popup = function () {
     this.hidePopup = function () {
         $('body').css('overflow', 'auto');
         $('.popupWindow').fadeOut();
+        $('.wrapper').css('filter', 'none');
     };
 
     this.initialize();
@@ -215,6 +217,13 @@ controller.form = new function () {
 };
 
 $(document).ready(function () {
+    $('.blogPostsContainer').slick({
+        centerPadding: '60px',
+        slidesToShow: 3,
+        arrows: true,
+        dots: true,
+    });
+
     $('.mainPageContent').fadeIn(1000);
 
     controller.popupControl = new popup();

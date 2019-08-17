@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'ukrainian';
+    src: local('UkrainianJikharev'), local('UkrainianJikharev-Regular'),
+    url(/public/fonts/ukrainianjikharev.woff) format('woff'),
+    url(/public/fonts/ukrainianjikharev.ttf) format('truetype');
+}
+
+a, span, div, li {
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+.ukrainianTitle {
+    font-family: ukrainian, Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+}
+
+
+.headerContainer {
+    padding: 30px 20px;
+    position: relative;
+    width: 480px;
+    margin: 0 auto;
+}
+
+.headerContainer:after {
+    content: ' ';
+    bottom: 0;
+    position: absolute;
+    background-image: url(/public/images/mobile/layout/afterMenuBackground.png);
+    width: 480px;
+    height: 100px;
+    left: -144px;
+}
+
+.headerContainer .menuBackground {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    top: 0;
+    left: 0;
+}
+
+.headerContainer .headerControlPanel .controlButton {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+
+}
+
+.headerContainer .headerControlPanel .controlButton i {
+    background-color: #FFF;
+    padding: 8px 12px 10px;
+    border: 2px solid #CC0000;
+    color: #cc1417;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.headerContainer .headerControlPanel .controlButton:hover {
+    border: 3px solid #FFF;
+}
+
+.headerContainer .headerControlPanel .controlButton i:hover {
+    background-color: #FFF;
+}
+
+.headerContainer .logo {
+    margin: -40px auto 0;
+}
+
+.headerContainer .logo img {
+    height: 180px;
+}

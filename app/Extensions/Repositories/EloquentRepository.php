@@ -16,7 +16,7 @@ use Illuminate\Support\Collection;
  *
  * @package App\Repositories
  */
-abstract class EloquentRepository extends BaseRepository implements Repository, Arrayable, ArrayAccess, Countable, \Iterator
+abstract class EloquentRepository extends BaseRepository implements Arrayable, ArrayAccess, Countable, \Iterator
 {
     public $table;
 
@@ -131,7 +131,7 @@ abstract class EloquentRepository extends BaseRepository implements Repository, 
     }
 
     /**
-     * @return mixed|BPMModel
+     * @return mixed|Model
      */
     public function prev()
     {

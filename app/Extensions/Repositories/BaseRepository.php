@@ -2,12 +2,14 @@
 
 namespace App\Extensions\Repositories;
 
+use App\Extensions\Repositories\Contracts\Repository;
 use ArrayIterator;
+use Detection\MobileDetect;
 use Exception;
 use Illuminate\Database\Eloquent\Concerns\HasAttributes;
 use Illuminate\Support\Collection;
 
-class BaseRepository
+class BaseRepository implements Repository
 {
     use HasAttributes;
 
@@ -133,7 +135,7 @@ class BaseRepository
      */
     public function offsetGet($offset)
     {
-        return $this->getAttribute($offset);
+        return $this->offsetGet($offset);
     }
 
     /**
@@ -145,7 +147,7 @@ class BaseRepository
      */
     public function offsetSet($offset, $value)
     {
-        $this->setAttribute($offset, $value);
+        $this->offsetSet($offset, $value);
     }
 
     /**
@@ -187,5 +189,10 @@ class BaseRepository
 
     protected function afterSetItems()
     {
+    }
+
+    public function getItems()
+    {
+        return $this->items();
     }
 }

@@ -16,9 +16,11 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.8",
         "mobiledetect/mobiledetectlib": "^2.8",
+        "orangedata/orangedata-client": "dev-master",
         "socialiteproviders/instagram": "^3.0",
         "socialiteproviders/manager": "~2.0 || ~3.0",
-        "socialiteproviders/vkontakte": "^4.0"
+        "socialiteproviders/vkontakte": "^4.0",
+        "yandex-money/yandex-checkout-sdk-php": "^1.4"
     },
     "require-dev": {
         "backpack/generators": "^1.2",

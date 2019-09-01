@@ -21,6 +21,7 @@ Route::prefix('order')->group(
         Route::get('/', 'Order\OrderController@index');
         Route::post('store', 'Order\OrderController@store');
         Route::get('success/{order}', 'Order\OrderController@success');
+        Route::post('cardPaymentCallback', 'Order\OrderController@cardPaymentCallback');
     });
 
 Route::prefix('cart')->group(

@@ -45,8 +45,8 @@ let cartControl = function () {
                     beforeSubmit: function () {
                         controller.form.clearErrors();
                     },
-                    success: function (resounce) {
-                        location.href = '/order/success/' + resounce.order_id
+                    success: function (response) {
+                        location.href = response.redirectUrl;
                     },
                     error: function (response) {
                         controller.form.renderErrors(response.responseJSON.errors);

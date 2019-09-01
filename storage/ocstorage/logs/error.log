@@ -23,3 +23,226 @@
 2019-07-14 12:13:26 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\admin\controller\startup\error.php:34) in C:\OSPanel\domains\charm\system\library\response.php on line 36
 2019-07-14 12:13:53 - PHP Notice:  Undefined index: tag in C:\OSPanel\domains\charm\admin\model\blog\article.php on line 16
 2019-07-14 12:13:53 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\admin\controller\startup\error.php:34) in C:\OSPanel\domains\charm\system\library\response.php on line 36
+2019-07-18 17:06:40 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-18 17:06:40 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: sku in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: upc in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: ean in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: jan in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: isbn in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: mpn in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: location in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: quantity in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: minimum in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: subtract in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: stock_status_id in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: shipping in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Notice:  Undefined index: tax_class_id in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 7:57:08 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\admin\controller\startup\error.php:34) in C:\OSPanel\domains\charm\system\library\response.php on line 36
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: sku in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: upc in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: ean in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: jan in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: isbn in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: mpn in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: location in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: quantity in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: minimum in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: subtract in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: stock_status_id in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: shipping in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Notice:  Undefined index: tax_class_id in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:02:42 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\admin\controller\startup\error.php:34) in C:\OSPanel\domains\charm\system\library\response.php on line 36
+2019-07-21 8:03:22 - PHP Notice:  Undefined index: tax_class_id in C:\OSPanel\domains\charm\admin\model\catalog\product.php on line 159
+2019-07-21 8:03:22 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\admin\controller\startup\error.php:34) in C:\OSPanel\domains\charm\system\library\response.php on line 36
+2019-07-21 9:00:29 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-21 9:00:29 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-21 9:02:13 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-21 9:02:13 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:02:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:06:30 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:06:30 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:06:30 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:14:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:14:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:14:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:16:42 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:16:42 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:16:42 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:16:42 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:16:42 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:16:42 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:16:42 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:16:42 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:16:42 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:17:08 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:17:08 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:17:08 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:18:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:18:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:18:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:18:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:18:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:18:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:51:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:51:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:51:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 9:51:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 9:51:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 9:51:43 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 15:07:59 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-21 15:07:59 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-21 15:11:59 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 15:11:59 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 15:11:59 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 15:11:59 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 15:11:59 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 15:11:59 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 15:12:01 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 15:12:01 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 15:12:01 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 15:12:01 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 15:12:01 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 15:12:01 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 15:12:03 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 15:12:03 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 15:12:03 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 15:12:03 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 15:12:03 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 15:12:03 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 16:03:04 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 16:03:04 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 16:03:04 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 16:03:04 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 25
+2019-07-21 16:03:04 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 26
+2019-07-21 16:03:04 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 27
+2019-07-21 16:07:48 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-21 16:07:48 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-21 16:07:48 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:07:48 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:07:48 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:07:48 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:07:48 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:07:48 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:07:49 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-21 16:07:49 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-21 16:07:52 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:07:52 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:07:52 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:07:52 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:07:52 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:07:52 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:09:46 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:09:46 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:09:46 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:09:46 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:09:46 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:09:46 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:10:34 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:10:34 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:10:34 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:10:34 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:10:34 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:10:34 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:16:14 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:16:14 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:16:14 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:16:14 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:16:14 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:16:14 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:38:12 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:38:25 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 30
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 31
+2019-07-21 16:39:47 - PHP Notice:  Undefined index:  in C:\OSPanel\domains\charm\system\library\cart\currency.php on line 32
+2019-07-21 16:42:14 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-21 16:42:14 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-23 17:47:26 - PHP Warning:  Cannot modify header information - headers already sent in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-23 17:50:05 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-23 17:50:05 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-31 18:57:17 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-31 18:57:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-31 19:08:26 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-31 19:08:26 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-31 19:08:26 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\library\response.php on line 36
+2019-07-31 19:53:21 - PHP Notice:  Undefined index: key in C:\OSPanel\domains\charm\admin\controller\design\translation.php on line 412
+2019-07-31 19:58:58 - PHP Notice:  Undefined index: key in C:\OSPanel\domains\charm\admin\controller\design\translation.php on line 412
+2019-07-31 19:59:17 - PHP Notice:  Undefined index: key in C:\OSPanel\domains\charm\admin\controller\design\translation.php on line 412
+2019-07-31 20:00:23 - PHP Notice:  Undefined index: key in C:\OSPanel\domains\charm\admin\controller\design\translation.php on line 412
+2019-07-31 20:01:27 - PHP Notice:  Undefined index: key in C:\OSPanel\domains\charm\admin\controller\design\translation.php on line 412
+2019-07-31 20:08:05 - PHP Notice:  Undefined index: key in C:\OSPanel\domains\charm\admin\controller\design\translation.php on line 412
+2019-07-31 20:09:57 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-31 20:09:57 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-31 20:10:31 - PHP Notice:  Undefined index: route in C:\OSPanel\domains\charm\admin\model\design\translation.php on line 8
+2019-07-31 20:10:31 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\admin\controller\startup\error.php:34) in C:\OSPanel\domains\charm\system\library\response.php on line 36
+2019-07-31 20:11:38 - PHP Notice:  Undefined index: route in C:\OSPanel\domains\charm\admin\model\design\translation.php on line 8
+2019-07-31 20:11:38 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\admin\controller\startup\error.php:34) in C:\OSPanel\domains\charm\system\library\response.php on line 36
+2019-07-31 20:12:34 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
+2019-07-31 20:12:34 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
+2019-07-31 20:12:34 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\library\response.php on line 36

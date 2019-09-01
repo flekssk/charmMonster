@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Order;
 
 use App\Extensions\Cart\CartFacade;
+use App\Extensions\Payments\Methods\CardPayment;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Order\OrderFormRequest;
 use App\Models\Order\Order;
 use App\Models\Order\OrderProduct;
+use App\Models\Order\YandexPayment;
 use App\Models\Product\Product;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -35,7 +37,6 @@ class OrderController extends Controller
         $order->store_url          = config('app.url');
         $order->telephone          = $request->telephone;
         $order->order_status_id    = 1;
-
         $order->save();
 
         $totalOrderPrice = 0;
@@ -62,10 +63,14 @@ class OrderController extends Controller
 
         $order->total = $totalOrderPrice;
 
+        $order->save();
+
+        $payment = new CardPayment($order);
+
         return JsonResponse::create(
             [
                 'success'  => true,
-                'order_id' => $order->order_id,
+                'redirectUrl' => $payment->pay()
             ]
         );
     }
@@ -73,5 +78,15 @@ class OrderController extends Controller
     public function success(Order $order)
     {
         return view('order.success', compact('order'));
+    }
+
+    public function cardPaymentCallback(Request $request)
+    {
+        $yandexPayment = YandexPayment::findByYandexOrderId($request->object['id']);
+
+        if($request->object['status'] == 'succeeded') {
+            $yandexPayment->order->order_status_id = Order::STATUS_WAITING;
+            $yandexPayment->order->save();
+        }
     }
 }

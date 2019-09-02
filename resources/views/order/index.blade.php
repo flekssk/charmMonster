@@ -79,8 +79,8 @@
             </div>
             <div class="form-group">
                 <label for=""><b>Способ оплаты</b></label>
-                <div><input name="payment_method" type="radio" value="1"> Наличными</div>
-                <div><input name="payment_method" type="radio" value="2"> Банковской картов</div>
+                <div><input name="payment_method" type="radio" value="1"> Сбербанк онлайн (перевод)</div>
+                <div><input name="payment_method" type="radio" value="2"> Yandex касса (банковской картой)</div>
             </div>
             <div class="form-group">
                 {!! Recaptcha::render() !!}

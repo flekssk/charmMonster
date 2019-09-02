@@ -22,6 +22,9 @@ Route::prefix('order')->group(
         Route::post('store', 'Order\OrderController@store');
         Route::get('success/{order}', 'Order\OrderController@success');
         Route::post('cardPaymentCallback', 'Order\OrderController@cardPaymentCallback');
+        Route::get('yandexSuccess/{order}', 'Order\OrderController@yandexSuccess');
+        Route::get('yandexError/{order}', 'Order\OrderController@yandexError');
+        Route::get('sberbankOrder/{order}', 'Order\OrderController@sberbankOrder');
     });
 
 Route::prefix('cart')->group(

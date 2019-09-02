@@ -4,7 +4,7 @@ namespace App\Extensions\Payments\Methods;
 
 use YandexCheckout\Client;
 
-class CardPayment extends Payment
+class YandexPayment extends Payment
 {
     public function pay()
     {

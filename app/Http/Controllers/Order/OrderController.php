@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Order;
 
 use App\Extensions\Cart\CartFacade;
-use App\Extensions\Payments\Methods\CardPayment;
+use App\Extensions\Payments\Methods\Payment;
+use App\Extensions\Payments\Payer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Order\OrderFormRequest;
 use App\Models\Order\Order;
@@ -36,7 +37,7 @@ class OrderController extends Controller
         $order->store_name         = 'charm';
         $order->store_url          = config('app.url');
         $order->telephone          = $request->telephone;
-        $order->order_status_id    = 1;
+        $order->order_status_id    = Order::STATUS_WAITING;
         $order->save();
 
         $totalOrderPrice = 0;
@@ -65,7 +66,7 @@ class OrderController extends Controller
 
         $order->save();
 
-        $payment = new CardPayment($order);
+        $payment = Payer::getPayment($order);
 
         return JsonResponse::create(
             [
@@ -80,13 +81,32 @@ class OrderController extends Controller
         return view('order.success', compact('order'));
     }
 
-    public function cardPaymentCallback(Request $request)
+    public function yandexPaymentCallback(Request $request)
     {
         $yandexPayment = YandexPayment::findByYandexOrderId($request->object['id']);
 
         if($request->object['status'] == 'succeeded') {
-            $yandexPayment->order->order_status_id = Order::STATUS_WAITING;
+            $yandexPayment->order->order_status_id = Order::STATUS_IN_PROCESS;
             $yandexPayment->order->save();
+
+            redirect();
         }
+    }
+
+    public function sberbankOrder(Order $order)
+    {
+        return view('order.sberbankOrder', compact('order'));
+    }
+
+    public function yandexSuccess(Order $order)
+    {
+        return view('order.yandexSuccess', compact('order'));
+    }
+
+    public function yandexError(Order $order)
+    {
+        $tryPayAgainUrl = Payer::getPayment($order)->pay();
+
+        return view('order.yandexError', compact('order', 'tryPayAgainUrl'));
     }
 }

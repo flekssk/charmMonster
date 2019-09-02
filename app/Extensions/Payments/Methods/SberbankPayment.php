@@ -2,13 +2,11 @@
 
 namespace App\Extensions\Payments\Methods;
 
-use App\Extensions\Payments\Contracts\PaymentMethod;
-
-class SberbankPayment implements PaymentMethod
+class SberbankPayment extends Payment
 {
     public function pay()
     {
-        return true;
+        return action('Order\OrderController@sberbankOrder', ['order' => $this->order->id]);
     }
 
     public function getPaymentStatus()

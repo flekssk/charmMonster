@@ -65,7 +65,7 @@ class OrderController extends Controller
         $order->total = $totalOrderPrice;
 
         $order->save();
-
+        dd($order);
         $payment = Payer::getPayment($order);
 
         return JsonResponse::create(

@@ -10,9 +10,9 @@ class Translation extends Model
 
     protected $primaryKey = 'translation_id';
 
-    public static function findByKey($key)
+    public static function findByKey($key, $default = '')
     {
-        return (new static())->newQuery()->where('key', '=', $key)->first();
+        return (new static())->newQuery()->where('key', '=', $key)->first() ?? $default;
     }
 
     public function __toString()

@@ -16,11 +16,12 @@ class IndexController extends Controller
         return view(
             'index',
             [
-                'products'     => ProductRepository::getOnMain(),
-                'categories'   => CategoriesRepository::getOnMain(),
+                'products' => ProductRepository::getOnMain(),
+                'categories' => CategoriesRepository::getOnMain(),
                 'sliderImages' => MainSliderImagesRepository::getBySliderId(config('pageContents.mainPage.sliderId')),
-                'posts'        => ArticlesRepository::getOnMain(),
-                'mainText'     => Translation::findByKey('mainTitleText'),
+                'posts' => ArticlesRepository::getOnMain(),
+                'mainText' => Translation::findByKey('mainTitleText'),
+                'mainVideoLink' => Translation::findByKey('mainVideoLink', 'test'),
             ]
         );
     }

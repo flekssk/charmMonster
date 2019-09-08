@@ -64,15 +64,17 @@
                         <div class="description">
                             <div>
                                 @if($product->description->description)
-                                    <b>Описание:</b>
+                                    <div style="margin-bottom: 10px;">
+                                        <b>Описание:</b>
+                                    </div>
                                     {!! html_entity_decode($product->description->description, ENT_QUOTES, 'UTF-8') !!}
                                 @endif
                             </div>
                             <div>
-                                @if($product->attributes->count() > 0)
+                                @if($product->productAttributes->count() > 0)
                                     <b>Характеристики:</b>
                                     <ul style="list-style: none; margin-top: 10px; padding-left: 0;">
-                                        @foreach($product->attributes as $attribute)
+                                        @foreach($product->productAttributes as $attribute)
                                             <li>
                                                 <b>{{ $attribute->attribute->description->name }}
                                                     :</b> {{ $attribute->text }}

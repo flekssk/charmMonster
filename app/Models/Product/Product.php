@@ -6,6 +6,13 @@ use App\Models\Model;
 use Illuminate\Http\File;
 use Illuminate\Support\Collection;
 
+/**
+ * Class Product
+ *
+ * @package App\Models\Product
+ *
+ * @property Collection $productAttributes
+ */
 class Product extends Model
 {
     protected $table = 'product';
@@ -60,7 +67,7 @@ class Product extends Model
         return $comments;
     }
 
-    public function attributes()
+    public function productAttributes()
     {
         return $this->hasMany(ProductAttribute::class, 'product_id');
     }

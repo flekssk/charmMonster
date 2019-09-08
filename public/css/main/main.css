@@ -11,6 +11,7 @@ a, span, div, li {
 
 body {
     height: 100%;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
 .ukrainianTitle {
@@ -233,7 +234,7 @@ body {
 .topMenuContainer {
     height: 100px;
     background: linear-gradient(to right, #FBBDBD, #CC0000);
-    padding: 35px 10px 10px 10px;
+    padding: 40px 10px 10px 10px;
     z-index: -1;
 }
 
@@ -246,7 +247,7 @@ body {
     content: ' ';
     height: 44px;
     width: 1920px;
-    top: -19px;
+    top: -30px;
     left: -386px;
     background: url(/public/images/layout/menuLine.png) no-repeat;
     overflow: hidden;
@@ -265,7 +266,7 @@ body {
 
 .topMenuContainer .menu a {
     width: 100%;
-    font-size: 22px;
+    font-size: 20px;
     cursor: pointer;
     margin: 0;
     padding: 0;
@@ -284,10 +285,10 @@ body {
 .topMenuContainer .menu .item.active .mainItem:before {
     content: '';
     position: absolute;
-    height: 200%;
+    height: 206%;
     width: 51px;
     background: url(/public/images/layout/menuHovered.png) no-repeat;
-    top: -14px;
+    top: -19px;
     display: none;
     left: 45px;
 }
@@ -738,7 +739,7 @@ body {
 
 .cartWidgetContainer .control a {
     display: inline-block;
-    width: 165px;
+    width: 164px;
 }
 
 .qty {

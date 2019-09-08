@@ -54,9 +54,10 @@
     background-color: #FFE2E2;
     color: #995C5C;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 15px;
     text-align: left;
     cursor: pointer;
+    padding: 10px 15px;
 }
 
 .filterContainer .tagsFilters .tagFilter.active {

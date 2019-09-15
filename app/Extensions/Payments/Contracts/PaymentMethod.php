@@ -6,5 +6,7 @@ interface PaymentMethod
 {
     public function pay();
 
+    public function getRedirectUrl();
+
     public function getPaymentStatus();
 }

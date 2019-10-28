@@ -19,7 +19,7 @@ final class Openbay {
 			}
 		}
 
-		$this->logger = new \Log('openbay.log');
+		$this->logger = new \OCLog('openbay.log');
 	}
 
 	public function __get($name) {

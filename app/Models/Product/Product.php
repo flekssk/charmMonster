@@ -3,6 +3,7 @@
 namespace App\Models\Product;
 
 use App\Models\Model;
+use App\Repositories\Product\ProductComplectationRepository;
 use Illuminate\Http\File;
 use Illuminate\Support\Collection;
 
@@ -12,6 +13,8 @@ use Illuminate\Support\Collection;
  * @package App\Models\Product
  *
  * @property Collection $productAttributes
+ * @property int product_id
+ * @property ProductComplectationRepository $complectation
  */
 class Product extends Model
 {
@@ -67,8 +70,61 @@ class Product extends Model
         return $comments;
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function productAttributes()
     {
         return $this->hasMany(ProductAttribute::class, 'product_id');
+    }
+
+    /**
+     * @return \App\Extensions\Repositories\BaseRepository
+     */
+    public function getComplectationAttribute()
+    {
+        return ProductComplectationRepository::getProductComplectation($this->product_id);
+    }
+
+    /**
+     * @param Product[] $complection
+     *
+     * @return mixed
+     */
+    public function getFullPrice($complection = [])
+    {
+        $price = $this->price;
+
+        $complection = !empty($complections) ? $complections : $this->getDefaultComplection();
+
+        foreach ($complection as $product) {
+            $price += $product->price;
+        }
+
+        return $price;
+    }
+
+    public function getDefaultComplection()
+    {
+        $defaultComplection = [];
+
+        /** @var ProductComplectation $item */
+        foreach ($this->complectation->items() as $complection) {
+            $defaultComplection[] = $complection->categories->items()->first()->getSelectedProduct();
+        }
+
+        return $defaultComplection;
+    }
+
+    public function getDefaultComplectionJson()
+    {
+        $data = [];
+
+        /** @var Product $product */
+        foreach ($this->getDefaultComplection() as $product) {
+            $data[] = $product->product_id;
+        }
+
+        return json_encode($data);
     }
 }

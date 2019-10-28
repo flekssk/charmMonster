@@ -123,7 +123,8 @@ let cartControl = function () {
                 method: 'post',
                 dataType: 'json',
                 data: {
-                    'product_id': button.data('product-id')
+                    product_id: button.data('product-id'),
+                    complection: controller.productController.getSelectedComplectionProductsId(),
                 },
                 success: function (response) {
                     $('.totalPrice').html(response.totalPrice);

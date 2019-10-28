@@ -173,7 +173,7 @@ final class Ebay {
 			}
 		}
 
-		$this->logger = new \Log('ebaylog.log');
+		$this->logger = new \OCLog('ebaylog.log');
 	}
 
 	public function log($data, $write = true) {

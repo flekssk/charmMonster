@@ -12,6 +12,7 @@ class OrderFormRequest extends FormRequest
             'first_name'           => 'required',
             'last_name'            => 'required',
             'telephone'            => 'required',
+//            'g-recaptcha-response' => 'required|recaptcha',
         ];
     }
 

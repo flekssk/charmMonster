@@ -174,7 +174,7 @@ final class fba {
 			}
 		}
 
-		$this->logger = new \Log('fulfillment_by_amazon.log');
+		$this->logger = new \OCLog('fulfillment_by_amazon.log');
 	}
 
 	public function log($data) {

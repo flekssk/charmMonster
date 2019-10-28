@@ -51,7 +51,10 @@
                 </div>
                 <div class="description">
                     <div class="price">
-                        {{ number_format(round($product->price), 0, '.', ' ') }} <i class="fa fa-ruble"></i>
+                        <span data-base-price="{{ $product->price }}" class="mainProductPrice">
+                            {{ number_format(round($product->getFullPrice()), 0, '.', ' ') }}
+                        </span>
+                        <i class="fa fa-ruble"></i>
                     </div>
                     <div class="descriptionBackground"></div>
                     <div class="ukrainianTitle mainTitle title">
@@ -59,9 +62,65 @@
                     </div>
                     <div class="text">
                         <div class="textBackground">
-
                         </div>
                         <div class="description">
+                            <div>
+                                <?php
+                                /**
+                                 * @var \App\Models\Product\ProductComplectation $complection
+                                 */
+                                ?>
+                                @foreach($product->complectation->items() as $complection)
+                                    <div style="display: block">
+                                        <b>{{ $complection->name }}:</b>
+                                    </div>
+                                    <div style="display: block; margin-bottom: 10xp;">
+                                        <select
+                                                data-complection-id="{{ $complection->id }}"
+                                                class="complectionCategorySelect"
+                                                data-product-id="{{ $product->product_id }}"
+                                        >
+                                            @foreach($complection->categories as $complectionCategory)
+                                                <option value="{{ $complectionCategory->category_id }}">{{ $complectionCategory->category->description->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <?php
+                                    $selectedCategory = true;
+                                    /**
+                                     * @var \App\Models\Product\ProductComplectationCategory $complectionCategory
+                                     */
+                                    ?>
+                                    @foreach($complection->categories as $complectationCategory)
+                                        <div
+                                                class="complectionCategoryProducts {{ $selectedCategory ? 'selected' : '' }}"
+                                                data-category-id="{{ $complectationCategory->category_id }}"
+                                                data-complection-id="{{ $complection->id }}"
+                                        >
+                                            <?php
+                                            $selected = true;
+                                            /**
+                                             * @var \App\Models\Product\Product $product
+                                             */
+                                            ?>
+                                            @foreach($complectationCategory->products as $complectionProduct)
+                                                <div
+                                                        class="complectationProduct {{ $complectationCategory->getSelectedClass($complectionProduct->product_id)  }}"
+                                                        data-complection-id="{{ $complection->id }}"
+                                                        data-category-id="{{ $complectationCategory->category_id }}"
+                                                        data-product-id="{{ $complectionProduct->product_id }}"
+                                                        data-price="{{ $complectionProduct->price }}"
+                                                        data-main-product="{{ $product->product_id }}"
+                                                >
+                                                    <img src="{{ getImagePath($complectionProduct->image) }}" alt="">
+                                                </div>
+                                            @endforeach
+                                            <?php $selected = false; ?>
+                                        </div>
+                                        <?php $selectedCategory = false; ?>
+                                    @endforeach
+                                @endforeach
+                            </div>
                             <div>
                                 @if($product->description->description)
                                     <div style="margin-bottom: 10px;">
@@ -87,7 +146,12 @@
                     </div>
                     <div class="row container" style="text-align: center; margin: 0 auto;">
                         <div>
-                            <a data-product-id="{{ $product->product_id }}" class="addToCart controlButton">
+                            <a
+                                    data-product-id="{{ $product->product_id }}"
+                                    data-complection="{{ $product->getDefaultComplectionJson() }}"
+                                    data-test="12323"
+                                    class="addToCart controlButton"
+                            >
                                 В корзину
                             </a>
                         </div>

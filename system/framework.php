@@ -3,13 +3,14 @@
 $registry = new Registry();
 
 // Config
-$config = new Config();
+$config = new OCConfiguration();
+
 $config->load('default');
 $config->load($application_config);
 $registry->set('config', $config);
 
 // Log
-$log = new Log($config->get('error_filename'));
+$log = new OCLog($config->get('error_filename'));
 $registry->set('log', $log);
 
 date_default_timezone_set($config->get('date_timezone'));
@@ -67,21 +68,21 @@ $loader = new Loader($registry);
 $registry->set('load', $loader);
 
 // Request
-$registry->set('request', new Request());
+$registry->set('request', new OCRequest());
 
 // Response
-$response = new Response();
+$response = new OCResponse();
 $response->addHeader('Content-Type: text/html; charset=utf-8');
 $response->setCompression($config->get('config_compression'));
 $registry->set('response', $response);
 
 // Database
 if ($config->get('db_autostart')) {
-	$registry->set('db', new DB($config->get('db_engine'), $config->get('db_hostname'), $config->get('db_username'), $config->get('db_password'), $config->get('db_database'), $config->get('db_port')));
+	$registry->set('db', new OCDB($config->get('db_engine'), $config->get('db_hostname'), $config->get('db_username'), $config->get('db_password'), $config->get('db_database'), $config->get('db_port')));
 }
 
 // Session
-$session = new Session($config->get('session_engine'), $registry);
+$session = new OCSession($config->get('session_engine'), $registry);
 $registry->set('session', $session);
 
 if ($config->get('session_autostart')) {
@@ -109,7 +110,7 @@ if ($config->get('session_autostart')) {
 }
 
 // Cache
-$registry->set('cache', new Cache($config->get('cache_engine'), $config->get('cache_expire')));
+$registry->set('cache', new OCCache($config->get('cache_engine'), $config->get('cache_expire')));
 
 // Url
 if ($config->get('url_autostart')) {

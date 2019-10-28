@@ -21,6 +21,8 @@ Route::prefix('order')->group(
         Route::get('/', 'Order\OrderController@index');
         Route::post('store', 'Order\OrderController@store');
         Route::get('success/{order}', 'Order\OrderController@success');
+        Route::get('show/{order}', 'Order\OrderController@show');
+        Route::get('showByHash/{hash}', 'Order\OrderController@showByHash');
         Route::post('cardPaymentCallback', 'Order\OrderController@cardPaymentCallback');
         Route::get('yandexSuccess/{order}', 'Order\OrderController@yandexSuccess');
         Route::get('yandexError/{order}', 'Order\OrderController@yandexError');
@@ -51,3 +53,17 @@ Route::get('login/instagram/callback', 'User\InstagramAuthController@handleProvi
 
 Route::get('login/authenticate', 'User\UserController@authenticate');
 Route::get('login/logout', 'User\UserController@logout');
+
+
+Route::prefix('backend')->namespace('')
+    ->group(function () {
+        Route::prefix('catalog')->group(function () {
+            Route::prefix('product')->group(function () {
+                Route::get(
+                    'complectationTab',
+                    'Backend\Http\ControllersCatalog\Product@complectationTab'
+                );
+                Route::post('addComplectation');
+            });
+        });
+    });

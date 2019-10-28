@@ -246,3 +246,143 @@
 2019-07-31 20:12:34 - PHP Warning:  PDO::__construct(): MySQL server has gone away in C:\OSPanel\domains\charm\system\library\db\mpdo.php on line 9
 2019-07-31 20:12:34 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\framework.php on line 108
 2019-07-31 20:12:34 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OSPanel\domains\charm\system\framework.php:42) in C:\OSPanel\domains\charm\system\library\response.php on line 36
+2019-10-06 15:28:50 - PHP Notice:  Undefined property: Illuminate\Support\Facades\Request::$server in /Users/osipov/Projects/charmMonster/system/library/cart/user.php on line 22
+2019-10-06 15:28:50 - PHP Notice:  Undefined property: Illuminate\Support\Facades\Request::$server in /Users/osipov/Projects/charmMonster/admin/controller/common/login.php on line 14
+2019-10-06 15:28:50 - PHP Notice:  Undefined property: Illuminate\Support\Facades\Request::$server in /Users/osipov/Projects/charmMonster/admin/controller/common/header.php on line 9
+2019-10-06 15:28:53 - PHP Notice:  Undefined property: Illuminate\Support\Facades\Request::$server in /Users/osipov/Projects/charmMonster/system/library/cart/user.php on line 22
+2019-10-06 15:28:53 - PHP Notice:  Undefined property: Illuminate\Support\Facades\Request::$server in /Users/osipov/Projects/charmMonster/admin/controller/common/login.php on line 14
+2019-10-06 15:28:53 - PHP Notice:  Undefined property: Illuminate\Support\Facades\Request::$server in /Users/osipov/Projects/charmMonster/admin/controller/common/header.php on line 9
+2019-10-17 20:32:15 - PHP Notice:  Undefined variable: productModel in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 8
+2019-10-17 20:32:15 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 8
+2019-10-17 20:32:15 - PHP Warning:  Invalid argument supplied for foreach() in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 8
+2019-10-17 20:32:15 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:32:15 - PHP Notice:  Undefined variable: category in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 17
+2019-10-17 20:32:15 - PHP Notice:  Undefined variable: category in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 18
+2019-10-17 20:34:23 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Extensions/Repositories/EloquentRepository.php on line 202
+2019-10-17 20:34:23 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:34:23 - PHP Notice:  Undefined variable: category in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 17
+2019-10-17 20:34:23 - PHP Notice:  Undefined variable: category in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 18
+2019-10-17 20:35:54 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Extensions/Repositories/EloquentRepository.php on line 202
+2019-10-17 20:35:54 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:36:08 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Extensions/Repositories/EloquentRepository.php on line 202
+2019-10-17 20:36:08 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:36:30 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Extensions/Repositories/EloquentRepository.php on line 202
+2019-10-17 20:36:30 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:45:34 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Extensions/Repositories/EloquentRepository.php on line 214
+2019-10-17 20:45:34 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:46:35 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:47:30 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:48:16 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:49:01 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:49:27 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-17 20:49:34 - PHP Notice:  Undefined variable: addComplectationCategoryUrl in /Users/osipov/Projects/charmMonster/storage/framework/views/528630abf8743bf6babf3b94bb4f86a0c959f75a.php on line 14
+2019-10-20 19:42:55 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-20 19:43:57 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-20 19:43:57 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/library/ocresponse.php on line 36
+2019-10-20 19:45:16 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-20 19:45:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/library/ocresponse.php on line 36
+2019-10-26 14:27:28 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 14:31:18 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 15:41:21 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 15:42:50 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 15:43:59 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 15:46:17 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 15:47:27 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 15:53:13 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 15:53:44 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 15:55:56 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 15:56:24 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:363) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 15:57:22 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:1219) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 19:01:06 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:1219) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 19:02:07 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/osipov/Projects/charmMonster/vendor/symfony/http-foundation/Response.php:1219) in /Users/osipov/Projects/charmMonster/system/framework.php on line 109
+2019-10-26 21:24:12 - PHP Notice:  Undefined offset: 1 in /Users/osipov/Projects/charmMonster/vendor/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php on line 95
+2019-10-26 21:24:12 - PHP Notice:  Undefined offset: 2 in /Users/osipov/Projects/charmMonster/vendor/laravel/framework/src/Illuminate/View/Compilers/Concerns/CompilesLoops.php on line 97
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Undefined variable: product in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 10:38:00 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Models/Product/ProductComplectationCategory.php on line 53
+2019-10-27 11:53:43 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Extensions/Repositories/EloquentRepository.php on line 214
+2019-10-27 11:54:35 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Extensions/Repositories/EloquentRepository.php on line 214
+2019-10-27 11:55:49 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Extensions/Repositories/EloquentRepository.php on line 214
+2019-10-27 11:56:18 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Extensions/Repositories/EloquentRepository.php on line 214
+2019-10-27 11:56:39 - PHP Notice:  Trying to get property of non-object in /Users/osipov/Projects/charmMonster/app/Extensions/Repositories/EloquentRepository.php on line 214

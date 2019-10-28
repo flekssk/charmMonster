@@ -2,6 +2,7 @@
 
 namespace App\Extensions\Cart;
 
+use App\Models\Product\Product;
 use Illuminate\Support\Facades\Session;
 
 class Cart
@@ -39,17 +40,16 @@ class Cart
         return $this->products->get($productId)->totalPrice();
     }
 
-    public function addProduct($productId)
+    public function addProduct(CartProduct $product)
     {
-        if ($this->products->has($productId)) {
+        if ($this->products->has($product->getUniqueId())) {
             /** @var CartProduct $product */
-            $product = $this->products->get($productId);
+            $product = $this->products->get($product->getUniqueId());
             $product->increaseProduct();
-        } else {
-            $product = new CartProduct($productId);
         }
 
-        $this->products->put($productId, $product);
+        $this->products->put($product->getUniqueId(), $product);
+
         $this->saveCart();
     }
 

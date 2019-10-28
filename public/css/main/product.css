@@ -155,3 +155,27 @@
 .productPage .description .price i {
     font-size: 15px;
 }
+
+.complectationProduct {
+    padding: 0 0 5px 5px;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.complectationProduct.selected {
+    border: 1px solid red;
+}
+
+.complectationProduct img {
+    width: 100px;
+}
+
+.productPage .complectionCategoryProducts {
+    display: none;
+    padding-top: 5px
+}
+
+.complectionCategoryProducts.selected {
+    display: block;
+}

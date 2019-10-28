@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Order;
 
 use App\Extensions\Cart\CartFacade;
+use App\Extensions\Cart\CartProduct;
 use App\Http\Controllers\Controller;
+use App\Models\Product\Product;
 use App\Requests\Order\ProductToCartFormRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -17,7 +19,15 @@ class CartController extends Controller
 
     public function addToCart(ProductToCartFormRequest $request)
     {
-        CartFacade::addProduct($request->product_id);
+        $cartProduct = new CartProduct(Product::find($request->product_id));
+        $complection = [];
+
+        foreach ($request->get('complection', []) as $complectionProductId) {
+            $complection[] = Product::find($complectionProductId);
+        }
+        $cartProduct->addComplection($complection);
+
+        CartFacade::addProduct($cartProduct);
 
         return JsonResponse::create(
             [

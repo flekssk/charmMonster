@@ -36,7 +36,7 @@ class Category extends Model
 
     public function getProductsAttribute()
     {
-        return ProductRepository::getFormCategory($this->category_id);
+        return ProductRepository::getFromCategory($this->category_id);
     }
 
     public function imagesToSelector()

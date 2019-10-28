@@ -92,6 +92,18 @@ class OrderController extends Controller
         }
     }
 
+    public function show(Order $order)
+    {
+        return view('order.show', compact('order'));
+    }
+
+    public function showByHash($hash)
+    {
+        $order = Order::findByHash($hash);
+
+        return view('order.show', compact('order'));
+    }
+
     public function sberbankOrder(Order $order)
     {
         return view('order.sberbankOrder', compact('order'));

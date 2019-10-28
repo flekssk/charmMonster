@@ -4,6 +4,7 @@
         <span class="price"><span class="totalPrice">{{ $products->totalPrice() }}</span> р</span>
     </div>
     <div class="products">
+        <?php /** @var \App\Extensions\Cart\CartProduct $product */ ?>
         @foreach($products->items() as $product)
             <div class="product">
                 <div class="col-2">
@@ -33,9 +34,24 @@
                     </div>
                 </div>
                 <div class="col-1">
-                    <span class="delete removeFromCart" data-product-id="{{ $product->product->product_id }}">
+                    <span class="delete removeFromCart" data-product-id="{{ $product->getUniqueId() }}">
                         <i class="fa fa-trash"></i>
                     </span>
+                </div>
+            </div>
+            <div class="product">
+                <div style="display: block">
+                    <?php /** @var \App\Models\Product\Product $complectionProduct */ ?>
+                    @foreach($product->complection as $complectionProduct)
+                        <div class="col-2">
+                            <img src="{{ getImagePath($complectionProduct->image) }}" alt="">
+                        </div>
+                        <div class="col-5">
+                            <a href="{{ action('Product\ProductController@show', ['product' => $product->product->product_id]) }}">
+                                {{ $product->product->description->name }}
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         @endforeach

@@ -13,4 +13,9 @@ class SberbankPayment extends Payment
     {
 
     }
+
+    public function getRedirectUrl()
+    {
+
+    }
 }

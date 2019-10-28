@@ -122,7 +122,7 @@ final class Etsy {
 			}
 		}
 
-		$this->logger = new \Log('etsylog.log');
+		$this->logger = new \OCLog('etsylog.log');
 	}
 
 	public function log($data, $write = true) {

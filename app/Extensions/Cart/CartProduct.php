@@ -2,27 +2,26 @@
 
 namespace App\Extensions\Cart;
 
-use App\Models\Product\Product as ProductModel;
+use App\Models\Product\Product;
 
 class CartProduct
 {
-    /** @var CartProduct */
+    /** @var Product */
     public $product;
     /** @var int */
     public $count = 1;
+    /** @var Product[] */
+    public $complection;
 
     /**
      * Product constructor.
-     * @param $productId
+     * @param Product $product
      * @throws \Exception
      */
-    public function __construct($productId)
+    public function __construct(Product $product)
     {
-        $this->product = ProductModel::find($productId);
-
-        if(is_null($this->product)) {
-            throw new \Exception('Given product not existed');
-        }
+        $this->product = $product;
+        $this->complection = [];
     }
 
     public function getId()
@@ -42,7 +41,19 @@ class CartProduct
 
     public function totalPrice()
     {
-        return $this->product->price * $this->count;
+        return ($this->product->price + $this->getComplectionPrice()) * $this->count;
+    }
+
+    public function getComplectionPrice()
+    {
+        $price = 0;
+
+        /** @var Product $this */
+        foreach ($this->complection as $product) {
+            $price += $product->price;
+        }
+
+        return $price;
     }
 
     public function setCount(int $count)
@@ -50,5 +61,32 @@ class CartProduct
         if($count > 0) {
             $this->count = $count;
         }
+    }
+
+    /**
+     * @param Product[] $complection
+     */
+    public function addComplection(array $complection)
+    {
+        $this->complection = empty($complection) ? $this->product->getDefaultComplection() : $complection;;
+    }
+
+    public function getUniqueId()
+    {
+        return $this->product->product_id . $this->getComplectionUniqueKey();
+    }
+
+    public function getComplectionUniqueKey()
+    {
+        $key = '';
+
+        /**
+         * @var Product $item
+         */
+        foreach ($this->complection as $item) {
+            $key .= $item->product_id;
+        }
+
+        return $key;
     }
 }

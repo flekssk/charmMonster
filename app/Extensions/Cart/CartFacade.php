@@ -16,7 +16,7 @@ use Illuminate\View\View;
  * @method static View productTotalPrice(int $productId)
  * @method static View increaseProduct(int $productId)
  * @method static View reduceProduct(int $productId)
- * @method static View addProduct(int $productId)
+ * @method static View addProduct(CartProduct $product)
  * @method static View removeProduct(int $productId)
  * @method static View changeProductCount(int $productId, int $count)
  */

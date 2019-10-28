@@ -2,14 +2,12 @@
 
 namespace App\Extensions\Repositories;
 
-use App\Extensions\Repositories\Contracts\Repository;
 use App\Models\Model;
 use ArrayAccess;
 use Countable;
 use Exception;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Support\Collection;
 
 /**
  * Class EloquentRepository
@@ -62,6 +60,19 @@ abstract class EloquentRepository extends BaseRepository implements Arrayable, A
         return $all;
     }
 
+    public static function allWithout(array $withoutIds)
+    {
+        $instance = self::newInstance();
+
+        $model = $instance->newModelInstance();
+
+        $items = $model->newQuery()
+            ->whereNotIn($model->getKeyName(), $withoutIds)
+            ->get();
+
+        return $instance->setItems($items);
+    }
+
     /**
      * @param array $where
      * @param array $columns
@@ -73,7 +84,7 @@ abstract class EloquentRepository extends BaseRepository implements Arrayable, A
     public static function getWhere($where, $columns = array('*'))
     {
         $repository = self::newInstance();
-        $items      = $repository->newModelInstance()
+        $items = $repository->newModelInstance()
             ->newQuery()
             ->select($columns)
             ->where($where)
@@ -90,11 +101,12 @@ abstract class EloquentRepository extends BaseRepository implements Arrayable, A
     public function newModelInstance()
     {
         $name = $this->getModelAlias();
+
         return new $name();
     }
 
     /**
-     * @param $method
+     * @param       $method
      * @param array $params
      *
      * @return mixed
@@ -107,7 +119,7 @@ abstract class EloquentRepository extends BaseRepository implements Arrayable, A
     /**
      * Split records on pages
      *
-     * @param int $perPage
+     * @param int   $perPage
      * @param array $columns
      *
      * @return Paginator
@@ -205,9 +217,9 @@ abstract class EloquentRepository extends BaseRepository implements Arrayable, A
     public function findLikeByFieldValue($field, $value)
     {
         $key = false;
-        if(!empty($field) && !empty($value)) {
-            $key = $this->items()->search(function ($item, $key) use($field, $value) {
-                return  mb_stristr($item->$field, $value) ? $key : false;
+        if (!empty($field) && !empty($value)) {
+            $key = $this->items()->search(function ($item, $key) use ($field, $value) {
+                return mb_stristr($item->$field, $value) ? $key : false;
             });
         }
 
@@ -217,16 +229,17 @@ abstract class EloquentRepository extends BaseRepository implements Arrayable, A
 
     public function findByFieldValue($field, $value)
     {
-        $key = $this->items()->search(function ($item, $key) use($field, $value) {
-           return  $item->$field == $value ? $key : false;
+        $key = $this->items()->search(function ($item, $key) use ($field, $value) {
+            return $item->$field == $value ? $key : false;
         });
 
         return $key !== false && $this->items()->has($key) ? $this->items()->get($key) : null;
     }
 
     /**
-     * @param $method
+     * @param       $method
      * @param array $params
+     *
      * @return $this
      *
      * @throws Exception

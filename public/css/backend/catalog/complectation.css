@@ -1,0 +1,40 @@
+.complectionCategory {
+    margin-bottom: 20px;
+}
+
+.complectationTabContainer span.help-block {
+    font-size: 13px;
+}
+
+.complectationProduct {
+    display: inline-block;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.complectationProduct.selected {
+    border: 1px solid red;
+}
+
+.complectationProduct img {
+    width: 100px;
+}
+
+.destroyComplection, .destroyComplectionCategory {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.complectationTitle {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.addComplectationCategoryForm {
+    padding-left: 20px;
+}
+
+.addComplectionForm {
+    padding-left: 20px;
+}

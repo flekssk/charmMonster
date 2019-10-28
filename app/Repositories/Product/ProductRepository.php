@@ -70,7 +70,7 @@ class ProductRepository extends EloquentRepository
         return $instance->setItems($instance->newModelInstance()->newQuery()->where('status', '=', 1)->get());
     }
 
-    public static function getFormCategory($categoryId)
+    public static function getFromCategory($categoryId)
     {
         $instance = self::newInstance();
 
@@ -86,7 +86,7 @@ class ProductRepository extends EloquentRepository
                           ->where('product_to_category.category_id', '=', $categoryId)
                           ->get();
 
-        return $instance->setItems($items);
+        return $instance->setItems($items->keyBy('product_id'));
     }
 
     public function getModelAlias()

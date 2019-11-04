@@ -1615,7 +1615,7 @@ class ControllerCatalogProduct extends Controller
         }
 
         /** @var Product $productModel */
-        $productModel = Product::find(request('product_id'));
+        $productModel = Product::find(request('product_id')) ?? new Product();
 
         $this->load->model('design/layout');
 

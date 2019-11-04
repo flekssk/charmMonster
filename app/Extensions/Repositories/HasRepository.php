@@ -25,7 +25,6 @@ class HasRepository extends Relation
      */
     public function addEagerConstraints(array $models)
     {
-        dd($models);
     }
 
     /**

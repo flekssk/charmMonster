@@ -6,7 +6,7 @@ class SberbankPayment extends Payment
 {
     public function pay()
     {
-        return action('Order\OrderController@sberbankOrder', ['order' => $this->order->id]);
+        return $this->getRedirectUrl();
     }
 
     public function getPaymentStatus()
@@ -16,6 +16,6 @@ class SberbankPayment extends Payment
 
     public function getRedirectUrl()
     {
-        return action('Order\OrderController@sberbankOrder', ['order' => $this->order->id]);
+        return action('Order\OrderController@sberbankOrder', ['order' => $this->order->order_id]);
     }
 }

@@ -6,7 +6,6 @@ use App\Extensions\Cart\CartFacade;
 use App\Extensions\Cart\CartProduct;
 use App\Extensions\Payments\Payer;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Order\OrderFormRequest;
 use App\Models\Order\Order;
 use App\Models\Order\OrderProduct;
 use App\Models\Order\YandexPayment;
@@ -25,9 +24,8 @@ class OrderController extends Controller
         );
     }
 
-    public function store(OrderFormRequest $request)
+    public function store(Request $request)
     {
-        var_dump(123);die;
         $order = new Order();
 
         $order->firstname = $request->first_name;
@@ -88,6 +86,7 @@ class OrderController extends Controller
 
         $order->save();
         $payment = Payer::getPayment($order);
+        $payment->pay();
 
         return JsonResponse::create(
             [
@@ -128,7 +127,7 @@ class OrderController extends Controller
 
     public function sberbankOrder(Order $order)
     {
-        return view('order.sberbankOrder', compact('order'));
+        return view('order.show', compact('order'));
     }
 
     public function yandexSuccess(Order $order)

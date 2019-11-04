@@ -85,9 +85,8 @@ let cartControl = function () {
                     beforeSubmit: function () {
                         controller.form.clearErrors();
                     },
+                    method: 'get',
                     success: function (response) {
-                        console.log(response.redirectUrl);
-                        return;
                         location.href = response.redirectUrl;
                     },
                     error: function (response) {

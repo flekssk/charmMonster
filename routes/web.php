@@ -19,7 +19,6 @@ Route::prefix('categories')->group(
 Route::prefix('order')->group(
     function () {
         Route::get('/', 'Order\OrderController@index');
-        Route::post('store', 'Order\OrderController@store');
         Route::get('success/{order}', 'Order\OrderController@success');
         Route::get('show/{order}', 'Order\OrderController@show');
         Route::get('showByHash/{hash}', 'Order\OrderController@showByHash');
@@ -27,6 +26,7 @@ Route::prefix('order')->group(
         Route::get('yandexSuccess/{order}', 'Order\OrderController@yandexSuccess');
         Route::get('yandexError/{order}', 'Order\OrderController@yandexError');
         Route::get('sberbankOrder/{order}', 'Order\OrderController@sberbankOrder');
+        Route::get('store', 'Order\OrderController@store');
     });
 
 Route::prefix('cart')->group(

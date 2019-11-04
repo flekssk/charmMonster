@@ -26,7 +26,7 @@ class YandexPayment extends Payment
                 ],
                 'confirmation' => [
                     'type' => 'redirect',
-                    'return_url' => 'charmkupi.site/order/show/' . $this->order->hash,
+                    'return_url' => 'charmkupi.site/order/showByHash/' . $this->order->hash,
                 ],
                 'description' => 'Заказ',
             ],

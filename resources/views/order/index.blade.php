@@ -13,14 +13,18 @@
                         <th></th>
                         <th>Название</th>
                         <th>Количество</th>
+                        <th>Цена</th>
                     </tr>
                     </thead>
+                    <?php /** @var \App\Extensions\Cart\CartProduct $product */ ?>
                     @foreach(\App\Extensions\Cart\CartFacade::getProducts()->items()->all() as $product)
                         <tr>
                             <td style="vertical-align: middle; text-align: center;">
                                 <input type="checkbox"
-                                       name="products[{{ $product->product->product_id }}]"
+                                       class="productSelector"
+                                       name="products[{{ $product->getUniqueId() }}]"
                                        style="width: 15px;"
+                                       data-product="{{ $product->getUniqueId() }}"
                                        checked
                                 >
                             </td>
@@ -33,25 +37,56 @@
                             <td>
                                 <div class="qty small productCounter">
                                 <span class="btn clickable minus"
-                                      data-counter="product{{ $product->product->product_id }}">
+                                      data-counter="product{{ $product->getUniqueId() }}">
                                     -
                                 </span>
                                     <input
                                             type="number"
                                             class="count"
-                                            name="quantity[{{ $product->product->product_id }}]"
+                                            name="quantity[{{ $product->getUniqueId() }}]"
                                             value="{{ $product->count }}"
-                                            data-product="{{ $product->product->product_id }}"
-                                            data-counter="product{{ $product->product->product_id }}"
+                                            data-product="{{ $product->getUniqueId() }}"
+                                            data-counter="product{{ $product->getUniqueId() }}"
                                     >
                                     <span class="btn clickable plus"
-                                          data-counter="product{{ $product->product->product_id }}">
-                            +
-                        </span>
+                                          data-counter="product{{ $product->getUniqueId() }}">
+                                    +
+                                    </span>
                                 </div>
                             </td>
+                            <td>
+                                <span style="font-size: 18px;" class="price"
+                                      data-product="{{ $product->getUniqueId() }}">
+                                    {{ \App\Decorators\PriceDecorator::format($product->totalPrice()) }}
+                                </span>
+                                <i class="fa fa-ruble"></i>
+                            </td>
                         </tr>
+                        @foreach($product->complection as $complectionProduct)
+                            <tr>
+                                <td colspan="1" style="text-align: center; vertical-align: middle">
+                                </td>
+                                <td colspan="1"><img src="{{ getImagePath($product->product->image) }}" alt=""
+                                                     style="width: 100px"></td>
+                                <td colspan="2">{{ $product->product->description->name }}</td>
+                                <td></td>
+                            </tr>
+                        @endforeach
                     @endforeach
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <b style="float: right">Итого:</b>
+                        </td>
+                        <td>
+                            <span style="font-size: 18px;" class="totalPrice">
+                            {{ \App\Decorators\PriceDecorator::format(\App\Extensions\Cart\CartFacade::totalPrice()) }}
+                            </span>
+                            <i class="fa fa-ruble"></i>
+                        </td>
+                    </tr>
                 </table>
             </div>
             <div class="form-group">

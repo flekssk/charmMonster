@@ -18,18 +18,18 @@ class YandexPayment extends Payment
 
         /** @var CreatePaymentResponse payment */
         $this->paymentResponse = $client->createPayment(
-            array(
-                'amount' => array(
+            [
+                'capture' => true,
+                'amount' => [
                     'value' => $this->order->total,
                     'currency' => 'RUB',
-                ),
-                'confirmation' => array(
+                ],
+                'confirmation' => [
                     'type' => 'redirect',
                     'return_url' => 'charmkupi.site/order/show/' . $this->order->hash,
-                ),
-                'capture' => true,
+                ],
                 'description' => 'Заказ',
-            ),
+            ],
             uniqid('', true)
         );
 

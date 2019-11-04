@@ -6,12 +6,14 @@
 }
 
 a, span, div, li {
-    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif!important;
 }
 
 body {
     height: 100%;
     font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    background: url(/public/images/layout/back.jpg), rgba(255,255,255,.96);
+    background-blend-mode: color;
 }
 
 .ukrainianTitle {
@@ -730,6 +732,7 @@ body {
 
 .cartWidgetContainer .product img {
     width: 50px;
+    border-radius: 5px;
 }
 
 
@@ -937,4 +940,27 @@ input:disabled {
 
 .slick-prev {
     left: -53px;
+}
+
+.mainFooter {
+    margin-top: 20px;
+}
+
+.complectationContainer {
+    margin-bottom: 15px;
+}
+
+.complectionCategorySelect {
+    border-radius: 0;
+    height: 35px;
+    min-width: 250px;
+    font-size: 17px;
+}
+
+.descriptionTitleContainer {
+    margin-bottom: 10px;
+}
+
+.descriptionTitleContainer .descriptionTitle {
+    font-size: 17px;
 }

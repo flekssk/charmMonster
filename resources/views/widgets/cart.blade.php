@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-3">
                     <div class="qty small productCounter">
-                        <span class="btn clickable minus" data-counter="product{{ $product->product->product_id }}">
+                        <span class="btn clickable minus" data-counter="product{{ $product->getUniqueId() }}">
                             -
                         </span>
                         <input
@@ -25,10 +25,10 @@
                                 class="count"
                                 name="qty"
                                 value="{{ $product->count }}"
-                                data-product="{{ $product->product->product_id }}"
-                                data-counter="product{{ $product->product->product_id }}"
+                                data-product="{{ $product->getUniqueId() }}"
+                                data-counter="product{{ $product->getUniqueId() }}"
                         >
-                        <span class="btn clickable plus" data-counter="product{{ $product->product->product_id }}">
+                        <span class="btn clickable plus" data-counter="product{{ $product->getUniqueId() }}">
                             +
                         </span>
                     </div>
@@ -39,21 +39,23 @@
                     </span>
                 </div>
             </div>
-            <div class="product">
-                <div style="display: block">
-                    <?php /** @var \App\Models\Product\Product $complectionProduct */ ?>
-                    @foreach($product->complection as $complectionProduct)
-                        <div class="col-2">
-                            <img src="{{ getImagePath($complectionProduct->image) }}" alt="">
-                        </div>
-                        <div class="col-5">
-                            <a href="{{ action('Product\ProductController@show', ['product' => $product->product->product_id]) }}">
-                                {{ $product->product->description->name }}
-                            </a>
-                        </div>
-                    @endforeach
+            @if($product->complection->count() > 0)
+                <div class="product">
+                    <div style="display: block">
+                        <?php /** @var \App\Models\Product\Product $complectionProduct */ ?>
+                        @foreach($product->complection as $complectionProduct)
+                            <div class="col-2">
+                                <img src="{{ getImagePath($complectionProduct->image) }}" alt="">
+                            </div>
+                            <div class="col-5">
+                                <a href="{{ action('Product\ProductController@show', ['product' => $product->product->product_id]) }}">
+                                    {{ $product->product->description->name }}
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
-            </div>
+            @endif
         @endforeach
     </div>
     <div class="control">

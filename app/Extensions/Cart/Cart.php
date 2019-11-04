@@ -2,12 +2,13 @@
 
 namespace App\Extensions\Cart;
 
-use App\Models\Product\Product;
 use Illuminate\Support\Facades\Session;
 
 class Cart
 {
-    /** @var CartProductsRepository */
+    /**
+     * @var CartProductsRepository
+     */
     protected $products;
 
     public function __construct(CartProductsRepository $products)

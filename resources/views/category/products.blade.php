@@ -82,11 +82,12 @@ use Illuminate\Support\Arr;
                     </form>
                 </div>
                 <div class="row col-9 productContainer">
+                    <?php /** @var \App\Models\Product\Product $product */ ?>
                     @foreach($products->filtrate($filters) as $product)
                         <div class="col-4 product">
                             <div class="productContent">
                                 <div class="price">
-                                    {{ number_format(round($product->price), 0, '.', ' ') }} <i class="fa fa-ruble"></i>
+                                    {{ number_format(round($product->getFullPrice()), 0, '.', ' ') }} <i class="fa fa-ruble"></i>
                                 </div>
                                 <div class="image">
                                     <img src="{{ getImagePath($product->image) }}" alt="">
@@ -110,6 +111,7 @@ use Illuminate\Support\Arr;
                                             </a>
                                             <a class="btn btn-product-control addToCart"
                                                data-product-id="{{ $product->product_id }}"
+                                               data-complection="{{ $product->getDefaultComplectionJson() }}"
                                             >
                                                 В корзину
                                                 <i class="icon fa fa-shopping-cart"></i>

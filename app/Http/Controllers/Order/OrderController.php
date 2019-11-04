@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Order;
 
 use App\Extensions\Cart\CartFacade;
-use App\Extensions\Payments\Methods\Payment;
+use App\Extensions\Cart\CartProduct;
 use App\Extensions\Payments\Payer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Order\OrderFormRequest;
@@ -27,37 +27,59 @@ class OrderController extends Controller
 
     public function store(OrderFormRequest $request)
     {
+        var_dump(123);die;
         $order = new Order();
 
-        $order->firstname          = $request->first_name;
-        $order->lastname           = $request->last_name;
-        $order->email              = $request->email;
+        $order->firstname = $request->first_name;
+        $order->lastname = $request->last_name;
+        $order->email = $request->email;
         $order->shipping_address_1 = $request->delivery_address;
-        $order->payment_method     = $request->payment_method;
-        $order->store_name         = 'charm';
-        $order->store_url          = config('app.url');
-        $order->telephone          = $request->telephone;
-        $order->order_status_id    = Order::STATUS_WAITING;
+        $order->payment_method = $request->payment_method;
+        $order->store_name = 'charm';
+        $order->store_url = config('app.url');
+        $order->telephone = $request->telephone;
+        $order->order_status_id = Order::STATUS_WAITING;
+
         $order->save();
 
         $totalOrderPrice = 0;
+        $cartProducts = CartFacade::getProducts();
         foreach ($request->products as $id => $flag) {
-            $product = Product::find($id);
+            /** @var CartProduct $cartProduct */
+            $cartProduct = $cartProducts->get($id);
 
             $orderProduct = new OrderProduct();
 
-            $orderProduct->product_id = $product->product_id;
-            $orderProduct->order_id   = $order->order_id;
-            $orderProduct->model      = $product->model;
-            $orderProduct->name       = $product->description->name;
-            $orderProduct->quantity   = $request->quantity[$id];
-            $orderProduct->total      = $product->price * $request->quantity[$id];
-            $orderProduct->price      = $product->price;
-            $orderProduct->reward     = 0;
+            $orderProduct->product_id = $cartProduct->product->product_id;
+            $orderProduct->order_id = $order->order_id;
+            $orderProduct->model = $cartProduct->product->model;
+            $orderProduct->name = $cartProduct->product->description->name;
+            $orderProduct->quantity = $request->quantity[$id];
+            $orderProduct->total = $cartProduct->product->price * $request->quantity[$id];
+            $orderProduct->price = $cartProduct->product->price;
+            $orderProduct->reward = 0;
 
             $orderProduct->save();
 
             $totalOrderPrice += $orderProduct->total;
+
+            /** @var Product $complectionProduct */
+            foreach ($cartProduct->complection as $complectionProduct) {
+                $orderComplectionProduct = new OrderProduct();
+
+                $orderComplectionProduct->product_id = $complectionProduct->product_id;
+                $orderComplectionProduct->order_id = $order->order_id;
+                $orderComplectionProduct->model = $complectionProduct->model;
+                $orderComplectionProduct->name = $complectionProduct->description->name;
+                $orderComplectionProduct->quantity = $request->quantity[$id];
+                $orderComplectionProduct->total = $complectionProduct->price * $request->quantity[$id];
+                $orderComplectionProduct->price = $complectionProduct->price;
+                $orderComplectionProduct->reward = 0;
+
+                $orderComplectionProduct->save();
+
+                $totalOrderPrice += $orderComplectionProduct->total;
+            }
 
             CartFacade::removeProduct($id);
         }
@@ -69,8 +91,8 @@ class OrderController extends Controller
 
         return JsonResponse::create(
             [
-                'success'  => true,
-                'redirectUrl' => $payment->getRedirectUrl()
+                'success' => true,
+                'redirectUrl' => $payment->getRedirectUrl(),
             ]
         );
     }
@@ -84,7 +106,7 @@ class OrderController extends Controller
     {
         $yandexPayment = YandexPayment::findByYandexOrderId($request->object['id']);
 
-        if($request->object['status'] == 'succeeded') {
+        if ($request->object['status'] == 'succeeded') {
             $yandexPayment->order->order_status_id = Order::STATUS_IN_PROCESS;
             $yandexPayment->order->save();
 

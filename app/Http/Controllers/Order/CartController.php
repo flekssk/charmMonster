@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Order;
 
+use App\Decorators\PriceDecorator;
 use App\Extensions\Cart\CartFacade;
 use App\Extensions\Cart\CartProduct;
 use App\Http\Controllers\Controller;
@@ -59,6 +60,23 @@ class CartController extends Controller
             [
                 'totalPrice'        => CartFacade::totalPrice(),
                 'productTotalPrice' => CartFacade::productTotalPrice($request->product_id),
+            ]
+        );
+    }
+
+    public function getProductsPrice(Request $request)
+    {
+        $products = $request->get('products', []);
+        $totalPrice = 0;
+
+        foreach ($products as $product) {
+            $totalPrice += CartFacade::getProduct($product)->totalPrice();
+        }
+
+        return JsonResponse::create(
+            [
+                'price' => $totalPrice,
+                'formatPrice' => PriceDecorator::format($totalPrice)
             ]
         );
     }

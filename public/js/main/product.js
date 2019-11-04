@@ -1,5 +1,40 @@
 class ProductController {
     constructor(options = {}) {
+        let object = this;
+
+        $(".mainImage").zoom();
+        $('.imagesList .image').click(function () {
+            $(".mainImage").trigger('zoom.destroy');
+            let clickedImage = $(this).find('img').attr('src');
+            $('.mainImage').find('img').attr('src', clickedImage);
+            $(document).ready(function () {
+                $(".mainImage").zoom();
+            });
+        });
+
+        $('.complectationProduct').click(function () {
+            $('.complectationProduct')
+                .filter('[data-category-id="' + $(this).data('category-id') + '"]')
+                .removeClass('selected');
+
+            $(this).addClass('selected');
+
+            object.repriceComplection();
+            object.changeProductComplection($(this).data('main-product'));
+        });
+
+        $('.complectionCategorySelect').change(function () {
+            let selectedCategory = $('.complectionCategorySelect').find('option:selected').val(),
+                productId = $(this).data('product-id');
+
+            $('.complectionCategoryProducts').removeClass('selected');
+            $('.complectionCategoryProducts').filter('[data-category-id="' + selectedCategory + '"]').addClass('selected');
+
+            $(document).ready(function () {
+                object.repriceComplection();
+                object.changeProductComplection(productId);
+            });
+        });
 
     }
 
@@ -48,57 +83,9 @@ class ProductController {
     }
 }
 
-let productController = new ProductController();
-
-controller.productController = productController;
-
-var product = function () {
-    let caller;
-
-    this.initialize = function () {
-        $(".mainImage").zoom();
-        $('.imagesList .image').click(function () {
-            $(".mainImage").trigger('zoom.destroy');
-            let clickedImage = $(this).find('img').attr('src');
-            $('.mainImage').find('img').attr('src', clickedImage);
-            $(document).ready(function () {
-                $(".mainImage").zoom();
-            });
-        });
-
-        $('.complectationProduct').click(function () {
-            $('.complectationProduct')
-                .filter('[data-category-id="' + $(this).data('category-id') + '"]')
-                .removeClass('selected');
-
-            $(this).addClass('selected');
-
-            productController.repriceComplection();
-            productController.changeProductComplection($(this).data('main-product'));
-
-        });
-
-        $('.complectionCategorySelect').change(function () {
-            let selectedCategory = $('.complectionCategorySelect').find('option:selected').val(),
-                productId = $(this).data('product-id');
-
-            $('.complectionCategoryProducts').removeClass('selected');
-            $('.complectionCategoryProducts').filter('[data-category-id="' + selectedCategory + '"]').addClass('selected');
-
-            $(document).ready(function () {
-                productController.repriceComplection();
-                productController.changeProductComplection(productId);
-            });
-        });
-    };
-
-    this.selectComplectionProduct = function () {
-
-    };
-};
 
 $(document).ready(function () {
-    let productControl = new product();
+    let productController = new ProductController();
 
-    productControl.initialize();
+    controller.productController = productController;
 });

@@ -23,7 +23,7 @@ class OrderFormRequest extends FormRequest
             'last_name.required'             => 'Фамилия: обязательное поле',
             'telephone.required'             => 'Телефон: обязательное поле',
             'g-recaptcha-response.required'  => 'Необходимо пройти проверку',
-            'g-recaptcha-response.recaptcha' => 'Необходимо пройти проверку',
+//            'g-recaptcha-response.recaptcha' => 'Необходимо пройти проверку',
         ];
     }
 }

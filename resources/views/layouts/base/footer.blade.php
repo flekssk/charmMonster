@@ -1,4 +1,4 @@
-<footer class="main-footer text-sm clearfix">
+<footer class="main-footer text-sm clearfix mainFooter">
     <div class="container-fluid footerFluid">
         <div class="container footerContainer" style="text-align: center;">
             dsadsadasd

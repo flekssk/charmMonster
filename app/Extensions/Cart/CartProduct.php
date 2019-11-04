@@ -3,25 +3,36 @@
 namespace App\Extensions\Cart;
 
 use App\Models\Product\Product;
+use Illuminate\Support\Collection;
 
 class CartProduct
 {
-    /** @var Product */
+    /**
+     * @var Product
+     */
     public $product;
-    /** @var int */
+
+    /**
+     * @var int
+     */
     public $count = 1;
-    /** @var Product[] */
+
+    /**
+     * @var Collection
+     */
     public $complection;
 
     /**
      * Product constructor.
+     *
      * @param Product $product
+     *
      * @throws \Exception
      */
     public function __construct(Product $product)
     {
         $this->product = $product;
-        $this->complection = [];
+        $this->complection = collect();
     }
 
     public function getId()
@@ -58,7 +69,7 @@ class CartProduct
 
     public function setCount(int $count)
     {
-        if($count > 0) {
+        if ($count > 0) {
             $this->count = $count;
         }
     }
@@ -68,7 +79,7 @@ class CartProduct
      */
     public function addComplection(array $complection)
     {
-        $this->complection = empty($complection) ? $this->product->getDefaultComplection() : $complection;;
+        $this->complection = collect(empty($complection) ? $this->product->getDefaultComplection() : $complection);
     }
 
     public function getUniqueId()

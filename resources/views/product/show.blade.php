@@ -64,15 +64,15 @@
                         <div class="textBackground">
                         </div>
                         <div class="description">
-                            <div>
+                            <div class="complectationContainer">
                                 <?php
                                 /**
                                  * @var \App\Models\Product\ProductComplectation $complection
                                  */
                                 ?>
                                 @foreach($product->complectation->items() as $complection)
-                                    <div style="display: block">
-                                        <b>{{ $complection->name }}:</b>
+                                    <div class="descriptionTitleContainer">
+                                        <b class="descriptionTitle">{{ $complection->name }}:</b>
                                     </div>
                                     <div style="display: block; margin-bottom: 10xp;">
                                         <select
@@ -123,15 +123,17 @@
                             </div>
                             <div>
                                 @if($product->description->description)
-                                    <div style="margin-bottom: 10px;">
-                                        <b>Описание:</b>
+                                    <div class="descriptionTitleContainer">
+                                        <b class="descriptionTitle">Описание:</b>
                                     </div>
                                     {!! html_entity_decode($product->description->description, ENT_QUOTES, 'UTF-8') !!}
                                 @endif
                             </div>
                             <div>
                                 @if($product->productAttributes->count() > 0)
-                                    <b>Характеристики:</b>
+                                    <div class="descriptionTitleContainer">
+                                        <b class="descriptionTitle">Характеристики:</b>
+                                    </div>
                                     <ul style="list-style: none; margin-top: 10px; padding-left: 0;">
                                         @foreach($product->productAttributes as $attribute)
                                             <li>
@@ -149,7 +151,6 @@
                             <a
                                     data-product-id="{{ $product->product_id }}"
                                     data-complection="{{ $product->getDefaultComplectionJson() }}"
-                                    data-test="12323"
                                     class="addToCart controlButton"
                             >
                                 В корзину

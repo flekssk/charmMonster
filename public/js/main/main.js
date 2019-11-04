@@ -1,10 +1,50 @@
 let controller = {};
 
+class Cart {
+    constructor() {
+        // let button = $(event.currentTarget);
+        //
+        // $(this).parent().parent().remove();
+        // $.ajax({
+        //     url: '/cart/removeFromCart',
+        //     method: 'delete',
+        //     dataType: 'json',
+        //     data: {
+        //         'product_id': button.data('product-id')
+        //     },
+        //     success: function (response) {
+        //         $('.totalPrice').html(response.totalPrice);
+        //         $('.cartWidget .content').html(response.widgetContent);
+        //         $('.cartProductContainer').filter('[data-product="' + button.data('product-id') + '"]').remove();
+        //         caller.initialize();
+        //         $.notify(
+        //             {
+        //                 message: 'Товар удален из корзины',
+        //                 target: '_blank'
+        //             },
+        //             {
+        //                 type: 'info',
+        //                 timer: 1000,
+        //                 delay: 1000,
+        //                 placement: {
+        //                     align: "center"
+        //                 },
+        //             }
+        //         );
+        //     }
+        // });
+    }
+}
+
 let cartControl = function () {
     let caller = this;
 
     this.initialize = function () {
         $(document).ready(function () {
+            $('.productSelector').click(function () {
+                caller.repriceOrderTotal();
+            });
+
             $("#delivery_address").suggestions({
                 token: "04ce039c4780b0b29f0f77c8a80590ee1a3b2b5c",
                 type: "ADDRESS",
@@ -46,6 +86,8 @@ let cartControl = function () {
                         controller.form.clearErrors();
                     },
                     success: function (response) {
+                        console.log(response.redirectUrl);
+                        return;
                         location.href = response.redirectUrl;
                     },
                     error: function (response) {
@@ -56,7 +98,30 @@ let cartControl = function () {
                     }
                 }
             );
+            caller.repriceOrderTotal();
         });
+    };
+
+    this.repriceOrderTotal = function () {
+        let selected = $('.productSelector').filter(':checked');
+        let products = [];
+
+        $.each(selected, function (id, item) {
+            products.push($(item).data('product'));
+        });
+        console.log(products);
+        $.ajax(
+            {
+                url: '/cart/getProductsPrice',
+                data: {
+                    products: products
+                },
+                dataType: 'json',
+                success: function (response) {
+                    $('.totalPrice').html(response.formatPrice);
+                }
+            }
+        )
     };
 
     this.removeFromCart = function (event) {
@@ -105,7 +170,7 @@ let cartControl = function () {
                         'count': counter.val()
                     },
                     success: function (response) {
-                        $('.price').filter('[data-product="' + productId + '"]').html(response.productTotalPrice + ' р.');
+                        $('.price').filter('[data-product="' + productId + '"]').html(response.productTotalPrice);
                         $('.totalPrice').html(response.totalPrice);
 
                         caller.initialize();

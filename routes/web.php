@@ -32,6 +32,7 @@ Route::prefix('order')->group(
 Route::prefix('cart')->group(
     function () {
         Route::get('/', 'Order\CartController@index');
+        Route::get('getProductsPrice', 'Order\CartController@getProductsPrice');
         Route::post('addToCart', 'Order\CartController@addToCart')->middleware([]);
         Route::delete('removeFromCart', 'Order\CartController@removeFromCart')->middleware([]);
         Route::post('changeCount', 'Order\CartController@changeCount')->middleware([]);

@@ -42,14 +42,18 @@
             @if($product->complection->count() > 0)
                 <div class="product">
                     <div style="display: block">
-                        <?php /** @var \App\Models\Product\Product $complectionProduct */ ?>
+                        <?php /** @var \App\Extensions\Cart\CartProduct $complectionProduct */ ?>
                         @foreach($product->complection as $complectionProduct)
                             <div class="col-2">
                                 <img src="{{ getImagePath($complectionProduct->image) }}" alt="">
                             </div>
-                            <div class="col-5">
-                                <a href="{{ action('Product\ProductController@show', ['product' => $product->product->product_id]) }}">
-                                    {{ $product->product->description->name }}
+                            <div class="col-9">
+                                <a
+                                        href="{{ action('Product\ProductController@show', ['product' => $product->product->product_id]) }}"
+                                        style="font-size: .9em"
+                                >
+                                    <b>{{ $complectionProduct->category->category->description->name }}: </b>
+                                    {{ $complectionProduct->description->name }}
                                 </a>
                             </div>
                         @endforeach

@@ -15,6 +15,7 @@ use Illuminate\Support\Collection;
  * @property Collection $productAttributes
  * @property int product_id
  * @property ProductComplectationRepository $complectation
+ * @property Category $category
  */
 class Product extends Model
 {
@@ -34,9 +35,12 @@ class Product extends Model
         return $this->hasMany(ProductsImage::class, 'product_id', 'product_id');
     }
 
-    public function category()
+    /**
+     * @return Category|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Model|object|null
+     */
+    public function getCategoryAttribute()
     {
-        return $this->belongsTo(Category::class);
+        return ProductToCategory::findProductCategory($this->product_id);
     }
 
     public function description()
@@ -110,7 +114,7 @@ class Product extends Model
 
         /** @var ProductComplectation $item */
         foreach ($this->complectation->items() as $complection) {
-            $defaultComplection[] = $complection->categories->items()->first()->getSelectedProduct();
+            $defaultComplection[] = $complection->categories->items()->first()->selectedProduct;
         }
 
         return $defaultComplection;

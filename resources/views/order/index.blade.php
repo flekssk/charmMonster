@@ -68,7 +68,10 @@
                                 </td>
                                 <td colspan="1"><img src="{{ getImagePath($product->product->image) }}" alt=""
                                                      style="width: 100px"></td>
-                                <td colspan="2">{{ $product->product->description->name }}</td>
+                                <td colspan="2">
+                                    <b>{{ $product->product->category->category->description->name }}: </b>
+                                    {{ $product->product->description->name }}
+                                </td>
                                 <td></td>
                             </tr>
                         @endforeach

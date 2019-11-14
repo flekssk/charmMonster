@@ -5,6 +5,13 @@ namespace App\Extensions\Cart;
 use App\Models\Product\Product;
 use Illuminate\Support\Collection;
 
+/**
+ * Class CartProduct
+ *
+ * @package App\Extensions\Cart
+ *
+ * @property Product $product
+ */
 class CartProduct
 {
     /**

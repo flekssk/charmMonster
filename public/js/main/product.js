@@ -2,20 +2,21 @@ class ProductController {
     constructor(options = {}) {
         let object = this;
 
-        $(".mainImage").zoom();
         $('.imagesList .image').click(function () {
             $(".mainImage").trigger('zoom.destroy');
             let clickedImage = $(this).find('img').attr('src');
             $('.mainImage').find('img').attr('src', clickedImage);
-            $(document).ready(function () {
-                $(".mainImage").zoom();
-            });
         });
 
         $('.complectationProduct').click(function () {
             $('.complectationProduct')
                 .filter('[data-category-id="' + $(this).data('category-id') + '"]')
                 .removeClass('selected');
+
+            $('.selectedProductName')
+                .filter('[data-category-id="' + $(this).data('category-id') + '"]')
+                .find('.name')
+                .html($(this).data('original-title'));
 
             $(this).addClass('selected');
 
@@ -88,4 +89,6 @@ $(document).ready(function () {
     let productController = new ProductController();
 
     controller.productController = productController;
+
+    $('[data-toggle="tooltip"]').tooltip()
 });

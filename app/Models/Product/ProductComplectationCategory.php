@@ -12,6 +12,7 @@ use App\Repositories\Product\ProductRepository;
  *
  * @property ProductRepository $products
  * @property Category $category
+ * @property Product $selectedProduct
  */
 class ProductComplectationCategory extends Model
 {
@@ -46,7 +47,7 @@ class ProductComplectationCategory extends Model
     /**
      * @return Product
      */
-    public function getSelectedProduct()
+    public function getSelectedProductAttribute()
     {
         return $this->products->get($this->getSelectedProductId());
     }

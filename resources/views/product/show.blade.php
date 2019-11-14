@@ -97,6 +97,17 @@
                                                 data-category-id="{{ $complectationCategory->category_id }}"
                                                 data-complection-id="{{ $complection->id }}"
                                         >
+                                            <div
+                                                    class="selectedProductName"
+                                                    data-category-id="{{ $complectationCategory->category_id }}"
+                                                    data-complection-id="{{ $complection->id }}"
+                                                    style="display: block; margin-bottom: 5px;"
+                                            >
+                                                <b>Выбрано:</b>
+                                                <span class="name">
+                                                    {{ $complectationCategory->selectedProduct->description->name }}
+                                                </span>
+                                            </div>
                                             <?php
                                             $selected = true;
                                             /**
@@ -111,6 +122,9 @@
                                                         data-product-id="{{ $complectionProduct->product_id }}"
                                                         data-price="{{ $complectionProduct->price }}"
                                                         data-main-product="{{ $product->product_id }}"
+                                                        data-toggle="tooltip"
+                                                        data-placement="bottom"
+                                                        title="{{ $complectionProduct->description->name }}"
                                                 >
                                                     <img src="{{ getImagePath($complectionProduct->image) }}" alt="">
                                                 </div>

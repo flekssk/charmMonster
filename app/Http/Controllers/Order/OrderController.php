@@ -17,9 +17,17 @@ class OrderController extends Controller
 {
     public function index(Request $request)
     {
+        $products = CartFacade::getProducts()
+            ->getByIds($request->products);
+
         return JsonResponse::create(
             [
-                'content' => view('order.index')->render(),
+                'content' => view(
+                    'order.index',
+                    [
+                        'products' => $products
+                    ]
+                )->render(),
             ]
         );
     }

@@ -94,4 +94,14 @@ class Cart
     {
         return $this->products->get($id);
     }
+
+    /**
+     * @param array $ids
+     *
+     * @return CartProductsRepository|\App\Extensions\Repositories\BaseRepository
+     */
+    public function getProductsByIds(array $ids)
+    {
+        return $this->products->getByIds($ids);
+    }
 }

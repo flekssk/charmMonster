@@ -32,9 +32,10 @@ class CartController extends Controller
 
         return JsonResponse::create(
             [
-                'success'       => true,
+                'success' => true,
                 'widgetContent' => CartFacade::renderWidget()->render(),
-                'totalPrice'    => CartFacade::totalPrice(),
+                'totalPrice' => CartFacade::totalPrice(),
+                'id' => $cartProduct->getUniqueId(),
             ]
         );
     }
@@ -45,9 +46,9 @@ class CartController extends Controller
 
         return JsonResponse::create(
             [
-                'success'       => true,
+                'success' => true,
                 'widgetContent' => CartFacade::renderWidget()->render(),
-                'totalPrice'    => CartFacade::totalPrice(),
+                'totalPrice' => CartFacade::totalPrice(),
             ]
         );
     }
@@ -58,7 +59,7 @@ class CartController extends Controller
 
         return JsonResponse::create(
             [
-                'totalPrice'        => CartFacade::totalPrice(),
+                'totalPrice' => CartFacade::totalPrice(),
                 'productTotalPrice' => CartFacade::productTotalPrice($request->product_id),
             ]
         );
@@ -76,7 +77,7 @@ class CartController extends Controller
         return JsonResponse::create(
             [
                 'price' => $totalPrice,
-                'formatPrice' => PriceDecorator::format($totalPrice)
+                'formatPrice' => PriceDecorator::format($totalPrice),
             ]
         );
     }

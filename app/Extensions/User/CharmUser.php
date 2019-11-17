@@ -4,6 +4,11 @@ namespace App\Extensions\User;
 
 class CharmUser
 {
+    public static function id($default = '')
+    {
+        return app('sessionUser') ? app('sessionUser')->user_id  : $default;
+    }
+
     public static function name($default = '')
     {
         return app('sessionUser') ? app('sessionUser')->firstname . ' ' . app('sessionUser')->lastname : $default;

@@ -10,7 +10,10 @@
         json_encode(
             [
                 'createOrderUrl' => action('Order\OrderController@index'),
-                'authenticateUrl' => action('User\UserController@authenticate')
+                'authenticateUrl' => action('User\UserController@authenticate'),
+                'addLikedLink' => action('Product\LikedController@store'),
+                'showLikedLink' => action('Product\LikedController@index'),
+                'userId' => \App\Extensions\User\CharmUser::id()
             ]
         )
         }}

@@ -108,6 +108,9 @@ class Product extends Model
         return $price;
     }
 
+    /**
+     * @return Product[]
+     */
     public function getDefaultComplection()
     {
         $defaultComplection = [];
@@ -130,5 +133,16 @@ class Product extends Model
         }
 
         return json_encode($data);
+    }
+
+    public function getIdWithComplection()
+    {
+        $id = $this->product_id;
+
+        foreach ($this->getDefaultComplection() as $item) {
+            $id .= $item->product_id;
+        }
+
+        return $id;
     }
 }

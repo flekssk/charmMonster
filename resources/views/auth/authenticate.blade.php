@@ -2,6 +2,9 @@
     <div class="mainTitle title ukrainianTitle">
         <h1>Авторизация</h1>
     </div>
+    <div style="text-align: center; margin-bottom: 10px;">
+        <span>{{ $text }}</span>
+    </div>
     <div class="buttonsContainer">
         @if(!App\Extensions\User\CharmUser::has())
             <a href="{{ action('User\VKAuthController@redirectToProvider') }}"

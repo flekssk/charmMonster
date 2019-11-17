@@ -1,5 +1,7 @@
-class ProductController {
+class Product extends Service {
     constructor(options = {}) {
+        super(options);
+
         let object = this;
 
         $('.imagesList .image').click(function () {
@@ -37,6 +39,7 @@ class ProductController {
             });
         });
 
+        $('[data-toggle="tooltip"]').tooltip();
     }
 
     getSelectedComplection() {
@@ -83,12 +86,3 @@ class ProductController {
         return complection;
     }
 }
-
-
-$(document).ready(function () {
-    let productController = new ProductController();
-
-    controller.productController = productController;
-
-    $('[data-toggle="tooltip"]').tooltip()
-});

@@ -23,7 +23,22 @@
                     <span class="userName">{{ \App\Extensions\User\CharmUser::name() }}</span>
                 </div>
                 <div class="control">
-                    <span class="controlButton authenticate"><i class="fa fa-user"></i></span>
+                    <span
+                            class="controlButton authenticate"
+                            data-toggle="tooltip"
+                            data-title="Пользователь"
+                    >
+                        <i class="fa fa-user"></i>
+                    </span>
+                </div>
+                <div class="control">
+                    <span
+                            class="controlButton liked"
+                            data-toggle="tooltip"
+                            data-title="Понравившиеся товары"
+                    >
+                        <i class="fa fa-heart"></i>
+                    </span>
                 </div>
                 <div class="control cartControlBlock">
                     <span class="controlButton cartButton">

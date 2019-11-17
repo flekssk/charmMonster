@@ -10,7 +10,6 @@
 
 
 @push('after_scripts')
-    <script src="{{ asset('js/main/product.js') }}"></script>
     <script src="{{ asset('js/blowup.js') }}"></script>
 @endpush
 
@@ -174,7 +173,10 @@
                             <a href="" class="controlButton">Оформить заказ</a>
                         </div>
                         <div>
-                            <a href="" class="controlButton">
+                            <a
+                                    class="controlButton addToLiked"
+                                    data-product-id="{{ $product->product_id }}"
+                            >
                                 <span class="fa fa-heart-o"></span>В понравившиеся
                             </a>
                         </div>

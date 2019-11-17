@@ -1,3 +1,8 @@
+<?php
+/**
+ * @var \App\Extensions\Cart\CartProductsRepository $products
+ */
+?>
 <div class="orderContainer">
     @if(\App\Extensions\Cart\CartFacade::getProducts()->items()->count() > 0)
         <form id="orderForm" action="{{ action('Order\OrderController@store') }}" method="post">
@@ -6,7 +11,7 @@
             </div>
             <div class="errorsContainer"></div>
             <div class="products" style="margin: 0 -20px;">
-                <table class="table table-hover">
+                <table class="table">
                     <thead>
                     <tr>
                         <th></th>
@@ -17,9 +22,9 @@
                     </tr>
                     </thead>
                     <?php /** @var \App\Extensions\Cart\CartProduct $product */ ?>
-                    @foreach(\App\Extensions\Cart\CartFacade::getProducts()->items()->all() as $product)
+                    @foreach($products->items()->all() as $product)
                         <tr>
-                            <td style="vertical-align: middle; text-align: center;">
+                            <td style="vertical-align: middle; text-align: center;" rowspan="2">
                                 <input type="checkbox"
                                        class="productSelector"
                                        name="products[{{ $product->getUniqueId() }}]"
@@ -28,7 +33,7 @@
                                        checked
                                 >
                             </td>
-                            <td>
+                            <td rowspan="2">
                                 <img src="{{ getImagePath($product->product->image) }}" alt="" style="width: 150px">
                             </td>
                             <td>
@@ -62,10 +67,8 @@
                                 <i class="fa fa-ruble"></i>
                             </td>
                         </tr>
-                        @foreach($product->complection as $complectionProduct)
+                        @forelse($product->complection as $complectionProduct)
                             <tr>
-                                <td colspan="1" style="text-align: center; vertical-align: middle">
-                                </td>
                                 <td colspan="1"><img src="{{ getImagePath($product->product->image) }}" alt=""
                                                      style="width: 100px"></td>
                                 <td colspan="2">
@@ -74,7 +77,13 @@
                                 </td>
                                 <td></td>
                             </tr>
-                        @endforeach
+                        @empty
+                            <tr>
+                                <td colspan="1"></td>
+                                <td colspan="2"></td>
+                                <td></td>
+                            </tr>
+                        @endforelse
                     @endforeach
                     <tr>
                         <td></td>
@@ -85,7 +94,7 @@
                         </td>
                         <td>
                             <span style="font-size: 18px;" class="totalPrice">
-                            {{ \App\Decorators\PriceDecorator::format(\App\Extensions\Cart\CartFacade::totalPrice()) }}
+                            {{ \App\Decorators\PriceDecorator::format($products->totalPrice()) }}
                             </span>
                             <i class="fa fa-ruble"></i>
                         </td>

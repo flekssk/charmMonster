@@ -5,24 +5,18 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\User\InstagramUserLink;
 use App\Models\User\VKUserLink;
+use Laravel\Socialite\Contracts\User;
 use Laravel\Socialite\Facades\Socialite;
 
-class InstagramAuthController extends Controller
+class InstagramAuthController extends AbstractAuthController
 {
-    public function redirectToProvider()
+    public function getDriverName()
     {
-        return Socialite::driver('instagram')->redirect();
+        return 'instagram';
     }
 
-    /**
-     * Obtain the user information from GitHub.
-     */
-    public function handleProviderCallback()
+    public function putUser(User $user)
     {
-        $user = Socialite::driver('instagram')->user();
-
         session()->put('user', InstagramUserLink::findOrCreateUser($user)->user_id);
-
-        return redirect('/');
     }
 }

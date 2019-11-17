@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var \App\Extensions\Cart\CartProductsRepository $products
+ */
+?>
+
 <div class="cartWidgetContainer" data-product-count="{{ $products->count() }}">
     <div class="total">
         <span class="text">В вашей корзине {{ $products->items()->count() }} на сумму :</span>
@@ -63,7 +69,12 @@
         @endforeach
     </div>
     <div class="control">
-        <a class="btn btn-product-control makeOrder">Оформить заказ</a>
+        <a
+                class="btn btn-product-control makeOrder"
+                data-products="{{ json_encode($products->productsToOrder()) }}"
+        >
+            Оформить заказ
+        </a>
         <a class="btn btn-product-control" href="{{ action('Order\CartController@index') }}">В корзину</a>
     </div>
 </div>

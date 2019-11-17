@@ -12,7 +12,6 @@ a, span, div, li {
 body {
     height: 100%;
     font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    background: url(/public/images/layout/back.jpg), rgba(255,255,255,.96);
     background-blend-mode: color;
 }
 
@@ -326,7 +325,7 @@ body {
 .topMenuContainer .menu .item .submenu:after {
     content: ' ';
     position: absolute;
-    top: -60px;
+    top: -100px;
     left: 0;
     width: 100px;
     height: 100px;
@@ -334,10 +333,11 @@ body {
 
 .topMenuContainer .menu .item .submenu .submenuItem {
     display: inline-block;
+    width: 255px;
 }
 
 .topMenuContainer .menu .item .submenu .submenuItem a {
-    width: 255px;
+    width: 100%;
     height: 100%;
     display: block;
     padding: 10px;
@@ -851,7 +851,7 @@ input:disabled {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(177, 177, 177, 0.7);
+    background: rgba(177, 177, 177, 0.3);
     z-index: 1111;
     overflow: scroll;
     display: none;

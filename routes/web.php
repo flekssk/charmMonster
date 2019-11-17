@@ -39,6 +39,14 @@ Route::prefix('cart')->group(
     }
 );
 
+Route::prefix('liked')->group(
+    function () {
+        Route::get('/', 'Product\LikedController@index');
+        Route::post('store', 'Product\LikedController@store');
+        Route::delete('destroy', 'Product\LikedController@destroy');
+    }
+);
+
 Route::prefix('blog')->group(
     function () {
         Route::get('/', 'Blog\BlogController@index');

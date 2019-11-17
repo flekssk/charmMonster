@@ -4,12 +4,19 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function authenticate()
+    public function authenticate(Request $request)
     {
-        return JsonResponse::create(['content' => view('auth.authenticate')->render()]);
+        $text = $request->get('text', '');
+
+        return JsonResponse::create(
+            [
+                'content' => view('auth.authenticate', compact('text'))->render(),
+            ]
+        );
     }
 
     public function logout()

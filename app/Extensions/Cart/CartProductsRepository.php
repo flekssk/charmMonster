@@ -3,6 +3,7 @@
 namespace App\Extensions\Cart;
 
 use App\Extensions\Repositories\BaseRepository;
+use App\Models\Order\OrderProduct;
 use Illuminate\Support\Collection;
 
 class CartProductsRepository extends BaseRepository
@@ -40,5 +41,36 @@ class CartProductsRepository extends BaseRepository
         }
 
         return $totalPrice;
+    }
+
+    public function productsToOrder()
+    {
+        $products = [];
+
+        /**
+         * @var OrderProduct $item
+         */
+        foreach ($this->items->all() as $id => $item) {
+            $products[] = $id;
+        }
+
+        return $products;
+    }
+
+    /**
+     * @param array $ids
+     *
+     * @return BaseRepository|self
+     */
+    public function getByIds(array $ids)
+    {
+        $instance = self::newInstance();
+        $items = collect();
+
+        foreach ($ids as $id) {
+            $items->put($id, $this->get($id));
+        }
+
+        return $instance->setItems($items);
     }
 }

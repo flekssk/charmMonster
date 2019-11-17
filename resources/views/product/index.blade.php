@@ -17,7 +17,7 @@
 @endpush
 
 @push('after_scripts')
-    <script src="{{ asset('js/main/products.js') }}"></script>
+    <script src="{{ asset('ProductsProducts.js/script>
 @endpush
 
 @section('content')

@@ -19,11 +19,6 @@ use Illuminate\Support\Arr;
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endpush
 
-@push('after_scripts')
-    <script src="{{ asset('js/main/products.js') }}"></script>
-    <script src="{{ asset('js/main/product.js') }}"></script>
-@endpush
-
 @section('content')
     <div class="container-fluid contentContainer">
         <div class="container">
@@ -105,13 +100,15 @@ use Illuminate\Support\Arr;
                                                 Быстрый просмотр
                                                 <i class="icon fa fa-eye"></i>
                                             </a>
-                                            <a class="btn btn-product-control">
+                                            <a
+                                                    class="btn btn-product-control fastOrder"
+                                                    data-product-id="{{ $product->product_id }}"
+                                            >
                                                 Быстрый заказ
                                                 <i class="icon fa fa-shopping-cart"></i>
                                             </a>
                                             <a class="btn btn-product-control addToCart"
                                                data-product-id="{{ $product->product_id }}"
-                                               data-complection="{{ $product->getDefaultComplectionJson() }}"
                                             >
                                                 В корзину
                                                 <i class="icon fa fa-shopping-cart"></i>

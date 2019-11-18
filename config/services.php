@@ -33,23 +33,22 @@ return [
 
     'vkontakte' => [
         'model'         => App\Models\User\VKUser::class,
-        'redirect'      => 'http://charm.local/login/vk/callback',
-        'secret'        => env('STRIPE_SECRET'),
-        'client_id'     => 7056662,
-        'client_secret' => 'rBjGpQyBKK2mr7PlVcQF',
+        'redirect'      => env('AUTH_VK_REDIRECT'),
+        'client_id'     => env('AUTH_VK_APP_ID'),
+        'client_secret' => env('AUTH_VK_PRIVATE_KEY'),
     ],
 
     'instagram' => [
-        'redirect'      => 'http://charm.local/login/instagram/callback',
-        'client_id'     => '50e460e96ef242efa0193b675d3d84c0',
-        'client_secret' => '79b479f7b7084f7db1d8089e5617b330',
+        'client_id'     => env('AUTH_INSTAGRAM_PUBLIC_KEY'),
+        'client_secret' => env('AUTH_INSTAGRAM_PRIVATE_KEY'),
+        'redirect'      => env('AUTH_INSTAGRAM_REDIRECT'),
     ],
 
     'odnoklassniki' => [
-        'client_id' => 512000128354,
-        'client_secret' => 'DF00993619DC13EB9A8C31BF',
-        'client_public' => 'CDGGPGJGDIHBABABA',
-        'redirect' => 'http://charm.local/login/ok/callback',
+        'client_id' => env('AUTH_OK_APP_ID'),
+        'client_secret' => env('AUTH_OK_PRIVATE_KEY'),
+        'client_public' => env('AUTH_OK_PUBLIC_KEY'),
+        'redirect' => env('AUTH_OK_REDIRECT'),
     ],
 
     'facebook' => [

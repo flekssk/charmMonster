@@ -166,6 +166,7 @@ return [
         \App\Extensions\Cart\CartServiceProvider::class,
         \App\Providers\OCSessionProvider::class,
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
+        SocialiteProviders\Manager\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -232,5 +233,5 @@ return [
         'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
     ],
 
-    'asset_url' => '/public/'
+    'asset_url' => '/public'
 ];

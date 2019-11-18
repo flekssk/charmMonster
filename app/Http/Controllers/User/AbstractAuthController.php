@@ -21,7 +21,7 @@ abstract class AbstractAuthController extends Controller
     }
 
     /**
-     * Obtain the user information from GitHub.
+     * Obtain the user information from driver.
      */
     public function handleProviderCallback()
     {

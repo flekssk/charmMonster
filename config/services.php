@@ -43,5 +43,18 @@ return [
         'redirect'      => 'http://charm.local/login/instagram/callback',
         'client_id'     => '50e460e96ef242efa0193b675d3d84c0',
         'client_secret' => '79b479f7b7084f7db1d8089e5617b330',
-    ]
+    ],
+
+    'odnoklassniki' => [
+        'client_id' => 512000128354,
+        'client_secret' => 'DF00993619DC13EB9A8C31BF',
+        'client_public' => 'CDGGPGJGDIHBABABA',
+        'redirect' => 'http://charm.local/login/ok/callback',
+    ],
+
+    'facebook' => [
+        'client_id'     => '3020406271320112',
+        'client_secret' => '1aa2af333336fffvvvffffvff',
+        'redirect'      => 'http://charm.local/login/facebook/callback',
+    ],
 ];

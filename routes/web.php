@@ -57,6 +57,12 @@ Route::prefix('blog')->group(
 Route::get('login/vk', 'User\VKAuthController@redirectToProvider');
 Route::get('login/vk/callback', 'User\VKAuthController@handleProviderCallback');
 
+Route::get('login/ok', 'User\OKAuthController@redirectToProvider');
+Route::get('login/ok/callback', 'User\OKAuthController@handleProviderCallback');
+
+Route::get('login/facebook', 'User\FacebookAuthController@redirectToProvider');
+Route::get('login/facebook/callback', 'User\FacebookAuthController@handleProviderCallback');
+
 Route::get('login/instagram', 'User\InstagramAuthController@redirectToProvider');
 Route::get('login/instagram/callback', 'User\InstagramAuthController@handleProviderCallback');
 

@@ -130,7 +130,7 @@ body {
 
 .headerContainer .headerControlPanel .control {
     display: inline-block;
-    min-width: 55px;
+    min-width: 50px;
     position: relative;
 }
 
@@ -153,11 +153,21 @@ body {
 
 .headerContainer .headerControlPanel .controlButton i {
     background-color: #FFB2B2;
-    padding: 4px 8px 5px;
+    padding: 5px 8px 5px;
     border: 2px solid #CC0000;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+    font-size: 15px;
+}
+
+.headerContainer .headerControlPanel .controlButton i.fa-user {
+    padding: 5px 9px 5px;
+}
+
+.headerContainer .headerControlPanel .controlButton i.fa-heart {
+    font-size: 14px;
+    padding: 6px 8px 5px;
 }
 
 .headerContainer .headerControlPanel .controlButton:hover {
@@ -919,6 +929,11 @@ input:disabled {
 
 .btn-instagram {
     background-color: #2e5e86;
+    color: #fff;
+}
+
+.btn-odnoklassinki {
+    background-color: #ee8208;
     color: #fff;
 }
 

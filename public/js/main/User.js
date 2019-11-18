@@ -7,7 +7,6 @@ class User extends Service {
      */
     constructor(options = {}) {
         super(options);
-        console.log(options);
 
         this.userId = options.userId;
         this.authenticateUrl = options.authenticateUrl;
@@ -20,29 +19,31 @@ class User extends Service {
     }
 
     /**
-     * @param text Текст передаваемый в порму авторизации
+     * @param text Текст передаваемый в форму авторизации
      */
     authenticate(text = '') {
-        if (!this.hasUser()) {
-            $.ajax({
-                    url: this.authenticateUrl,
-                    method: 'get',
-                    data: {
-                        text: text
-                    },
-                    dataType: 'json',
-                    success: function (response) {
-                        popup().showContent(response.content);
-                    }
+        $.ajax({
+                url: this.authenticateUrl,
+                method: 'get',
+                data: {
+                    text: text
+                },
+                dataType: 'json',
+                success: function (response) {
+                    popup().showContent(response.content);
                 }
-            );
-        }
+            }
+        );
+    }
+
+    userInfo() {
+
     }
 
     rebindEvents() {
         let caller = this;
 
-        $('.authenticate').click(function () {
+        $('.user').click(function () {
             caller.authenticate();
         });
     }

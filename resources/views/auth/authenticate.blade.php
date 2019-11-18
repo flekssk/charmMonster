@@ -17,6 +17,11 @@
             >
                 <i class="fa fa-instagram"></i> Instagram
             </a>
+            <a href="{{ action('User\OKAuthController@redirectToProvider') }}"
+               class="btn btn-odnoklassinki authButton"
+            >
+                <i class="fa fa-odnoklassniki"></i> Одноклассиники
+            </a>
         @else
             <a href="{{ action('User\UserController@logout') }}"
                class="btn btn-logout authButton"

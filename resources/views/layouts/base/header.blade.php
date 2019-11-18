@@ -18,20 +18,21 @@
             8 960 353 31 59
         </span>
             </div>
-            <div class="col-3 align-self-end headerControlPanel">
-                <div class="control">
-                    <span class="userName">{{ \App\Extensions\User\CharmUser::name() }}</span>
-                </div>
-                <div class="control">
+            <div class="col-5 align-self-end headerControlPanel">
+                <div style="float: right">
+                    <div class="control">
+                        <span class="userName">{{ \App\Extensions\User\CharmUser::name() }}</span>
+                    </div>
+                    <div class="control">
                     <span
-                            class="controlButton authenticate"
+                            class="controlButton user"
                             data-toggle="tooltip"
                             data-title="Пользователь"
                     >
                         <i class="fa fa-user"></i>
                     </span>
-                </div>
-                <div class="control">
+                    </div>
+                    <div class="control">
                     <span
                             class="controlButton liked"
                             data-toggle="tooltip"
@@ -39,14 +40,15 @@
                     >
                         <i class="fa fa-heart"></i>
                     </span>
-                </div>
-                <div class="control cartControlBlock">
+                    </div>
+                    <div class="control cartControlBlock">
                     <span class="controlButton cartButton">
                         <i class="fa fa-shopping-cart"></i>
                     </span>
-                    <div class="cartWidget">
-                        <div class="content">
-                            <?php echo app('cart')->renderWidget()->render(); ?>
+                        <div class="cartWidget">
+                            <div class="content">
+                                <?php echo app('cart')->renderWidget()->render(); ?>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -68,14 +68,14 @@ class Cart extends Service {
             $('#orderForm').ajaxForm(
                 {
                     beforeSubmit: function () {
-                        controller.form.clearErrors();
+                        form().clearErrors();
                     },
                     method: 'get',
                     success: function (response) {
                         location.href = response.redirectUrl;
                     },
                     error: function (response) {
-                        controller.form.renderErrors(response.responseJSON.errors);
+                        form().renderErrors(response.responseJSON.errors);
                         $('.popupWindow').animate({
                             scrollTop: 0
                         }, 400);

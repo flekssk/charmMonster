@@ -32,15 +32,17 @@
                         <i class="fa fa-user"></i>
                     </span>
                     </div>
-                    <div class="control">
-                    <span
-                            class="controlButton liked"
-                            data-toggle="tooltip"
-                            data-title="Понравившиеся товары"
-                    >
-                        <i class="fa fa-heart"></i>
-                    </span>
-                    </div>
+                    @if(!\App\Extensions\User\CharmUser::isGuest())
+                        <div class="control">
+                            <span
+                                    class="controlButton liked"
+                                    data-toggle="tooltip"
+                                    data-title="Понравившиеся товары"
+                            >
+                                <i class="fa fa-heart"></i>
+                            </span>
+                        </div>
+                    @endif
                     <div class="control cartControlBlock">
                     <span class="controlButton cartButton">
                         <i class="fa fa-shopping-cart"></i>

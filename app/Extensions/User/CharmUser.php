@@ -33,4 +33,9 @@ class CharmUser
     {
         return app('sessionUser') ? true : false;
     }
+
+    public static function isGuest()
+    {
+        return is_null(app('sessionUser'));
+    }
 }

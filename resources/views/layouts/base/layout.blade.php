@@ -16,7 +16,7 @@
 <div class="popupWindow">
     <div class="popupContent">
         <div class="closer">
-            <span class="fa fa-close closePopup"></span>
+            <i class="fa fa-close closePopup"></i>
         </div>
         <div class="contentContainer"></div>
     </div>

@@ -46,7 +46,7 @@ class Product extends Service {
         let products = {};
 
         $.each($('.complectionCategoryProducts.selected'), function (index, category) {
-            products[index] = ($(category).find('.complectationProduct.selected'));
+            products[index] = $(category).find('.complectationProduct.selected').data('product-id');
         });
 
         return products;

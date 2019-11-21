@@ -169,7 +169,8 @@ class Cart extends Service {
     addToCart(productId, complection = []) {
         let caller = this,
             result = false;
-
+        console.log(productId);
+        console.log(complection);
         $.ajax({
                 url: '/cart/addToCart',
                 method: 'post',

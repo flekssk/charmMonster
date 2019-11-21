@@ -39,7 +39,7 @@ class Product extends Service {
             });
         });
 
-        $('[data-toggle="tooltip"]').tooltip();
+        // $('[data-toggle="tooltip"]').tooltip();
     }
 
     getSelectedComplection() {

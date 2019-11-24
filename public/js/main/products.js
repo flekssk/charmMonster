@@ -28,13 +28,11 @@ class Products extends Service {
         $('.fastLook').click(function () {
             caller.fastLook($(this).data('link'));
         });
-        $('.productContainer .productContent').unbind();
         $('.productContainer .productContent').mouseover(function () {
             $(this).find('.productControl').show();
             $(this).find('.title').addClass('active');
         });
 
-        $('.productContainer .productContent').unbind();
         $('.productContainer .productContent').mouseout(function () {
             $(this).find('.productControl').hide();
             $(this).find('.title').removeClass('active');

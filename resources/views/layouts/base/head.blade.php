@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="{{ asset('slick/slick.css') }}">
 <link rel="stylesheet" href="{{ asset('slick/slick-theme.css') }}">
 <link rel="stylesheet" href="{{ asset('css/main/main.css') }}">
+<link rel="stylesheet" href="{{ asset('css/main/products.css') }}">
+<link rel="stylesheet" href="{{ asset('css/main/product.css') }}">
 <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@19.7.1/dist/css/suggestions.min.css" rel="stylesheet" />
 
 

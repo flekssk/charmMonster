@@ -2,14 +2,20 @@ class Product extends Service {
     constructor(options = {}) {
         super(options);
 
+        this.rebindEvents();
+    }
+
+    rebindEvents() {
         let object = this;
 
+        $('.imagesList .image').unbind();
         $('.imagesList .image').click(function () {
             $(".mainImage").trigger('zoom.destroy');
             let clickedImage = $(this).find('img').attr('src');
             $('.mainImage').find('img').attr('src', clickedImage);
         });
 
+        $('.complectationProduct').unbind();
         $('.complectationProduct').click(function () {
             $('.complectationProduct')
                 .filter('[data-category-id="' + $(this).data('category-id') + '"]')
@@ -26,6 +32,7 @@ class Product extends Service {
             object.changeProductComplection($(this).data('main-product'));
         });
 
+        $('.complectionCategorySelect').unbind();
         $('.complectionCategorySelect').change(function () {
             let selectedCategory = $('.complectionCategorySelect').find('option:selected').val(),
                 productId = $(this).data('product-id');
@@ -39,7 +46,7 @@ class Product extends Service {
             });
         });
 
-        // $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip();
     }
 
     getSelectedComplection() {
@@ -48,7 +55,6 @@ class Product extends Service {
         $.each($('.complectionCategoryProducts.selected'), function (index, category) {
             products[index] = $(category).find('.complectationProduct.selected').data('product-id');
         });
-        console.log(products);
         return products;
     }
 
@@ -57,11 +63,10 @@ class Product extends Service {
             totalPrice = 0;
 
         $.each(this.getSelectedComplection(), function (index, product) {
-            totalPrice += Number.parseInt($(product).data('price'));
+            totalPrice += Number.parseInt($('.complectationProduct[data-product-id="' + product + '"]').data('price'));
         });
 
         totalPrice += baseProductPrice;
-
         $('.mainProductPrice').html(totalPrice);
     }
 

@@ -1,16 +1,40 @@
 class Products extends Service {
     constructor(options = {}) {
         super(options);
+
+        this.rebindEvents();
+    }
+
+    fastLook(link) {
+        $.ajax({
+            url: link,
+            dataType: 'json',
+            success: function (response) {
+                popup().showContent(response.content);
+                $(document).ready(function () {
+                    $(document).ready(function () {
+                        product().rebindEvents();
+                        cart().rebindEvents();
+                    });
+                });
+            }
+        });
+    }
+
+    rebindEvents() {
         let caller = this;
 
+        $('.fastLook').unbind();
         $('.fastLook').click(function () {
             caller.fastLook($(this).data('link'));
         });
+        $('.productContainer .productContent').unbind();
         $('.productContainer .productContent').mouseover(function () {
             $(this).find('.productControl').show();
             $(this).find('.title').addClass('active');
         });
 
+        $('.productContainer .productContent').unbind();
         $('.productContainer .productContent').mouseout(function () {
             $(this).find('.productControl').hide();
             $(this).find('.title').removeClass('active');
@@ -53,19 +77,6 @@ class Products extends Service {
                 $('#priceRange').attr('value', min + ', ' + max);
                 $('#priceRange').attr('data-value', min + ', ' + max);
             });
-        });
-    }
-
-    fastLook(link) {
-        $.ajax({
-            url: link,
-            dataType: 'json',
-            success: function (response) {
-                popup().showContent(response.content);
-                $(document).ready(function () {
-                    let productControl = new ProductController();
-                });
-            }
         });
     }
 }

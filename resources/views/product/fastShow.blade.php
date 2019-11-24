@@ -152,12 +152,15 @@
                         </a>
                     </div>
                     <div>
-                        <a href="" class="controlButton">Оформить заказ</a>
+                        <a class="controlButton fastOrder" data-product-id="{{ $product->product_id }}">
+                            Оформить заказ
+                        </a>
                     </div>
                     <div>
-                        <a href="" class="controlButton">
-                            <span class="fa fa-heart-o"></span>В понравившиеся
-                        </a>
+                        <span href="" class="controlButton addToLiked">
+                            <i class="fa fa-heart" style="font-size: 14px; margin-right: 5px;"></i>
+                            В понравившиеся
+                        </span>
                     </div>
                 </div>
             </div>

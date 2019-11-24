@@ -22,7 +22,7 @@ class LikedController extends Controller
                     [
                         'products' => $liked->getProductsRepository()
                     ]
-                ),
+                )->render(),
             ]
         );
     }

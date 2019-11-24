@@ -63,19 +63,19 @@
                     @if($product->complection)
                         @foreach($product->complection as $complectionProduct)
                             <div class="row col-12 cartProductContainer"
-                                 data-product="{{ $complectionProduct->product->product_id }}">
+                                 data-product="{{ $complectionProduct->product_id }}">
                                 <div class="cartProductBackground"></div>
                                 <div class="col-2">
                                     <div class="imageContainer">
                                         <div class="image">
-                                            <img src="{{ getImagePath($complectionProduct->product->image) }}" alt="">
+                                            <img src="{{ getImagePath($complectionProduct->image) }}" alt="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-10">
                                     <div class="information">
                                         <div class="mainTitle name">
-                                            {{ $complectionProduct->product->description->name }}
+                                            {{ $complectionProduct->description->name }}
                                         </div>
                                     </div>
                                 </div>

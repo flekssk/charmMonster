@@ -23,26 +23,13 @@ class Liked extends Service {
 
         $.ajax(
             {
-                url: this.addLink,
-                data: {
-                    productId: productId
-                },
+                url: this.showLink,
                 dataType: 'json',
                 success: function (response) {
-                    if (response.success === true) {
-                        $.notify({
-                            message: 'Товар добавлен в понравившиеся',
-                            target: '_blank'
-                        }, {
-                            type: 'info',
-                            timer: 1000,
-                            delay: 1000,
-                            placement: {
-                                align: "center"
-                            },
-                        });
-                    }
-
+                    popup().showContent(response.content);
+                    $(document).ready(function () {
+                        products().rebindEvents();
+                    });
                 }
             }
         )
@@ -85,6 +72,10 @@ class Liked extends Service {
 
         $('.addToLiked').click(function () {
             caller.add($(this).data('product-id'));
+        });
+
+        $('.liked').click(function () {
+           caller.show();
         });
     }
 }

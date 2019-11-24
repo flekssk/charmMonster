@@ -7,7 +7,10 @@
 <div class="cartWidgetContainer" data-product-count="{{ $products->count() }}">
     <div class="total">
         <span class="text">В вашей корзине {{ $products->items()->count() }} на сумму :</span>
-        <span class="price"><span class="totalPrice">{{ $products->totalPrice() }}</span> р</span>
+        <span class="price">
+            <span class="totalPrice">{{ $products->totalPrice() }}</span>
+            <i class="fa fa-rub" style="font-size: 14px;"></i>
+        </span>
     </div>
     <div class="products">
         <?php /** @var \App\Extensions\Cart\CartProduct $product */ ?>

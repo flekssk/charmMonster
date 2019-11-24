@@ -112,6 +112,7 @@ class Cart extends Service {
             caller = this;
 
         $(this).parent().parent().remove();
+
         $.ajax({
                 url: '/cart/removeFromCart',
                 method: 'delete',

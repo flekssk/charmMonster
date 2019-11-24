@@ -10,8 +10,6 @@ use Illuminate\Support\Arr;
 
 @push('after_styles')
     <link rel="stylesheet" href="{{ asset('css/main/mainSlider.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main/products.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main/product.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet"

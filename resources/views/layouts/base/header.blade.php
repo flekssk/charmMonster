@@ -81,7 +81,7 @@
                 <a class="mainItem" href="{{ action('IndexController@index') }}">ГЛАВНАЯ</a>
             </div>
             <div class="col-2 item">
-                <a class="mainItem" href="{{ action('Product\ProductController@index') }}">КАТАЛОГ</a>
+                <a class="mainItem">КАТАЛОГ</a>
                 <div class="submenu">
                     @foreach(\App\Repositories\Category\CategoriesRepository::getOnMain()->items() as $category)
                         <div class="submenuItem">

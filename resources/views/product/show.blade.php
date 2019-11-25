@@ -16,5 +16,5 @@
 @extends('layouts.base.layout')
 
 @section('content')
-    {{  view('product.productCard', ['product' => $product]) }}
+    {!! view('product.productCard', ['product' => $product])->render() !!}
 @endsection

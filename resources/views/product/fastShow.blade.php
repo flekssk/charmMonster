@@ -1,1 +1,1 @@
-{{  view('product.productCard', ['product' => $product]) }}
+{!! view('product.productCard', ['product' => $product])->render() !!}

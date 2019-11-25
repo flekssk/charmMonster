@@ -168,7 +168,7 @@
                                 data-product-id="{{ $product->product_id }}"
                         >
                             <i class="fa fa-heart" style="font-size: 14px; margin-right: 5px;"></i>
-                            В понравившиеся
+                            Понравилось
                         </a>
                     </div>
                 </div>

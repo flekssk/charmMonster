@@ -24,7 +24,7 @@ class OrderController extends Controller
         if($request->event == 'payment.succeeded') {
             $yandexOrder = YandexPayment::findByYandexOrderId($request->object['id']);
 
-            $yandexOrder->order->status = OrderStatus::PAYED_STATUS;
+            $yandexOrder->order->order_status_id = OrderStatus::PAYED_STATUS;
             $yandexOrder->order->save();
         }
     }

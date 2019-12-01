@@ -10,6 +10,7 @@ use App\Models\Model;
  * @package App\Models\Order
  *
  * @property OrderStatus $orderStatus
+ * @property int order_status_id
  */
 class Order extends Model
 {

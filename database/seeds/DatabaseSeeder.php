@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Order\Order;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        if (!Order::find(6)) {
+            DB::table('order_status')
+                ->insert(
+                    [
+                        'name' => 'Оплачен',
+                        'language_id' => 1,
+                    ]
+                );
+        }
     }
 }

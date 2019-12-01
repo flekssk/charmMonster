@@ -27,6 +27,9 @@ class YandexPayment extends Model
             ->first();
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function order()
     {
         return $this->belongsTo(Order::class, 'order_id', 'order_id');

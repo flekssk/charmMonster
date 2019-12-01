@@ -2,7 +2,6 @@
 
 namespace App\Extensions\Payments\Methods;
 
-use App\Models\Order\Order;
 use YandexCheckout\Client;
 use YandexCheckout\Request\Payments\CreatePaymentResponse;
 
@@ -32,6 +31,12 @@ class YandexPayment extends Payment
             ],
             uniqid('', true)
         );
+
+        $yandexOrder = new \App\Models\Order\YandexPayment();
+        $yandexOrder->order_id = $this->order->order_id;
+        $yandexOrder->yandex_order_id = $this->paymentResponse->id;
+
+        $yandexOrder->save();
 
         return true;
     }

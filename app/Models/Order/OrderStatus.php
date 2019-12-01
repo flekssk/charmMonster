@@ -13,6 +13,7 @@ class OrderStatus extends Model
     const CANCELED_STATUS = 2;
     const ARRIVED_STATUS = 3;
     const DISPATCHED_STATUS = 2;
+    const PAYED_STATUS = 6;
 
     public static $orderMapping = [
         1 => 'Ожидает оплаты',
@@ -20,6 +21,7 @@ class OrderStatus extends Model
         3 => 'Отправлено',
         4 => 'Выполнен',
         5 => 'Обработка',
+        6 => 'Оплачен',
     ];
 
     protected $table = 'order_status';

@@ -35,6 +35,7 @@ class YandexPayment extends Payment
         $yandexOrder = new \App\Models\Order\YandexPayment();
         $yandexOrder->order_id = $this->order->order_id;
         $yandexOrder->yandex_order_id = $this->paymentResponse->id;
+        $yandexOrder->hash = $this->order->hash;
 
         $yandexOrder->save();
 

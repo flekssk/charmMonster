@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::prefix('order')->middleware(['apiKey'])->group(
+Route::prefix('order')->group(
     function () {
-        Route::any('history', 'Api\Order\OrderController@history');
-    });
+        Route::any('history', 'Api\Order\OrderController@history')->middleware(['apiKey']);
+        Route::post('yandexHandler', 'Api\Order\OrderController@yandexHandler')->middleware(['staticApiKey']);
+    }
+);

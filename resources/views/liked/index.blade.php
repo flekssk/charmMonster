@@ -1,7 +1,10 @@
-<div class="row col-9 productContainer">
+<div class="row col-12 productContainer" style="padding: 30px 0;">
+    <div class="col-12" style="text-align: center;">
+        <h1 class="mainTitle ukrainianTitle">Понравилось</h1>
+    </div>
     <?php /** @var \App\Models\Product\Liked $product */ ?>
     @forelse($products->items()->all() as $product)
-        <div class="col-4 product">
+        <div class="col-3 product">
             <div class="productContent">
                 <div class="price">
                     {{ number_format(round($product->getFullPrice()), 0, '.', ' ') }} <i class="fa fa-ruble"></i>

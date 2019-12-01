@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Extensions\Log\Loggers\RequestLogger;
 use Illuminate\Support\ServiceProvider;
 use Mockery\Container;
 
@@ -15,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         app()->singleton(\Mobile_Detect::class);
+        app()->singleton(RequestLogger::class);
     }
 
     /**

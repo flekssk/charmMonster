@@ -3,6 +3,7 @@
 namespace Api\Http;
 
 use App\Api\Middleware\ApiKeyValidation;
+use App\Api\Middleware\StaticApiKeyMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -55,5 +56,6 @@ class Kernel extends HttpKernel
         'guest'      => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle'   => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'apiKey'     => ApiKeyValidation::class,
+        'staticApiKey'     => StaticApiKeyMiddleware::class,
     ];
 }

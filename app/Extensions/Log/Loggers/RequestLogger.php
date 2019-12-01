@@ -135,6 +135,7 @@ class RequestLogger implements LoggerInterface
     {
         $logModel = new RequestLog();
 
+        $logModel->level = $level;
         $logModel->request = $message;
         $logModel->type = $context['type'];
 

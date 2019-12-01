@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('order')->middleware(['apiKey'])->group(
     function () {
-        Route::any('history', 'Api\Order\OrderController@history');
+        Route::any('history', 'Order\OrderController@history');
     });

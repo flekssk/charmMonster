@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('order')->group(
     function () {
         Route::any('history', 'Api\Order\OrderController@history')->middleware(['apiKey']);
-        Route::post('yandexHandler', 'Api\Order\OrderController@yandexHandler')->middleware(['staticApiKey']);
+        Route::any('yandexHandler', 'Api\Order\OrderController@yandexHandler')->middleware(['staticApiKey']);
     }
 );

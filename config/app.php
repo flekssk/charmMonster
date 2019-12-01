@@ -1,5 +1,7 @@
 <?php
 
+use App\Api\Middleware\StaticApiKeyMiddleware;
+
 return [
 
     /*
@@ -231,6 +233,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
+        'staticApiKey' => StaticApiKeyMiddleware::class
     ],
 
     'asset_url' => '/public'

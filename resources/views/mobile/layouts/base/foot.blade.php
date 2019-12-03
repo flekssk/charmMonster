@@ -16,6 +16,6 @@
 <script src="{{ asset('js/jquery.zoom.min.js') }}"></script>
 <script src="{{ asset('lightbox/js/lightgallery.js') }}"></script>
 
-<script src="{{ asset('bootstrabootstrap.js}}"></script>
+<script src="{{ asset('js/bootstrap.js') }}"></script>
 @yield('after_scripts')
 @stack('after_scripts')

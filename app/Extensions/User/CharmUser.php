@@ -2,6 +2,15 @@
 
 namespace App\Extensions\User;
 
+use App\Repositories\Product\LikedRepository;
+
+/**
+ * Class CharmUser
+ *
+ * @property LikedRepository $liked
+ *
+ * @package App\Extensions\User
+ */
 class CharmUser
 {
     public static function id($default = '')
@@ -37,5 +46,12 @@ class CharmUser
     public static function isGuest()
     {
         return is_null(app('sessionUser'));
+    }
+
+    public function getLikedAttribute()
+    {
+        $liked = LikedRepository::getUserLiked(self::id());
+
+        return $liked;
     }
 }

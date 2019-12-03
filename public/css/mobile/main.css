@@ -21,26 +21,25 @@ body {
 .headerContainer {
     padding: 30px 20px;
     position: relative;
-    width: 480px;
-    margin: 0 auto;
 }
 
-.headerContainer:after {
+.headerLine {
     content: ' ';
     bottom: 0;
     position: absolute;
     background-image: url(/public/images/mobile/layout/afterMenuBackground.png);
-    width: 480px;
+    width: 100%;
     height: 100px;
-    left: -144px;
+    background-position: center center;
+    top:170px;
 }
 
 .headerContainer .menuBackground {
     position: absolute;
     width: 100%;
     height: 50px;
-    background-color: #000;
-    top: 0;
+    background: linear-gradient(90deg, #FFCECE, #FDFDFD, #FFCECE);
+    top: 5px;
     left: 0;
 }
 
@@ -73,9 +72,55 @@ body {
 }
 
 .headerContainer .logo {
+    right: 20px;
+    z-index: 1;
     margin: -40px auto 0;
 }
 
 .headerContainer .logo img {
-    height: 180px;
+    height: 190px;
+}
+
+.topMenuContainer {
+    position: absolute;
+    top: 170px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.topMenuContainer .menuBackground {
+    padding: 8px 10px;
+    box-shadow: 3px 4px 7px rgba(0,0,0,.2);
+    width: 70%;
+    border-radius: 0 0 10px 10px;
+}
+
+.topMenuContainer .menuContent {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #CC1417;
+    border-top: none;
+    padding: 100px 0 0 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.topMenuContainer .menuContent .menu {
+    margin: 0 auto;
+}
+
+.topMenuContainer .item {
+    width: 70%;
+    margin: 0 auto 20px;
+}
+
+.topMenuContainer .item .mainItem {
+    display: block;
+    width: 100%;
+    background-color: #FFE2E2;
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 8px;
 }

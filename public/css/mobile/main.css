@@ -48,7 +48,7 @@ body {
     -moz-border-radius: 50%;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 100;
+    z-index: 2;
 
 }
 
@@ -88,12 +88,13 @@ body {
     text-align: center;
     width: 100%;
     padding: 10px;
+    display: none;
 }
 
 .topMenuContainer .menuBackground {
     padding: 8px 10px;
     box-shadow: 3px 4px 7px rgba(0,0,0,.2);
-    width: 70%;
+    width: 80%;
     border-radius: 0 0 10px 10px;
 }
 
@@ -123,4 +124,72 @@ body {
     padding: 10px;
     font-size: 30px;
     border-radius: 8px;
+}
+
+/* Popup */
+
+.popupWindow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    z-index: 20;
+    display: none;
+}
+
+.popupWindow .bluer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.popupWindow .popupContent .closer {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    font-size: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 0 20px;
+}
+
+/* Content */
+
+.mobileContent {
+
+}
+
+.mobileContent .categories a {
+    color: #000;
+}
+
+.mobileContent .categories .categoryTitle {
+    width: 100%;
+    text-align: center;
+    background-color: #ffd0d0;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.mobileContent .categories .image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mobileContent .categories .image img {
+    width: 80%;
+}
+
+.mobileContent .slider {
+    border: 5px solid #ad9999;
+    padding: 0;
+    background-color: #ad9999;
+}
+
+.mobileContent .slider .sliderContainer {
+
 }

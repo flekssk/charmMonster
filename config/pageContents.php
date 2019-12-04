@@ -2,6 +2,6 @@
 
 return [
     'mainPage' => [
-        'sliderId' => 7,
+        'sliderId' => 9,
     ],
 ];

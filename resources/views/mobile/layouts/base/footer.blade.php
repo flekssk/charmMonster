@@ -1,7 +1,6 @@
 <footer class="main-footer text-sm clearfix">
     <div class="container-fluid footerFluid">
         <div class="container footerContainer" style="text-align: center;">
-            dsadsadasd
         </div>
     </div>
     <div class="ajaxDebug"></div>

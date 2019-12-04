@@ -1,5 +1,5 @@
 <?php
-$version = '1.2';
+$version = '1.3';
 ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,6 +11,8 @@ $version = '1.2';
 <link rel="stylesheet" href="{{ asset('css/mobile/order.css?v=' . $version) }}">
 <link rel="stylesheet" href="{{ asset('css/mobile/product.css?v=' . $version) }}">
 <link rel="stylesheet" href="{{ asset('lightbox/css/lightgallery.css') }}">
+<link rel="stylesheet" href="{{ asset('slick/slick.css') }}">
+<link rel="stylesheet" href="{{ asset('slick/slick-theme.css') }}">
 <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@19.7.1/dist/css/suggestions.min.css" rel="stylesheet" />
 
 @stack('after_styles')

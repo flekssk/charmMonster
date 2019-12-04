@@ -15,11 +15,12 @@
 <script src="{{ asset('js/bootstrap.notify.min.js') }}"></script>
 <script src="{{ asset('js/jquery.form.js') }}"></script>
 <script src="{{ asset('js/jquery.maskedinput.min.js') }}"></script>
+<script src="{{ asset('slick/slick.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@19.7.1/dist/js/jquery.suggestions.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 <script src="{{ asset('js/jquery.zoom.min.js') }}"></script>
 <script src="{{ asset('lightbox/js/lightgallery.js') }}"></script>
 
-<script src="{{ asset('js/bootstrap.js') }}"></script>
+<script src="{{ asset('mobile/js/bootstrap.js') }}"></script>
 @yield('after_scripts')
 @stack('after_scripts')

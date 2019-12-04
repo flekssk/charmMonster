@@ -62,5 +62,31 @@
                 </div>
             </div>
         </div>
+        <div class="row blogPostsContainer">
+            @foreach($posts->items() as $post)
+                <div class="post slick-slide col-12"
+                     data-link="{{ action('Blog\BlogController@show', ['article' => $post->article_id]) }}"
+                >
+                    <div class="title">
+                        {{ $post->description->name }}
+                    </div>
+                    <div class="col-12 content">
+                        <div class="image col-12">
+                            <img src="{{ getImagePath($post->image) }}" alt="">
+                        </div>
+                        <div class="text">
+                            {{ $post->description->meta_description }}
+                        </div>
+                        <b>{{ \Illuminate\Support\Carbon::make($post->date_added)->format('m-d-Y') }}</b>
+                        <b>
+                            <a style="float: right;"
+                               href="{{ action('Blog\BlogController@show', ['article' => $post->article_id]) }}">
+                                Подробнее
+                            </a>
+                        </b>
+                    </div>
+                </div>
+            @endforeach
+        </div>
     </div>
 @endsection

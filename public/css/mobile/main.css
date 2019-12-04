@@ -261,14 +261,17 @@ body {
 }
 
 .blogPostsContainer .slick-prev:before, .blogPostsContainer .slick-next:before {
-    font-size: 30px;
-    color: #c6c6c6;
+    font-size: 40px;
+    color: #fff;
 }
 
 .blogPostsContainer .slick-prev {
-    left: 15px;
+    left: 65px;
+    top: 270px;
+    z-index: 20;
 }
 
 .blogPostsContainer .slick-next {
-    right: 25px;
+    right: 85px;
+    top: 270px;
 }

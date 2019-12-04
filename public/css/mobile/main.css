@@ -159,7 +159,7 @@ body {
 /* Content */
 
 .mobileContent {
-
+    margin-bottom: 60px;
 }
 
 .mobileContent .categories a {
@@ -274,4 +274,34 @@ body {
 .blogPostsContainer .slick-next {
     right: 85px;
     top: 270px;
+}
+
+.footerContainer {
+    background-color: #640000;
+    padding: 30px;
+}
+
+.footerContainer .socialButtons .contactButton {
+    border-radius: 50%;
+    border: 2px solid #FFB2B2;
+    color: #FFB2B2;
+    padding: 2px 4px 4px 9px;
+    margin-right: 20px;
+    font-size: 40px;
+}
+
+.footerContainer .socialButtons .contactButton.emailButton {
+    padding: 6px 4px 7px 15px;
+}
+
+.footerContainer .socialButtons .contactButton.vkButton {
+    padding: 7px 4px 8px 12px;
+}
+
+.footerContainer .socialButtons .contactButton.instagramButton {
+    padding: 7px 9px 8px 19px;
+}
+
+.footerContainer .socialButtons .contactButton.phoneButton {
+    padding: 8px 20px 7px 21px;
 }

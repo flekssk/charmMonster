@@ -15,8 +15,8 @@
                     <i class="fa fa-phone"></i>
                 </a>
                 <span class="phoneNumber">
-            8 960 353 31 59
-        </span>
+                    8 960 353 31 59
+                </span>
             </div>
             <div class="col-5 align-self-end headerControlPanel">
                 <div style="float: right">

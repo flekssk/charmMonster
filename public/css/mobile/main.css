@@ -286,22 +286,27 @@ body {
     border: 2px solid #FFB2B2;
     color: #FFB2B2;
     padding: 2px 4px 4px 9px;
-    margin-right: 20px;
-    font-size: 30px;
+    margin-right: 10px;
+    font-size: 23px;
+}
+
+.footerContainer .socialButtons .text {
+    color: white;
+    font-size: 15px;
 }
 
 .footerContainer .socialButtons .contactButton.emailButton {
-    padding: 6px 4px 7px 15px;
+    padding: 4px 3px 5px 9px;
 }
 
 .footerContainer .socialButtons .contactButton.vkButton {
-    padding: 7px 4px 8px 12px;
+    padding: 5px 4px 6px 7px;
 }
 
 .footerContainer .socialButtons .contactButton.instagramButton {
-    padding: 7px 9px 8px 19px;
+    padding: 6px 5px 6px 12px;
 }
 
 .footerContainer .socialButtons .contactButton.phoneButton {
-    padding: 8px 20px 7px 21px;
+    padding: 6px 5px 4px 13px;
 }

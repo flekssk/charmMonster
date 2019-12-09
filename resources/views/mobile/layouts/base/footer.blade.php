@@ -13,6 +13,9 @@
             <a class="contactButton phoneButton" href="">
                 <i class="fa fa-phone"></i>
             </a>
+            <span class="text">
+                +7 (904) 240-33-25
+            </span>
         </div>
     </div>
     <div class="ajaxDebug"></div>

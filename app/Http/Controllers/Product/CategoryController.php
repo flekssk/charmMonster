@@ -4,10 +4,16 @@ namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product\Category;
+use App\Repositories\Category\CategoriesRepository;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    public function index(Request $request)
+    {
+        return view('category.index', ['categories' => CategoriesRepository::all()]);
+    }
+
     public function products(Request $request, Category $category)
     {
         $filters = collect($request->get('filter', []));

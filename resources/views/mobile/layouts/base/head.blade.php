@@ -1,5 +1,5 @@
 <?php
-$version = '1.12';
+$version = '1.13';
 ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,7 +9,6 @@ $version = '1.12';
 <link rel="stylesheet" href="{{ asset('css/mobile/main.css?v=' . $version) }}">
 <link rel="stylesheet" href="{{ asset('font-awesome-4.7.0/css/font-awesome.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/mobile/order.css?v=' . $version) }}">
-<link rel="stylesheet" href="{{ asset('css/mobile/product.css?v=' . $version) }}">
 <link rel="stylesheet" href="{{ asset('lightbox/css/lightgallery.css?v=' . $version) }}">
 <link rel="stylesheet" href="{{ asset('slick/slick.css?v=' . $version) }}">
 <link rel="stylesheet" href="{{ asset('slick/slick-theme.css?v=' . $version) }}">

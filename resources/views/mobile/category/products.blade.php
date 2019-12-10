@@ -9,7 +9,6 @@ use Illuminate\Support\Arr;
 @extends('layouts.base.layout')
 
 @push('after_styles')
-    <link rel="stylesheet" href="{{ asset('css/main/mainSlider.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet"
@@ -39,19 +38,19 @@ use Illuminate\Support\Arr;
                                                 Просмотр
                                                 <i class="icon fa fa-eye"></i>
                                             </a>
-                                            <a class="btn btn-product-control fastLook"
-                                               data-link="{{ action('Product\ProductController@fastLook', ['product' => $product->product_id]) }}"
-                                            >
-                                                Быстрый просмотр
-                                                <i class="icon fa fa-eye"></i>
-                                            </a>
-                                            <a
-                                                    class="btn btn-product-control fastOrder"
-                                                    data-product-id="{{ $product->product_id }}"
-                                            >
-                                                Быстрый заказ
-                                                <i class="icon fa fa-shopping-cart"></i>
-                                            </a>
+{{--                                            <a class="btn btn-product-control fastLook"--}}
+{{--                                               data-link="{{ action('Product\ProductController@fastLook', ['product' => $product->product_id]) }}"--}}
+{{--                                            >--}}
+{{--                                                Быстрый просмотр--}}
+{{--                                                <i class="icon fa fa-eye"></i>--}}
+{{--                                            </a>--}}
+{{--                                            <a--}}
+{{--                                                    class="btn btn-product-control fastOrder"--}}
+{{--                                                    data-product-id="{{ $product->product_id }}"--}}
+{{--                                            >--}}
+{{--                                                Быстрый заказ--}}
+{{--                                                <i class="icon fa fa-shopping-cart"></i>--}}
+{{--                                            </a>--}}
                                             <a class="btn btn-product-control addToCart"
                                                data-product-id="{{ $product->product_id }}"
                                             >

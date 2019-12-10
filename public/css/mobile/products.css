@@ -163,9 +163,11 @@
 .productContainer .product {
     padding: 10px;
     height: 310px;
+    z-index: 10;
 }
 
 .productContainer .product .productContent {
+    position: relative;
     border-radius: 10px;
     padding: 10px;
     border: 1px solid #CC0000;
@@ -175,7 +177,7 @@
 
 .productContainer .product .productContent .price {
     position: absolute;
-    right: 0;
+    right: 5px;
     top: -10px;
     background-color: #fff;
     z-index: 1;
@@ -237,6 +239,9 @@
     padding: 5px 15px;
     text-align: left;
     font-size: 15px;
+    color: white;
+    width: 100%;
+    border:1px solid #fff;
 }
 
 .productContainer .product .image .productControl .buttons a.btn .icon {

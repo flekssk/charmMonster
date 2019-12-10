@@ -4,11 +4,6 @@
  */
 ?>
 
-@push('after_styles')
-    <link rel="stylesheet" href="{{ asset('css/main/product.css') }}">
-@endpush
-
-
 @push('after_scripts')
     <script src="{{ asset('js/blowup.js') }}"></script>
 @endpush

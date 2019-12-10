@@ -32,7 +32,7 @@
                     <a class="mainItem" href="{{ action('IndexController@index') }}">ГЛАВНАЯ</a>
                 </div>
                 <div class="item">
-                    <a class="mainItem" href="{{ action('Product\ProductController@index') }}">КАТАЛОГ</a>
+                    <a class="mainItem" href="{{ action('Product\CategoryController@index') }}">КАТАЛОГ</a>
                 </div>
                 <div class="item">
                     <a class="mainItem" href="{{ action('Blog\BlogController@index') }}">БЛОГ</a>

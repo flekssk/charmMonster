@@ -1,0 +1,1 @@
+{!! view('product.productCard', ['product' => $product])->render() !!}

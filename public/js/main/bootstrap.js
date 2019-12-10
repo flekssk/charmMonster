@@ -8,7 +8,6 @@ function app() {
     return application;
 }
 
-application.bindService(new Mobile());
 application.bindService(new Cart());
 application.bindService(new Popup());
 application.bindService(new Form());

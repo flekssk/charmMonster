@@ -1,0 +1,1 @@
+application.bindService(new Mobile());

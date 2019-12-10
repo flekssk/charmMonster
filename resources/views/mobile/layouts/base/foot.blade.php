@@ -38,6 +38,6 @@
 <script src="{{ asset('js/main/bootstrap.js') }}"></script>
 
 
-<script src="{{ asset('mobile/js/bootstrap.js') }}"></script>
+<script src="{{ asset('js/mobile/bootstrap.js') }}"></script>
 @yield('after_scripts')
 @stack('after_scripts')

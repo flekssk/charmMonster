@@ -35,9 +35,6 @@
 <script src="{{ asset('js/main/User.js') }}"></script>
 <script src="{{ asset('js/main/Adapter.js') }}"></script>
 
-<script src="{{ asset('js/main/bootstrap.js') }}"></script>
-
-
 <script src="{{ asset('js/mobile/bootstrap.js') }}"></script>
 @yield('after_scripts')
 @stack('after_scripts')

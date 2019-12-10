@@ -2,18 +2,18 @@
     <div class="menuBackground">
     </div>
     <div class="row headerControlPanel justify-content-between">
-        <div class=" col-5 control cartControlBlock">
-                    <span class="controlButton cartButton">
+        <div class="control cartControlBlock">
+                    <span class="controlButton">
                         <i class="fa fa-shopping-cart"></i>
                     </span>
-            <span class="col-5 controlButton cartButton">
-                        <i class="fa fa-heart"></i>
+            <span class="controlButton">
+                        <i class="fa fa-user"></i>
                     </span>
         </div>
-        <div class=" col-5 control cartControlBlock">
-                <span class="col-5 controlButton cartButton" style="float: right;">
-                        <i class="fa fa-heart"></i>
-                    </span>
+        <div class="control cartControlBlock">
+            <span class="menuButton">
+                <i class="fa fa-bars"></i>
+            </span>
         </div>
     </div>
     <div class="row">

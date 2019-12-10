@@ -21,6 +21,23 @@
 <script src="{{ asset('js/jquery.zoom.min.js') }}"></script>
 <script src="{{ asset('lightbox/js/lightgallery.js') }}"></script>
 
+<script src="{{ asset('js/main/Service.js') }}"></script>
+<script src="{{ asset('js/main/EventManager.js') }}"></script>
+<script src="{{ asset('js/main/Application.js') }}"></script>
+
+<script src="{{ asset('js/main/Mobile.js') }}"></script>
+<script src="{{ asset('js/main/Popup.js') }}"></script>
+<script src="{{ asset('js/main/Cart.js') }}"></script>
+<script src="{{ asset('js/main/Form.js') }}"></script>
+<script src="{{ asset('js/main/Products.js') }}"></script>
+<script src="{{ asset('js/main/Product.js') }}"></script>
+<script src="{{ asset('js/main/Liked.js') }}"></script>
+<script src="{{ asset('js/main/User.js') }}"></script>
+<script src="{{ asset('js/main/Adapter.js') }}"></script>
+
+<script src="{{ asset('js/main/bootstrap.js') }}"></script>
+
+
 <script src="{{ asset('mobile/js/bootstrap.js') }}"></script>
 @yield('after_scripts')
 @stack('after_scripts')

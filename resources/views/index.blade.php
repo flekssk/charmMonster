@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-6 videoBlock">
                     <div class="video">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9gi3n42sZsg"
+                        <iframe  src="https://www.youtube.com/embed/9gi3n42sZsg"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>

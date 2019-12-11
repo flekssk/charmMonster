@@ -17,6 +17,15 @@ body {
     font-family: ukrainian, Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
+.mainTitle {
+    background: url(/public/images/layout/title_background.png) no-repeat center;
+    background-size: contain;
+    width: auto;
+    display: inline-block;
+    padding-right: 40px;
+    background-clip: padding-box;
+    margin-bottom: 30px;
+}
 
 .headerContainer {
     padding: 30px 20px;
@@ -352,4 +361,38 @@ body {
 
 .footerContainer .socialButtons .contactButton.phoneButton {
     padding: 6px 5px 4px 13px;
+}
+
+.aboutCompanyContainer {
+    margin-top: 20px;
+    padding: 5% 8%;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.aboutCompanyContainer .aboutCompanyText {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.aboutCompanyContainer .mainTitle {
+    margin: 0 auto 10px;
+}
+
+.aboutCompanyContainer .aboutCompanyText .mainText {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.aboutCompanyContainer .videoBlock {
+    position: relative;
+    z-index: -1;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    padding: 0;
 }

@@ -13,6 +13,24 @@
 @endpush
 
 @section('content')
+    <div class="row aboutCompanyContainer">
+        <div class="aboutCompanyText">
+            <div class="mainTitle">
+                <h1 class="ukrainianTitle">О компании много</h1>
+            </div>
+            <div class="mainText">
+                {{ $mainText }}
+            </div>
+        </div>
+        <div class="videoBlock">
+            <div class="video">
+                <iframe width="100%" height="250px" src="https://www.youtube.com/embed/9gi3n42sZsg"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
     <div class="mobileContent" style="overflow: hidden;">
         <div class="categories">
             @foreach($categories->items()->all() as $category)

@@ -181,6 +181,7 @@ class Cart extends Service {
                 },
                 async: false,
                 success: function (response) {
+                    console.log(response);
                     $.notify({
                         message: 'Товар добавлен в корзину',
                         target: '_blank'
@@ -192,6 +193,8 @@ class Cart extends Service {
                             align: "center"
                         },
                     });
+
+                    $('.mobileCartButton:before').html(response.productsCount);
 
                     $('.cartWidget .content').html(response.widgetContent);
 

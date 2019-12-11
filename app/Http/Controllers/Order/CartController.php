@@ -35,6 +35,7 @@ class CartController extends Controller
                 'success' => true,
                 'widgetContent' => CartFacade::renderWidget()->render(),
                 'totalPrice' => CartFacade::totalPrice(),
+                'productsCount' => CartFacade::getProducts()->count(),
                 'id' => $cartProduct->getUniqueId(),
             ]
         );

@@ -3,7 +3,7 @@
     </div>
     <div class="row headerControlPanel justify-content-between">
         <div class="control cartControlBlock">
-                    <span class="controlButton">
+                    <span class="controlButton cartButton mobileCartButton">
                         <i class="fa fa-shopping-cart"></i>
                     </span>
             <span class="controlButton">
@@ -44,3 +44,8 @@
         </div>
     </div>
 </div>
+<style>
+    .headerContainer .headerControlPanel .control.cartControlBlock .cartButton:before {
+        content: '{{ \App\Extensions\Cart\CartFacade::getProducts()->count() }}';
+    }
+</style>

@@ -41,7 +41,7 @@ body {
     height: 100px;
     background-position: center center;
     top:170px;
-    z-index: 2;
+    z-index: 300;
 }
 
 .headerContainer .menuBackground {
@@ -62,7 +62,10 @@ body {
     z-index: 2;
     margin-right: 5px;
     margin-left: 5px;
+}
 
+.headerContainer .headerControlPanel .controlButton.user {
+    z-index: 100;
 }
 
 .headerContainer .headerControlPanel .cartControlBlock {
@@ -122,12 +125,14 @@ body {
 }
 
 .headerContainer .logo {
+
     right: 20px;
-    z-index: 1;
     margin: -40px auto 0;
+    z-index: 100;
 }
 
 .headerContainer .logo img {
+    position: relative;
     height: 190px;
 }
 
@@ -142,12 +147,13 @@ body {
 }
 
 .topMenuContainer .menuBackground {
+    position: relative;
     padding: 8px 10px;
     box-shadow: 3px 4px 7px rgba(0,0,0,.2);
     width: 80%;
     border-radius: 0 0 10px 10px;
     background-color: #fff;
-    z-index: 1;
+    z-index: 100;
 }
 
 .topMenuContainer .menuContent {
@@ -388,7 +394,6 @@ body {
 
 .aboutCompanyContainer .videoBlock {
     position: relative;
-    z-index: -1;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;

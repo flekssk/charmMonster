@@ -6,8 +6,8 @@
                     <span class="controlButton cartButton mobileCartButton">
                         <i class="fa fa-shopping-cart"></i>
                     </span>
-            <span class="controlButton">
-                        <i class="fa fa-user"></i>
+            <span class="controlButton user">
+                        <i class="fa fa-user user"></i>
                     </span>
         </div>
         <div class="control cartControlBlock">

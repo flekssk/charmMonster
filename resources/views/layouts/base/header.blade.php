@@ -2,20 +2,20 @@
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-4 headerContacts">
-                <a class="contactButton emailButton" href="">
+                <a class="contactButton emailButton" href="mailto:{{ translation('mailAddress') }}">
                     <i class="fa fa-envelope-o"></i>
                 </a>
-                <a class="contactButton vkButton" href="">
+                <a class="contactButton vkButton" href="{{ translation('vkLink', '') }}">
                     <i class="fa fa-vk"></i>
                 </a>
-                <a class="contactButton instagramButton" href="">
+                <a class="contactButton instagramButton" href="{{ translation('instagramLink', '') }}">
                     <i class="fa fa-instagram"></i>
                 </a>
                 <a class="contactButton phoneButton" href="">
                     <i class="fa fa-phone"></i>
                 </a>
                 <span class="phoneNumber">
-                    8 960 353 31 59
+                    {{ translation('phoneNumber', '') }}
                 </span>
             </div>
             <div class="col-5 align-self-end headerControlPanel">

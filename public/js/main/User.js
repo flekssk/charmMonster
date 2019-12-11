@@ -44,6 +44,7 @@ class User extends Service {
         let caller = this;
 
         $('.user').click(function () {
+            alert(213);
             caller.authenticate();
         });
     }

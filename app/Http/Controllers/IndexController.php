@@ -21,7 +21,7 @@ class IndexController extends Controller
                 'sliderImages' => MainSliderImagesRepository::getBySliderId(config('pageContents.mainPage.sliderId')),
                 'posts' => ArticlesRepository::getOnMain(),
                 'mainText' => Translation::findByKey('mainTitleText'),
-                'mainVideoLink' => Translation::findByKey('mainVideoLink', 'test'),
+                    'mainVideoLink' => Translation::findByKey('mainVideoLink', 'test'),
             ]
         );
     }

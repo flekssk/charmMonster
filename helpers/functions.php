@@ -36,3 +36,11 @@ if (!function_exists('getImagePath')) {
         return '/public/uploads/images/' . $images;
     }
 }
+
+if (!function_exists('translation')) {
+    function translation($name, $default = null)
+    {
+        return \App\Models\Content\Translation::findByKey($name, $default);
+    }
+}
+

@@ -3,14 +3,17 @@
     </div>
     <div class="row headerControlPanel justify-content-between">
         <div class="control cartControlBlock">
-                    <span class="controlButton cartButton mobileCartButton">
+                    <span
+                            class="controlButton cartButton mobileCartButton"
+                            data-products="{{ json_encode(\App\Extensions\Cart\CartFacade::getProducts()->productsToOrder()) }}"
+                    >
                         <i class="fa fa-shopping-cart"></i>
-                    </span>
-            <span class="controlButton user">
-                        <i class="fa fa-user user"></i>
                     </span>
         </div>
         <div class="control cartControlBlock">
+            <span class="controlButton user">
+                        <i class="fa fa-user user"></i>
+                    </span>
             <span class="menuButton">
                 <i class="fa fa-bars"></i>
             </span>

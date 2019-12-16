@@ -42,9 +42,8 @@ class User extends Service {
 
     rebindEvents() {
         let caller = this;
-
+        $('.user').unbind();
         $('.user').click(function () {
-            alert(213);
             caller.authenticate();
         });
     }

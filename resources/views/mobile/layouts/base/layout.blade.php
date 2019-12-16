@@ -15,10 +15,10 @@
 @include('layouts.base.foot')
 <div class="popupWindow">
     <div class="bluer"></div>
+    <div class="closer">
+        <span class="fa fa-close closePopup"></span>
+    </div>
     <div class="popupContent">
-        <div class="closer">
-            <span class="fa fa-close closePopup"></span>
-        </div>
         <div class="contentContainer"></div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 .orderContainer {
-    width: 900px;
-    margin: 0 auto;
+    width: 96%;
+    margin: 100px auto 0;
     border-radius: 10px;
     border: 1px solid #CC0000;
     padding: 20px;
@@ -15,4 +15,46 @@
 .orderSuccessContainer {
     margin-top: 50px;
     text-align: center;
+}
+
+.orderContainer .products .orderProduct {
+    padding: 10px;
+}
+
+.orderContainer .products .orderProduct .name {
+    margin-left: 29px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.orderContainer .products .orderProduct .image {
+    display: inline-block;
+}
+
+.orderContainer .products .orderProduct .selector {
+    padding: 5px;
+    display: inline-block;
+}
+
+.orderContainer .products .orderProduct .options {
+    display: inline-block;
+}
+
+.orderContainer .totalPrice {
+    background-color: #fff;
+    z-index: 1;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #320000;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0 auto 20px;
+}
+
+.orderContainer .products .productComplection {
+    margin-bottom: 10px;
+}
+.orderContainer .productComplection {
+    padding: 0 0 0 39px;
+    font-size: 14px;
 }

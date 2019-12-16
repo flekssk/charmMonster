@@ -27,7 +27,7 @@
 
 <script src="{{ asset('js/main/Mobile.js') }}"></script>
 <script src="{{ asset('js/main/Popup.js') }}"></script>
-<script src="{{ asset('js/main/Cart.js') }}"></script>
+<script src="{{ asset('js/mobile/Cart.js') }}"></script>
 <script src="{{ asset('js/main/Form.js') }}"></script>
 <script src="{{ asset('js/main/Products.js') }}"></script>
 <script src="{{ asset('js/main/Product.js') }}"></script>

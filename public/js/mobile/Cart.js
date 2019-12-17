@@ -111,17 +111,16 @@ class Cart extends Service {
                     'product_id': button.data('product-id')
                 },
                 success: function (response) {
-                    $('.totalPrice').html(response.totalPrice);
-                    $('.cartWidget .content').html(response.widgetContent);
-                    $('.cartProductContainer').filter('[data-product="' + button.data('product-id') + '"]').remove();
+                    $('.cartControlBlock').html(response.widgetContent);
+                    caller.makeOrder($('.mobileCartButton').data('products'));
                     caller.rebindEvents();
                     $.notify({
                         message: 'Товар удален из корзины',
                         target: '_blank'
                     }, {
                         type: 'info',
-                        timer: 1000,
-                        delay: 1000,
+                        timer: 500,
+                        delay: 500,
                         placement: {
                             align: "center"
                         },
@@ -171,7 +170,6 @@ class Cart extends Service {
                 },
                 async: false,
                 success: function (response) {
-                    console.log(response);
                     $.notify({
                         message: 'Товар добавлен в корзину',
                         target: '_blank'
@@ -184,9 +182,9 @@ class Cart extends Service {
                         },
                     });
 
-                    $('.mobileCartButton:before').html(response.productsCount);
+                    $('.cartControlBlock').html(response.widgetContent);
 
-                    $('.cartWidget .content').html(response.widgetContent);
+                    $('.mobileCartButton').attr('data-products', response.products);
 
                     caller.rebindEvents();
 
@@ -212,7 +210,7 @@ class Cart extends Service {
                 data: {
                     products: products
                 },
-
+                method: 'get',
                 success: function (response) {
                     popup().showContent(response.content);
                     caller.rebindEvents();

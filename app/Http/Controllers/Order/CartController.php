@@ -37,6 +37,7 @@ class CartController extends Controller
                 'totalPrice' => CartFacade::totalPrice(),
                 'productsCount' => CartFacade::getProducts()->count(),
                 'id' => $cartProduct->getUniqueId(),
+                'products' => json_encode(CartFacade::getProducts()->productsToOrder())
             ]
         );
     }
@@ -50,6 +51,7 @@ class CartController extends Controller
                 'success' => true,
                 'widgetContent' => CartFacade::renderWidget()->render(),
                 'totalPrice' => CartFacade::totalPrice(),
+                'products' => json_encode(CartFacade::getProducts()->productsToOrder())
             ]
         );
     }

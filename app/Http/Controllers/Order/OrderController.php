@@ -18,7 +18,7 @@ class OrderController extends Controller
     public function index(Request $request)
     {
         $products = CartFacade::getProducts()
-            ->getByIds($request->products);
+            ->getByIds($request->get('products', []));
 
         return JsonResponse::create(
             [

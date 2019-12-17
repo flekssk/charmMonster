@@ -40,7 +40,7 @@
     display: inline-block;
 }
 
-.orderContainer .totalPrice {
+.orderContainer .priceField {
     background-color: #fff;
     z-index: 1;
     padding: 5px 20px;

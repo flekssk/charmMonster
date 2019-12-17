@@ -50,13 +50,20 @@
                                     </span>
                                 </div>
                             </div>
-                            <span class="totalPrice">
-                                        <span style="font-size: 18px;" class="price"
-                                              data-product="{{ $product->getUniqueId() }}">
-                                            {{ \App\Decorators\PriceDecorator::format($products->totalPrice()) }}
-                                        </span>
-                                        <i class="fa fa-ruble"></i>
-                                    </span>
+                            <span class="priceField">
+                                <span style="font-size: 18px;" class="price"
+                                      data-product="{{ $product->getUniqueId() }}"
+                                >
+                                    {{ \App\Decorators\PriceDecorator::format($product->totalPrice()) }}
+                                </span>
+                                <i class="fa fa-ruble"></i>
+                            </span>
+                            <span class="delete removeFromCart"
+                                  data-product-id="{{ $product->getUniqueId() }}"
+                                  style="margin-left: 10px;"
+                            >
+                                <i class="fa fa-trash"></i>
+                            </span>
                         </div>
                     </div>
                     <div class="productComplection">
@@ -70,11 +77,10 @@
                 @endforeach
                 <div style="text-align: center; padding: 10px 0;">
                     <b>Общая стоимость</b>
-                    <span class="totalPrice">
-                    <span style="font-size: 18px;" class="price"
-                          data-product="{{ $product->getUniqueId() }}">
-                        {{ \App\Decorators\PriceDecorator::format($products->totalPrice()) }}
-                    </span>
+                    <span class="priceField">
+                        <span style="font-size: 18px;" class="price totalPrice">
+                            {{ \App\Decorators\PriceDecorator::format($products->totalPrice()) }}
+                        </span>
                     <i class="fa fa-ruble"></i>
                 </span>
                 </div>

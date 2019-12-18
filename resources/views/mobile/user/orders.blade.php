@@ -16,7 +16,14 @@
 @section('content')
     <div class="container-fluid contentContainer" style="overflow: hidden;">
         <div class="container">
-            {!! view('order.singleOrder', compact('order'))->render() !!}
+            <div class="orderSuccessContainer">
+                @forelse($orders as $order)
+                    {!! view('order.singleOrder', ['order' => $order])->render() !!}
+                @empty
+                    <h1 class="mainTitle ukrainianTitle">Заказы</h1>
+                    <h5>У Вас пока нет заказов</h5>
+                @endforelse
+            </div>
         </div>
     </div>
 @endsection

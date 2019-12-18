@@ -3,6 +3,7 @@
 namespace App\Models\User;
 
 use App\Models\Model;
+use App\Models\Order\Order;
 
 class User extends Model
 {
@@ -12,4 +13,9 @@ class User extends Model
     protected $primaryKey = 'user_id';
 
     protected $table = 'user';
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'user_id', 'user_id');
+    }
 }

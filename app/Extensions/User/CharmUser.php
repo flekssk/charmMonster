@@ -2,6 +2,7 @@
 
 namespace App\Extensions\User;
 
+use App\Models\User\User;
 use App\Repositories\Product\LikedRepository;
 
 /**
@@ -41,6 +42,14 @@ class CharmUser
     public static function has()
     {
         return app('sessionUser') ? true : false;
+    }
+
+    /**
+     * @return User
+     */
+    public static function get()
+    {
+        return app('sessionUser');
     }
 
     public static function isGuest()

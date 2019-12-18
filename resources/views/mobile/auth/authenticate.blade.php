@@ -24,6 +24,11 @@
             </a>
         @else
             Вы вошли как: {{ \App\Extensions\User\CharmUser::name() }}
+            <a href="{{ action('User\OrderController@orders') }}"
+               class="btn btn-logout authButton"
+            >
+                Заказы
+            </a>
             <a href="{{ action('User\UserController@logout') }}"
                class="btn btn-logout authButton"
             >

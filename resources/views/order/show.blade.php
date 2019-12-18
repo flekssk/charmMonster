@@ -17,7 +17,7 @@
     <div class="container-fluid contentContainer" style="overflow: hidden;">
         <div class="container">
             <div class="orderSuccessContainer">
-                <h1 class="mainTitle ukrainianTitle">Заказ №{{$order->order_id}}</h1>
+                <h1 class="mainTitle ukrainianTitle">Заказ {{$order->order_id}}</h1>
                 <div>
                     <b>Статус:</b> {{ $order->orderStatus->name }}
                 </div>

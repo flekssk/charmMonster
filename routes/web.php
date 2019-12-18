@@ -55,6 +55,12 @@ Route::prefix('blog')->group(
     }
 );
 
+Route::prefix('user')->group(
+    function () {
+        Route::get('order/orders', 'User\OrderController@orders');
+    }
+);
+
 Route::get('login/vk', 'User\VKAuthController@redirectToProvider');
 Route::get('login/vk/callback', 'User\VKAuthController@handleProviderCallback');
 

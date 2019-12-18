@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Order;
 use App\Extensions\Cart\CartFacade;
 use App\Extensions\Cart\CartProduct;
 use App\Extensions\Payments\Payer;
+use App\Extensions\User\CharmUser;
 use App\Http\Controllers\Controller;
 use App\Models\Order\Order;
 use App\Models\Order\OrderProduct;
@@ -45,6 +46,7 @@ class OrderController extends Controller
         $order->store_url = config('app.url');
         $order->telephone = $request->telephone;
         $order->order_status_id = Order::STATUS_WAITING;
+        $order->user_id = CharmUser::id(null);
 
         $order->save();
 

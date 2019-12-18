@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Extensions\User\CharmUser;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;

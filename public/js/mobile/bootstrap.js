@@ -146,9 +146,8 @@ $(document).ready(function () {
     });
     $(document).on('click', '.minus', function () {
         let counter = $('.count[data-counter="' + $(this).data('counter') + '"]');
-        counter.val(parseInt($('.count').val()) - 1);
-        if (counter.val() === 0) {
-            counter.val(1);
+        if (parseInt(counter.val()) - 1) {
+            counter.val(parseInt(counter.val()) - 1);
         }
     });
 });

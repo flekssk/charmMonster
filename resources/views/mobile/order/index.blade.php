@@ -33,10 +33,13 @@
                             <div class="qty small productCounter" style="margin-bottom: 20px;">
                                 <div>
                                     <span class="btn clickable minus"
-                                          data-counter="product{{ $product->getUniqueId() }}">
+                                          data-counter="product{{ $product->getUniqueId() }}"
+                                    >
                                         -
                                     </span>
                                     <input
+                                            max="2"
+                                            min="1"
                                             type="number"
                                             class="count"
                                             name="quantity[{{ $product->getUniqueId() }}]"
@@ -45,7 +48,8 @@
                                             data-counter="product{{ $product->getUniqueId() }}"
                                     >
                                     <span class="btn clickable plus"
-                                          data-counter="product{{ $product->getUniqueId() }}">
+                                          data-counter="product{{ $product->getUniqueId() }}"
+                                    >
                                         +
                                     </span>
                                 </div>

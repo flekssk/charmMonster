@@ -17,7 +17,8 @@ class ProductController extends Controller
 
     public function show(Product $product)
     {
-        return view('product.show', compact('product'));
+        $pageTitle = $product->description->meta_title;
+        return view('product.show', compact('product', 'pageTitle'));
     }
 
     public function fastLook(Product $product)

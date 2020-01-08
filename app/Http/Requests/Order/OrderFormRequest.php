@@ -12,7 +12,7 @@ class OrderFormRequest extends FormRequest
             'first_name'           => 'required',
             'last_name'            => 'required',
             'telephone'            => 'required',
-//            'g-recaptcha-response' => 'required|recaptcha',
+            'g-recaptcha-response' => 'required|recaptcha',
         ];
     }
 
@@ -22,8 +22,8 @@ class OrderFormRequest extends FormRequest
             'first_name.required'            => 'Имя: обязательное поле',
             'last_name.required'             => 'Фамилия: обязательное поле',
             'telephone.required'             => 'Телефон: обязательное поле',
-//            'g-recaptcha-response.required'  => 'Необходимо пройти проверку',
-//            'g-recaptcha-response.recaptcha' => 'Необходимо пройти проверку',
+            'g-recaptcha-response.required'  => 'Необходимо пройти проверку',
+            'g-recaptcha-response.recaptcha' => 'Необходимо пройти проверку',
         ];
     }
 }

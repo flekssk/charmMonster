@@ -57,6 +57,12 @@
                                           data-counter="product{{ $product->getUniqueId() }}">
                                     +
                                     </span>
+                                    <span class="delete removeFromCart"
+                                          data-product-id="{{ $product->getUniqueId() }}"
+                                          style="margin-left: 10px;"
+                                    >
+                                        <i class="fa fa-trash"></i>
+                                    </span>
                                 </div>
                             </td>
                             <td>

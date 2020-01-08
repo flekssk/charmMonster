@@ -101,7 +101,7 @@ class Cart extends Service {
         let button = $(event.currentTarget),
             caller = this;
 
-        $(this).parent().parent().remove();
+        $(event.currentTarget).parent().parent().remove();
 
         $.ajax({
                 url: '/cart/removeFromCart',

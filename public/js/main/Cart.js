@@ -124,6 +124,7 @@ class Cart extends Service {
                     $('.totalPrice').html(response.totalPrice);
                     $('.cartWidget .content').html(response.widgetContent);
                     $('.cartProductContainer').filter('[data-product="' + button.data('product-id') + '"]').remove();
+                    caller.makeOrder($('.makeOrder').data('products'));
                     caller.rebindEvents();
                     $.notify({
                         message: 'Товар удален из корзины',

@@ -30,7 +30,7 @@ class Products extends Service {
         });
 
         $('#searchButtonSubmit').click(function () {
-            caller.submitSearch($('#searchForm'));
+            caller.submitSearch($('#searchForm'), true);
         });
 
         $('.fastLook').unbind();
@@ -87,8 +87,12 @@ class Products extends Service {
         });
     }
 
-    submitSearch(form) {
+    submitSearch(form, withoutTimeout = false) {
         clearTimeout(this.submitTimes);
+
+        if(withoutTimeout) {
+            form.trigger('submit');
+        }
 
         this.submitTimes = setTimeout(
             function () {

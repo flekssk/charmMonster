@@ -22,13 +22,22 @@ use Illuminate\Support\Arr;
         <div class="container">
             <div class="row productsContainer">
                 <div class="col-3 filterContainer">
-                    <form method="get">
+                    <form method="get" id="searchForm">
                         <div class="filtersBackground"></div>
-                        <div class="form-group searchFilter">
-                            <button class="form-control submitSearch">
-                                Поиск
-                                <i class="fa fa-search"></i>
-                            </button>
+                        <div class="input-group">
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inlineFormInputGroupUsername"
+                                    placeholder="Название"
+                                    name="filter[name]"
+                                    value="{{ $filters->get('name') }}"
+                            >
+                            <div class="input-group-append">
+                                <div class="input-group-text" id="searchButtonSubmit">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
                         </div>
                         <div class="priceFilter">
                             <label for="" style="color: #995C5C;">Цена</label>
@@ -45,7 +54,8 @@ use Illuminate\Support\Arr;
                                 <div>
                                     От <input id="minPrice" name="filter[minPrice]"
                                               class="form-control priceFilterField"
-                                              value="{{ $filters->get('minPrice') ?? $products->getMinPrice() }}" disabled>
+                                              value="{{ $filters->get('minPrice') ?? $products->getMinPrice() }}"
+                                              disabled>
                                 </div>
                                 <div>
                                     До
@@ -80,7 +90,8 @@ use Illuminate\Support\Arr;
                         <div class="col-4 product">
                             <div class="productContent">
                                 <div class="price">
-                                    {{ number_format(round($product->getFullPrice()), 0, '.', ' ') }} <i class="fa fa-ruble"></i>
+                                    {{ number_format(round($product->getFullPrice()), 0, '.', ' ') }} <i
+                                            class="fa fa-ruble"></i>
                                 </div>
                                 <div class="image">
                                     <img src="{{ getImagePath($product->image) }}" alt="">

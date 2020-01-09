@@ -3,6 +3,7 @@ class Products extends Service {
         super(options);
 
         this.rebindEvents();
+        this.submitTimes = 0;
     }
 
     fastLook(link) {
@@ -23,6 +24,14 @@ class Products extends Service {
 
     rebindEvents() {
         let caller = this;
+
+        $('#searchForm').find('input').change(function (event) {
+            caller.submitSearch($('#searchForm'));
+        });
+
+        $('#searchButtonSubmit').click(function () {
+            caller.submitSearch($('#searchForm'));
+        });
 
         $('.fastLook').unbind();
         $('.fastLook').click(function () {
@@ -76,5 +85,16 @@ class Products extends Service {
                 $('#priceRange').attr('data-value', min + ', ' + max);
             });
         });
+    }
+
+    submitSearch(form) {
+        clearTimeout(this.submitTimes);
+
+        this.submitTimes = setTimeout(
+            function () {
+                form.trigger('submit');
+            },
+            2000
+        );
     }
 }

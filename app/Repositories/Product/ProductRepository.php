@@ -20,15 +20,16 @@ class ProductRepository extends EloquentRepository
         $instance = self::newInstance();
 
         $items = $instance->newModelInstance()
-                          ->newQuery()
-                          ->whereIn('product_id', $products)
-                          ->get();
+            ->newQuery()
+            ->whereIn('product_id', $products)
+            ->get();
 
         return $instance->setItems($items);
     }
 
     /**
      * @param Collection $filters
+     *
      * @return ProductRepository
      */
     public static function withFilters($filters)
@@ -36,7 +37,7 @@ class ProductRepository extends EloquentRepository
         $instance = self::newInstance();
 
         $query = $instance->newModelInstance()
-                          ->newQuery();
+            ->newQuery();
 
         if ($filters->has('categories')) {
             $categories = collect($filters->get('categories'))->filter(
@@ -75,16 +76,16 @@ class ProductRepository extends EloquentRepository
         $instance = self::newInstance();
 
         $items = $instance->newModelInstance()
-                          ->newQuery()
-                          ->select('product.*')
-                          ->join(
-                              'product_to_category',
-                              'product.product_id',
-                              '=',
-                              'product_to_category.product_id'
-                          )
-                          ->where('product_to_category.category_id', '=', $categoryId)
-                          ->get();
+            ->newQuery()
+            ->select('product.*')
+            ->join(
+                'product_to_category',
+                'product.product_id',
+                '=',
+                'product_to_category.product_id'
+            )
+            ->where('product_to_category.category_id', '=', $categoryId)
+            ->get();
 
         return $instance->setItems($items->keyBy('product_id'));
     }
@@ -116,6 +117,7 @@ class ProductRepository extends EloquentRepository
 
     /**
      * @param Collection $filters
+     *
      * @return Collection
      */
     public function filtrate($filters)
@@ -124,21 +126,44 @@ class ProductRepository extends EloquentRepository
 
         if ($filters->has('tags') > 0) {
             $items = $this->items()
-                          ->filter(
-                              function ($item) use ($filters) {
-                                  $tags = collect($filters->get('tags', []));
-                                  foreach ($item->description->tags as $tag) {
-                                      if ($tags->has($tag)) {
-                                          return true;
-                                      }
-                                  }
-                              });
+                ->filter(
+                    function ($item) use ($filters) {
+                        $tags = collect($filters->get('tags', []));
+                        foreach ($item->description->tags as $tag) {
+                            if ($tags->has($tag)) {
+                                return true;
+                            }
+                        }
+                    }
+                );
         }
 
         $items = $items->filter(
             function ($item) use ($filters) {
                 return $item->price >= (int)$filters->get('minPrice') && $item->price <= (int)$filters->get('maxPrice');
             });
+
+        if (!empty($filters->get('name'))) {
+            $items = $items->filter(
+                function ($item) use ($filters) {
+                    foreach (explode(' ', $filters->get('name')) as $keyword) {
+                        foreach ($item->description->tags as $tag) {
+                            if (
+                                stristr(mb_strtolower($keyword), mb_strtolower($tag))
+                                || stristr(mb_strtolower($tag), mb_strtolower($keyword))
+                            ) {
+                                return true;
+                            }
+                        }
+                        if (
+                            stristr(mb_strtolower($keyword), mb_strtolower($item->description->name))
+                            || stristr(mb_strtolower($item->description->name), mb_strtolower($keyword))
+                        ) {
+                            return true;
+                        }
+                    }
+                });
+        }
 
         return $items;
     }

@@ -75,7 +75,6 @@ use Illuminate\Support\Arr;
                                     <input
                                             type="checkbox"
                                             name="filter[tags][{{ $id }}]"
-                                            id="option1"
                                             autocomplete="off"
                                             {{ $selected ? 'checked' : '' }}
                                     >

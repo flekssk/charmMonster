@@ -37,7 +37,7 @@
                                 <div class="quantity">
                                     <div class="qty productCounter">
                                         <span class="btn clickable minus"
-                                              data-counter="product{{ $product->product->product_id }}">
+                                              data-counter="product{{ $product->getUniqueId() }}">
                                             -
                                         </span>
                                         <input
@@ -56,7 +56,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <i class="fa fa-close delete"></i>
+                                <i class="fa fa-close delete removeProductFromCart"  data-product-id="{{ $product->getUniqueId() }}"></i>
                             </div>
                         </div>
                     </div>

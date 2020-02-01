@@ -38,6 +38,10 @@ class Cart extends Service {
                 caller.makeOrder($(this).data('products'));
             });
 
+            $('.removeProductFromCart').click(function (event) {
+                caller.removeProductFromCart(event);
+            });
+
             $('.placeOrder').unbind();
             $('.placeOrder').click(caller.placeOrder);
 
@@ -106,6 +110,27 @@ class Cart extends Service {
             }
         )
     }
+
+    removeProductFromCart(event) {
+        let button = $(event.currentTarget),
+            caller = this;
+
+        $(this).parent().parent().remove();
+
+        $.ajax({
+                url: '/cart/removeFromCart',
+                method: 'delete',
+                dataType: 'json',
+                data: {
+                    'product_id': button.data('product-id')
+                },
+                success: function (response) {
+                    location.reload();
+                }
+            }
+        );
+    }
+
 
     removeFromCart(event) {
         let button = $(event.currentTarget),

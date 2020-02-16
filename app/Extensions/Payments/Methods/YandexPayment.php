@@ -29,13 +29,13 @@ class YandexPayment extends Payment
             $productArray = [];
             $productArray['quantity'] = $orderProduct->quantity;
             $productArray['amount'] = [
-                'description' => 'Товар',
                 'value' => $orderProduct->total,
                 'currency' => 'RUB',
             ];
             $productArray['vat_code'] = 1;
             $productArray['payment_mode'] = 'full_prepayment';
             $productArray['payment_subject'] = 'commodity';
+            $productArray['description'] = $product->description->name;
 
             $products[] = $productArray;
         }

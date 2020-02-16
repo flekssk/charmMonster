@@ -23,7 +23,7 @@ class YandexPayment extends Payment
         $products = [];
 
         /** @var OrderProduct $orderProduct */
-        foreach ($this->order->products as $orderProduct) {
+        foreach ($this->order->orderProducts as $orderProduct) {
             /** @var Product $product */
             $product = $orderProduct->product;
             $productArray = [];

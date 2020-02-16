@@ -16,6 +16,7 @@ use Illuminate\Support\Collection;
  * @property int product_id
  * @property ProductComplectationRepository $complectation
  * @property Category $category
+ * @property ProductDescription $description
  */
 class Product extends Model
 {

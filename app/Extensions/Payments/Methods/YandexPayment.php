@@ -51,12 +51,12 @@ class YandexPayment extends Payment
                     'type' => 'redirect',
                     'return_url' => 'charmkupi.site/order/showByHash/' . $this->order->hash,
                 ],
-                "receipt" => [
+                'receipt' => [
                     "customer" => [
                         "full_name" => $this->order->firstname . ' ' . $this->order->lastname,
                         "phone" => $this->order->telephone,
                     ],
-                    "items" => $products,
+                    'items' => $products,
                 ],
                 'capture' => true,
                 'description' => 'Заказ',

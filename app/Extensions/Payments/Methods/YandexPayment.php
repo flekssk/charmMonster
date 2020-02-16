@@ -56,9 +56,6 @@ class YandexPayment extends Payment
                     ],
                     'items' => $products,
                 ],
-                'recipient' => [
-                    'gateway_id' => 645390581976
-                ],
                 'capture' => true,
                 'description' => 'Заказ',
             ],

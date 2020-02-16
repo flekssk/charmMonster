@@ -33,7 +33,7 @@ class YandexPayment extends Payment
                 'value' => $orderProduct->total,
                 'currency' => 'RUB',
             ];
-            $productArray['vat_code'] = $product->product_id;
+            $productArray['vat_code'] = 1;
             $productArray['payment_mode'] = 'full_prepayment';
             $productArray['payment_subject'] = 'commodity';
 

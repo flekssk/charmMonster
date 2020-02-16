@@ -2,6 +2,8 @@
 
 namespace App\Extensions\Payments\Methods;
 
+use App\Models\Order\OrderProduct;
+use App\Models\Product\Product;
 use YandexCheckout\Client;
 use YandexCheckout\Request\Payments\CreatePaymentResponse;
 
@@ -13,12 +15,34 @@ class YandexPayment extends Payment
     public function pay()
     {
         $client = new Client();
-        $client->setAuth(634638, 'test_yd4wnUcDuz49p-23R152H3bouRFv0opeDFl_8PzyLJU');
+        $client->setAuth(
+            env('YANDEX_SHOP_ID'),
+            env('YANDEX_API_KEY')
+        );
+
+        $products = [];
+
+        /** @var OrderProduct $orderProduct */
+        foreach ($this->order->products as $orderProduct) {
+            /** @var Product $product */
+            $product = $orderProduct->product;
+            $productArray = [];
+            $productArray['quantity'] = $orderProduct->quantity;
+            $productArray['amount'] = [
+                'description' => $product->description->name,
+                'value' => $orderProduct->total,
+                'currency' => 'RUB',
+            ];
+            $productArray['vat_code'] = $product->product_id;
+            $productArray['payment_mode'] = 'full_prepayment';
+            $productArray['payment_subject'] = 'commodity';
+
+            $products[] = $productArray;
+        }
 
         /** @var CreatePaymentResponse payment */
         $this->paymentResponse = $client->createPayment(
             [
-                'capture' => true,
                 'amount' => [
                     'value' => $this->order->total,
                     'currency' => 'RUB',
@@ -27,6 +51,14 @@ class YandexPayment extends Payment
                     'type' => 'redirect',
                     'return_url' => 'charmkupi.site/order/showByHash/' . $this->order->hash,
                 ],
+                "receipt" => [
+                    "customer" => [
+                        "full_name" => $this->order->firstname . ' ' . $this->order->lastname,
+                        "phone" => $this->order->telephone,
+                    ],
+                    "items" => $products,
+                ],
+                'capture' => true,
                 'description' => 'Заказ',
             ],
             uniqid('', true)

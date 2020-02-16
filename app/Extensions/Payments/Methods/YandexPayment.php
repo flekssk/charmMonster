@@ -29,7 +29,7 @@ class YandexPayment extends Payment
             $productArray = [];
             $productArray['quantity'] = $orderProduct->quantity;
             $productArray['amount'] = [
-                'description' => $product->description->name,
+                'description' => 'Товар',
                 'value' => $orderProduct->total,
                 'currency' => 'RUB',
             ];

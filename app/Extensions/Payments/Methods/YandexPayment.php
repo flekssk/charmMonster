@@ -25,19 +25,17 @@ class YandexPayment extends Payment
         /** @var OrderProduct $orderProduct */
         foreach ($this->order->orderProducts as $orderProduct) {
             /** @var Product $product */
-            $product = $orderProduct->product;
-            $productArray = [];
-            $productArray['quantity'] = $orderProduct->quantity;
-            $productArray['amount'] = [
-                'value' => $orderProduct->total,
-                'currency' => 'RUB',
+            $products[] = [
+                'description' => $orderProduct->product->description->name,
+                'quantity' => $orderProduct->quantity,
+                'vat_code' => 1,
+                'payment_mode' => 'full_prepayment',
+                'payment_subject' => 'commodity',
+                'amount' => [
+                    'value' => $orderProduct->total,
+                    'currency' => 'RUB',
+                ],
             ];
-            $productArray['vat_code'] = 1;
-            $productArray['payment_mode'] = 'full_prepayment';
-            $productArray['payment_subject'] = 'commodity';
-            $productArray['description'] = $product->description->name;
-
-            $products[] = $productArray;
         }
 
         /** @var CreatePaymentResponse payment */
@@ -57,6 +55,9 @@ class YandexPayment extends Payment
                         "phone" => $this->order->telephone,
                     ],
                     'items' => $products,
+                ],
+                'recipient' => [
+                    'gateway_id' => 645390581976
                 ],
                 'capture' => true,
                 'description' => 'Заказ',
